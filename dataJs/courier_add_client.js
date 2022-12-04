@@ -1360,6 +1360,8 @@ input_recipient.addEventListener('blur', function () {
 
             validMsg.classList.remove("hide");
 
+
+            
         } else {
 
             input_recipient.classList.add("error");
