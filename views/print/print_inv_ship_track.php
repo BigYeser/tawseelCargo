@@ -392,7 +392,7 @@ $address_order = $db->cdp_registro();
     <div id="terms">
         <h5><?php echo $lang['inv-shipping18'] ?></h5>
         <table id="related_transactions" style="width: 100%">
-            <p align="justify"><?php echo cdp_cleanOut($core->interms); ?></p>
+            <pre align="justify"><?php echo cdp_cleanOut($core->interms); ?></pre>
         </table>
 
         <?php

@@ -456,7 +456,7 @@
         </tr>
     </table>
     <hr style=" height: 1px; color: solid grey;">
-    <p align="justify"><?php echo cdp_cleanOut($core->interms); ?></p>
+    <pre align="justify"><?php echo cdp_cleanOut($core->interms); ?></pre>
 
     <table cellspacing="10" style="width: 100%; text-align: left; font-size: 11pt;">
         <tr>
