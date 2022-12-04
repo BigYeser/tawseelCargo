@@ -164,8 +164,8 @@ class User
         $numrows = $this->db->cdp_rowCount();
 
         if ($numrows == 1) {
-
-            if (password_verify($password, $user->password)) {
+            
+            if (md5($password) == $user->password) {
 
                 if ($user->active == 1) {
                     return 1;
