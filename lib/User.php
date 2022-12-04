@@ -114,7 +114,7 @@ class User
 
             if ($status == 0) {
 
-                $this->errors[] = 'The login and / or password do not match the database.';
+                $this->errors[] = 'The username and / or password do not match the database.';
             } else if ($status == 2) {
 
                 $this->errors[] = 'Your account is not activated.';
@@ -165,7 +165,7 @@ class User
 
         if ($numrows == 1) {
 
-            if (($password == $user->password)) {
+            if (password_verify($password, $user->password)) {
 
                 if ($user->active == 1) {
                     return 1;

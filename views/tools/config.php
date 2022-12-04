@@ -45,7 +45,7 @@
 							<div class="col-md-4">
 								<div class="form-group">
 									<label for="lastName1"><?php echo $lang['tools-config3'] ?></label>
-									<input type="text" class="form-control" name="site_url" id="site_url" title="<?php echo $lang['tools-config4'] ?>" data-toggle="tooltip" value="<?php echo $core->site_url; ?>" placeholder="<?php echo $lang['tools-config3'] ?>" readonly>
+									<input type="text" class="form-control" name="site_url" id="site_url" title="<?php echo $lang['tools-config4'] ?>" data-toggle="tooltip" value="<?php echo $core->site_url; ?>" placeholder="<?php echo $lang['tools-config3'] ?>">
 								</div>
 							</div>
 							<div class="col-md-4">
