@@ -1665,10 +1665,10 @@ var Dropdown = function ($) {
       });
     };
 
-    Dropdown._clearMenus = function _clearMenus(event) {
-      if (event && (event.which === RIGHT_MOUSE_BUTTON_WHICH || event.type === 'keyup' && event.which !== TAB_KEYCODE)) {
-        return;
-      }
+    // Dropdown._clearMenus = function _clearMenus(event) {
+    //   if (event && (event.which === RIGHT_MOUSE_BUTTON_WHICH || event.type === 'keyup' && event.which !== TAB_KEYCODE)) {
+    //     return;
+    //   }
 
       var toggles = $.makeArray($(Selector.DATA_TOGGLE));
       for (var i = 0; i < toggles.length; i++) {

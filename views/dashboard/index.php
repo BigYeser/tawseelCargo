@@ -87,7 +87,7 @@ $db = new Conexion;
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">Dashboard Hello</h4>
+                        <h4 class="page-title">Dashboard</h4>
                     </div>
                 </div>
             </div>
