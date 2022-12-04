@@ -1103,7 +1103,7 @@ $("#add_recipient_from_modal_shipments").on('submit', function (event) {
         return false;
     }
 
-    if (iti.isValidNumber()) {
+    if (iti_recipient.isValidNumber()) {
 
         var sender_id = $('#sender_id').val();
         $('#save_data_recipient').attr("disabled", true);
@@ -1132,7 +1132,7 @@ $("#add_recipient_from_modal_shipments").on('submit', function (event) {
     } else {
 
         input.classList.add("error");
-        var errorCode = iti.getValidationError();
+        var errorCode = iti_recipient.getValidationError();
         errorMsg.innerHTML = errorMap[errorCode];
         errorMsg.classList.remove("hide");
 
@@ -1354,16 +1354,16 @@ input_recipient.addEventListener('blur', function () {
     reset();
     if (input_recipient.value.trim()) {
 
-        if (iti.isValidNumber()) {
+        if (iti_recipient.isValidNumber()) {
 
-            $('#phone_recipient').val(iti.getNumber());
+            $('#phone_recipient').val(iti_recipient.getNumber());
 
             validMsg.classList.remove("hide");
 
         } else {
 
             input_recipient.classList.add("error");
-            var errorCode = iti.getValidationError();
+            var errorCode = iti_recipient.getValidationError();
             errorMsg.innerHTML = errorMap[errorCode];
             errorMsg.classList.remove("hide");
 

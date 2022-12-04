@@ -668,7 +668,7 @@ try {
             .forEach(function (form) {
             form.addEventListener('submit', function (event) {
                 if (!form.checkValidity()) {
-                event.preventDefault()
+                // event.preventDefault()
                 event.stopPropagation()
                 }
 
@@ -748,7 +748,7 @@ try {
 //=========================================//
 document.getElementsByClassName("back-button")[0]?.addEventListener("click", (e)=>{
     if (document.referrer !== "") {
-        e.preventDefault();
+        // e.preventDefault();
         window.location.href = document.referrer;
       }
 })

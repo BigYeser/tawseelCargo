@@ -1483,7 +1483,7 @@
 
             //hide on esc and prevent propagation
             if (e.keyCode === 27) {
-                e.preventDefault();
+                // e.preventDefault();
                 e.stopPropagation();
 
                 this.hide();

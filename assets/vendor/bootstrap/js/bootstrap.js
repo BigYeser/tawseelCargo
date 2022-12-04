@@ -1576,7 +1576,7 @@ var Dropdown = function ($) {
       var _this9 = this;
 
       $(this._element).on(Event.CLICK, function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         event.stopPropagation();
         _this9.toggle();
       });

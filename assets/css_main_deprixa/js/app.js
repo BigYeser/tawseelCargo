@@ -145,7 +145,7 @@ function windowScroll() {
 }
 
 window.addEventListener('scroll', (ev) => {
-    ev.preventDefault();
+    // ev.preventDefault();
     windowScroll();
 })
 

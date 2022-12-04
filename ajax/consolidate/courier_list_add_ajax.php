@@ -311,7 +311,7 @@ if ($numrows > 0) { ?>
 
 					}
 				});
-				event.preventDefault();
+				// event.preventDefault();
 
 			})
 		</script>

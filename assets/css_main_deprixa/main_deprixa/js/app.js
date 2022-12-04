@@ -36,7 +36,7 @@
     
     $('.menu-arrow,.submenu-arrow').on('click', function (e) {
         if ($(window).width() < 992) {
-            e.preventDefault();
+            // e.preventDefault();
             $(this).parent('li').toggleClass('open').find('.submenu:first').toggleClass('open');
         }
     });
@@ -54,7 +54,7 @@
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 0
         }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+        // event.preventDefault();
     });
 
     //Sticky
