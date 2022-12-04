@@ -421,7 +421,6 @@ $order_prefix = $settings->prefix;
                                             <label for="inputlname" class="control-label col-form-label"><?php echo $lang['itemlogistics'] ?></label>
                                             <div class="input-group mb-3">
                                                 <select class="select2 form-control custom-select" id="order_item_category" name="order_item_category" required style="width: 100%;">
-                                                    <option value="<?php echo $s_logistics->id; ?>"><?php echo $s_logistics->name_item; ?></option>
                                                     <?php foreach ($categories as $row) : ?>
                                                         <option value="<?php echo $row->id; ?>"><?php echo $row->name_item; ?></option>
                                                     <?php endforeach; ?>
