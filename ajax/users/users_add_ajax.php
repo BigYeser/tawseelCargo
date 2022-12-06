@@ -118,7 +118,7 @@ if (empty($errors)) {
 
     if ($_POST['password'] != "") {
 
-        $data['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $data['password'] =  md5($_POST['password']); //password_hash($_POST['password'], PASSWORD_DEFAULT);
     }
 
     $data['avatar'] = '';

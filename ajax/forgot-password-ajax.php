@@ -80,7 +80,7 @@ if (empty($errors)) {
     $user_password = $password;
 
     $datos = [
-      'password' => password_hash($user_password, PASSWORD_DEFAULT),
+      'password' =>  md5($_POST['password']), // password_hash($user_password, PASSWORD_DEFAULT),
       'email' => $user_email
     ];
 
