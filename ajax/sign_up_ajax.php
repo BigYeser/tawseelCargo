@@ -125,7 +125,7 @@ if (empty($error)) {
 
     if ($_POST['pass'] != "") {
 
-        $datos['password'] = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+        $datos['password'] = md5($_POST['pass']);           //password_hash($_POST['pass'], PASSWORD_DEFAULT);
     }
 
     if (isset($_POST['terms'])) {
