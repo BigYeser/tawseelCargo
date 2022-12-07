@@ -92,7 +92,7 @@ if ($numrows > 0) { ?>
 				<tr>
 
 					<td><?php echo $user->fname; 
-							echo "<script>console.log(".$user.") ;</script>";
+							echo "<script>console.log(".$user->fname.") ;</script>";
 
 					?> <?php echo $user->lname; ?></td>
 					<td><?php echo $user->email; ?></td>
