@@ -4135,7 +4135,7 @@ function cdp_verifyReferentialIntegrityCounty($id)
     $db->cdp_execute();
     $result = $db->cdp_rowCount();
 
-    if ($result >= 0) {
+    if ($result > 0) {
         return true;
     } else {
         return false;
