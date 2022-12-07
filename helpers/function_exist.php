@@ -44,7 +44,7 @@ function cdp_getChecked($row, $status)
 function cdp_userStatus($status, $id)
 {
     
-   // $display = $status;
+    $display = $status;
     switch ($status) {
         case 1:
             $display = "<span style=\"font-size:15px;color:#48CFAD;\" class=\"ti-check\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Active\"></span> Active";
