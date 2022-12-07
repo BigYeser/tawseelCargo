@@ -787,7 +787,7 @@ $address_order = $db->cdp_registro();
 
                                                     <tr class="card-hover">
                                                         <td colspan="2"></td>
-                                                        <td class="text-right" colspan="2"><b>Re expedition</b></td>
+                                                        <td class="text-right" colspan="2"><b>Customs tariffs</b></td>
                                                         <td colspan="1">
                                                             <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event)" class="form-control form-control-sm" value="<?php echo $row_order->total_reexp; ?>" name="reexpedicion_value" id="reexpedicion_value">
                                                         </td>

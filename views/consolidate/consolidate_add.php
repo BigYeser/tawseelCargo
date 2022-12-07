@@ -1445,7 +1445,7 @@ if (isset($_POST["create_invoice"])) {
 
                                                 <tr class="card-hover">
                                                     <td colspan="2"></td>
-                                                    <td class="text-right" colspan="2"><b>Re expedition</b></td>
+                                                    <td class="text-right" colspan="2"><b>Customs tariffs</b></td>
                                                     <td colspan="2">
                                                         <input type="text" onkeypress="return isNumberKey(event, this)" onblur="cdp_cal_final_total();" class="form-control form-control-sm" value="0" name="reexpedicion_value" id="reexpedicion_value">
                                                     </td>

@@ -2671,7 +2671,7 @@ $lang = array(
 	"langs_045" => "Peso total",
 	"langs_046" => "Libra adicional",
 	"langs_047" => "Valor total declarado",
-	"langs_048" => "Re expedition",
+	"langs_048" => "Customs tariffs",
 	"langs_049" => "Cerrar",
 	"langs_050" => "Consolidar ahora",
 
@@ -2740,7 +2740,7 @@ $lang = array(
 	"langs_0108" => "Peso total",
 	"langs_0109" => "Libra adicional",
 	"langs_01010" => "Valor total declarado",
-	"langs_01011" => "Re expedition",
+	"langs_01011" => "Customs tariffs",
 	"langs_01012" => "Costo total",
 	"langs_01013" => "Update Consolidate",
 	"langs_01014" => "Seguimiento",

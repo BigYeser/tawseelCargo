@@ -288,7 +288,7 @@ $sender_data = $db->cdp_registro();
             <td colspan="3"></td>
             <!-- <td  colspan="2"></td> -->
 
-            <td colspan="3" class="text-right"><b>Re expedition</b></td>
+            <td colspan="3" class="text-right"><b>Customs tariffs</b></td>
             <td class="text-right" colspan="2" id="impuesto"><?php echo $row->total_reexp; ?></td>
 
         </tr>

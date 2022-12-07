@@ -1179,7 +1179,7 @@ if ($row_order->status_invoice == 1) {
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td colspan="2" class="text-right"><b>Re expedition </b></td>
+                                                    <td colspan="2" class="text-right"><b>Customs tariffs </b></td>
                                                     <td class="text-center" id="reexp"><?php echo cdb_money_format($row_order->total_reexp); ?></td>
                                                     <td></td>
                                                 </tr>

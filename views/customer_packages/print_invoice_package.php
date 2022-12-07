@@ -351,7 +351,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"><b>Re expedition</b></td>
+            <td colspan="3" class="text-right"><b>Customs tariffs</b></td>
             <td class="text-center" id="impuesto"><?php echo cdb_money_format_bar($row->total_reexp); ?></td>
 
         </tr>

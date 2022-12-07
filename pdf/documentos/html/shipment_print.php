@@ -423,7 +423,7 @@
             <td style=" border: 1px solid black; padding: 3px;"></td>
             <td style=" border: 1px solid black; padding: 3px;"></td>
             <td style=" border: 1px solid black; padding: 3px;"></td>
-            <td style=" border: 1px solid black; padding: 3px;" colspan="3" class="text-right"><b>Re expedition</b></td>
+            <td style=" border: 1px solid black; padding: 3px;" colspan="3" class="text-right"><b>Customs tariffs</b></td>
             <td style=" border: 1px solid black; padding: 3px;" class="text-center" id="impuesto"><?php echo $row->total_reexp; ?></td>
 
         </tr>

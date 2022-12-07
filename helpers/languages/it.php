@@ -1429,7 +1429,7 @@ $lang = array(
 	"langs_045" => "Peso totale",
 	"langs_046" => "Sterlina aggiuntiva",
 	"langs_047" => "Valore totale dichiarato",
-	"langs_048" => "Re expedition",
+	"langs_048" => "Customs tariffs",
 	"langs_049" => "Cerrar",
 	"langs_050" => "Consolida ora",
 
@@ -1498,7 +1498,7 @@ $lang = array(
 	"langs_0108" => "Peso totale",
 	"langs_0109" => "Sterlina aggiuntiva",
 	"langs_01010" => "Valore totale dichiarato",
-	"langs_01011" => "Re expedition",
+	"langs_01011" => "Customs tariffs",
 	"langs_01012" => "Costo totale",
 	"langs_01013" => "Aggiorna consolidamento",
 	"langs_01014" => "Tracciamento",

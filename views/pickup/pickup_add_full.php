@@ -821,7 +821,7 @@ $order_prefix = $settings->prefix;
 
                                                     <tr class="card-hover">
                                                         <td colspan="2"></td>
-                                                        <td class="text-right" colspan="2"><b>Re expedition</b></td>
+                                                        <td class="text-right" colspan="2"><b>Customs tariffs</b></td>
                                                         <td colspan="1">
                                                             <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="0" name="reexpedicion_value" id="reexpedicion_value">
                                                         </td>

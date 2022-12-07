@@ -218,7 +218,7 @@
         <tr>
             <td style=" border: 1px solid black; padding: 3px; width: 50%;" ><b><?php echo $lang['left234'] ?>:</b> <span id="total_volumetrico"><?php echo $sumador_volumetric; ?></span></td>                                            
 
-            <td style=" border: 1px solid black; padding: 3px; width: 25%;"  class="text-right"> <b>Customs tariffs <?php echo $row->tax_custom_tariffis_value; ?> %</b></td>
+            <!-- <td style=" border: 1px solid black; padding: 3px; width: 25%;"  class="text-right"> <b>Customs tariffs <?php //echo $row->tax_custom_tariffis_value; ?> %</b></td> -->
             <td style=" border: 1px solid black; padding: 3px; width: 25%;" class="text-center" id="total_impuesto_aduanero"><?php echo $total_impuesto_aduanero; ?></td>              
                                                         
 
@@ -235,7 +235,7 @@
         <tr>                
             <td style=" border: 1px solid black; padding: 3px; width: 50%;"></td>                          
 
-            <td style=" border: 1px solid black; padding: 3px; width: 25%;"  class="text-right"><b>Re expedition</b></td>
+            <td style=" border: 1px solid black; padding: 3px; width: 25%;"  class="text-right"><b>Customs tariffs</b></td>
             <td style=" border: 1px solid black; padding: 3px; width: 25%;"  class="text-center" id="impuesto"><?php echo $eow->total_reexp; ?></td> 
                                                                      
         </tr>   
