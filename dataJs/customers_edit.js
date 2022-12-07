@@ -353,12 +353,12 @@ $("#edit_user").on('submit', function (event) {
             return false;
         }
 
-        if ($.trim($('#postal' + no).val()).length == 0) {
-            alert("Please enter zip code");
-            $('#postal' + no).focus();
+        // if ($.trim($('#postal' + no).val()).length == 0) {
+        //     alert("Please enter zip code");
+        //     $('#postal' + no).focus();
 
-            return false;
-        }
+        //     return false;
+        // }
 
     }
 

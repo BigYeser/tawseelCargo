@@ -735,11 +735,11 @@ $("#add_user_from_modal_shipments").on('submit', function (event) {
         return false;
     }
 
-    if ($.trim($('#postal_modal_user').val()).length == 0) {
-        alert("Please enter zip code");
-        $('#postal_modal_user').focus();
-        return false;
-    }
+    // if ($.trim($('#postal_modal_user').val()).length == 0) {
+    //     alert("Please enter zip code");
+    //     $('#postal_modal_user').focus();
+    //     return false;
+    // }
 
     if ($.trim($('#address_modal_user').val()).length == 0) {
         alert("Please enter address");
@@ -810,11 +810,11 @@ $("#add_address_users_from_modal_shipments").on('submit', function (event) {
         return false;
     }
 
-    if ($.trim($('#postal_modal_user_address').val()).length == 0) {
-        alert("Please enter zip code");
-        $('#postal_modal_user_address').focus();
-        return false;
-    }
+    // if ($.trim($('#postal_modal_user_address').val()).length == 0) {
+    //     alert("Please enter zip code");
+    //     $('#postal_modal_user_address').focus();
+    //     return false;
+    // }
 
     var sender_id = $('#sender_id').val();
     $('#save_data_address_users').attr("disabled", true);

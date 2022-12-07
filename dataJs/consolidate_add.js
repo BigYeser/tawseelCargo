@@ -974,11 +974,11 @@ $("#add_user_from_modal_shipments").on('submit', function (event) {
     return false;
   }
 
-  if ($.trim($('#postal_modal_user').val()).length == 0) {
-    alert("Please enter zip code");
-    $('#postal_modal_user').focus();
-    return false;
-  }
+  // if ($.trim($('#postal_modal_user').val()).length == 0) {
+  //   alert("Please enter zip code");
+  //   $('#postal_modal_user').focus();
+  //   return false;
+  // }
 
   if ($.trim($('#address_modal_user').val()).length == 0) {
     alert("Please enter address");
@@ -1059,11 +1059,11 @@ $("#add_recipient_from_modal_shipments").on('submit', function (event) {
     return false;
   }
 
-  if ($.trim($('#postal_modal_recipient').val()).length == 0) {
-    alert("Please enter zip code");
-    $('#postal_modal_recipient').focus();
-    return false;
-  }
+  // if ($.trim($('#postal_modal_recipient').val()).length == 0) {
+  //   alert("Please enter zip code");
+  //   $('#postal_modal_recipient').focus();
+  //   return false;
+  // }
 
   if ($.trim($('#address_modal_recipient').val()).length == 0) {
     alert("Please enter address");
@@ -1135,11 +1135,11 @@ $("#add_address_users_from_modal_shipments").on('submit', function (event) {
     return false;
   }
 
-  if ($.trim($('#postal_modal_user_address').val()).length == 0) {
-    alert("Please enter zip code");
-    $('#postal_modal_user_address').focus();
-    return false;
-  }
+  // if ($.trim($('#postal_modal_user_address').val()).length == 0) {
+  //   alert("Please enter zip code");
+  //   $('#postal_modal_user_address').focus();
+  //   return false;
+  // }
 
   var sender_id = $('#sender_id').val();
   $('#save_data_address_users').attr("disabled", true);
@@ -1189,11 +1189,11 @@ $("#add_address_recipients_from_modal_shipments").on('submit', function (event) 
     return false;
   }
 
-  if ($.trim($('#postal_modal_recipient_address').val()).length == 0) {
-    alert("Please enter zip code");
-    $('#postal_modal_recipient_address').focus();
-    return false;
-  }
+  // if ($.trim($('#postal_modal_recipient_address').val()).length == 0) {
+  //   alert("Please enter zip code");
+  //   $('#postal_modal_recipient_address').focus();
+  //   return false;
+  // }
 
   var recipient_id = $('#recipient_id').val();
 
