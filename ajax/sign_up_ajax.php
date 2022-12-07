@@ -53,9 +53,9 @@ if (empty($_POST['address']))
 
     $error = 'Please enter the address';
 
-if (empty($_POST['postal']))
+// if (empty($_POST['postal']))
 
-    $error = 'Please enter the postal';
+//     $error = 'Please enter the postal';
 
 if (empty($_POST['username']))
 

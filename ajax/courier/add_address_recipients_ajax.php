@@ -44,9 +44,9 @@ if (empty($_POST['city_modal_recipient_address']))
 
     $errors['city'] = 'Please enter the city';
 
-if (empty($_POST['postal_modal_recipient_address']))
+// if (empty($_POST['postal_modal_recipient_address']))
 
-    $errors['postal'] = 'Please enter the postal';
+//     $errors['postal'] = 'Please enter the postal';
 
 if (empty($errors)) {
 
