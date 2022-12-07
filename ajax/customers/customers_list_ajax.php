@@ -92,8 +92,11 @@ if ($numrows > 0) { ?>
 					<td><?php echo $user->fname; ?> <?php echo $user->lname; ?></td>
 					<td><?php echo $user->email; ?></td>
 					<td><?php echo $user->locker; ?></td>
-					<td class="text-center"><?php echo cdp_userStatus($user->active, $user->id);  echo $user ?></td>
-					<td class="text-center"><?php echo cdp_isAdmin($user->userlevel); ?></td>
+					<td class="text-center"><?php echo cdp_userStatus($user->active, $user->id);  ?></td>
+					<td class="text-center"><?php 
+					echo cdp_isAdmin($user->userlevel); 
+					echo "<script>console.log(".$user.") ;</script>";
+					?></td>
 					<td class="text-center"><?php echo ($user->adate) ? $user->adate : "-/-"; ?></td>
 					<td align='center'>
 						<a href="customers_edit.php?user=<?php echo $user->id; ?>" data-toggle="tooltip" data-placement="top" title="<?php echo $lang['edit-clien46'] ?>"><i style="color:#343a40" class="ti-pencil"></i></a>
