@@ -93,6 +93,10 @@ if ($numrows > 0) { ?>
 
 					<td><?php echo $user->fname; 
 							echo "<script>console.log(".($user->fname).") ;</script>";
+							echo "<script>console.log(".($user->lname).") ;</script>";
+							echo "<script>console.log(".($user->email).") ;</script>";
+							echo "<script>console.log(".($user->locker).") ;</script>";
+							echo "<script>console.log(".($user->active).") ;</script>";
 
 					?> <?php echo $user->lname; ?></td>
 					<td><?php echo $user->email; ?></td>
