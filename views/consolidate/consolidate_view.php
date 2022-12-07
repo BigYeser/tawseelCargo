@@ -674,7 +674,7 @@ if ($row_order->status_invoice == 1) {
 
                 <!-- Row -->
                 <?php
-                if ($row_order->status_courier == 8) {
+                if ($row_order->status_courier == 39) {
 
                     $db->cdp_query("SELECT * FROM cdb_courier_track where order_track='" . $row_order->c_prefix . $row_order->c_no . "' and status_courier=8");
                     $courier_track = $db->cdp_registro();

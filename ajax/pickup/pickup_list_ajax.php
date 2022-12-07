@@ -165,7 +165,7 @@ if ($numrows > 0) { ?>
 								<?php } ?>
 
 								<?php
-								if ($row->status_courier == 12 || $row->status_courier == 21 || $row->status_courier == 8) { ?>
+								if ($row->status_courier == 12 || $row->status_courier == 21 || $row->status_courier == 39) { ?>
 
 									<span style="background: <?php echo $row->color; ?>;" class="label label-large"><?php echo $row->mod_style; ?></span>
 								<?php
