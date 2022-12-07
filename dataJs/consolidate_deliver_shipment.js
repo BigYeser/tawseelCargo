@@ -143,6 +143,7 @@ $(function() {
   }, false);
   submitBtn.addEventListener("click", function(e) {
     var dataUrl = canvas.toDataURL();
+    
     sigText.innerHTML = dataUrl;
     sigImage.setAttribute("src", dataUrl);
   }, false);

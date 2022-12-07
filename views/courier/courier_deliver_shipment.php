@@ -75,7 +75,7 @@ if (isset($_POST['person_receives'])) {
 
         $errors['driver_id'] = 'Please select employee';
 
-    $status_courier = 8;
+    $status_courier = 39;
     //signature update  
     if (isset($_POST['sig-dataUrl'])) {
 
@@ -644,7 +644,7 @@ if (isset($_POST['person_receives'])) {
                                     } ?>
 
                                 </div>
-                                <form name="myForm" class="xform" enctype="multipart/form-data" id="deliver_form" method="POST">
+                                <form name="myForm" class="cdp_mandarFirma" enctype="multipart/form-data" id="deliver_form" method="POST">
                                     <header>
                                         <h4 class="modal-title"> <b class="text-danger"><?php echo $lang['status-ship1'] ?> </b> <b>| #<?php echo $row->order_prefix . $row->order_no; ?></b>
                                         </h4>
