@@ -45,8 +45,8 @@ if (empty($_POST['country_cou']))
 if (empty($_POST['city_cou']))
     $errors['city_cou'] = 'Please Enter New City';
 
-if (empty($_POST['postal_cou']))
-    $errors['postal_cou'] = 'Please Enter Postal Code';
+// if (empty($_POST['postal_cou']))
+//     $errors['postal_cou'] = 'Please Enter Postal Code';
 
 if (empty($errors)) {
 
