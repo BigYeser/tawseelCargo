@@ -1231,6 +1231,7 @@ $("#add_address_recipients_from_modal_shipments").on('submit', function (event) 
         return false;
     }
 
+    
     // if ($.trim($('#postal_modal_recipient_address').val()).length == 0) {
     //     alert("Please enter zip code");
     //     $('#postal_modal_recipient_address').focus();
