@@ -97,6 +97,7 @@ if ($numrows > 0) { ?>
 							echo "<script>console.log(".($user->email).") ;</script>";
 							echo "<script>console.log(".($user->locker).") ;</script>";
 							echo "<script>console.log(".($user->active).") ;</script>";
+							echo "<script>console.log(".($user->userlevel).") ;</script>";
 
 					?> <?php echo $user->lname; ?></td>
 					<td><?php echo $user->email; ?></td>
