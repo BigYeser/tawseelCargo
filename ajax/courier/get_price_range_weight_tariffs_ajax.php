@@ -100,8 +100,7 @@ if (empty($error)) {
                     $error = "The weight $calculate_weight is above the maximum required $max_final_range";
                 } else if ($calculate_weight < $min_initial_range) {
                     $error = "The weight $calculate_weight is below the minimum required $min_initial_range"
-                            +"\nif your shipment weight less than $min_initial_range"
-                            +"\nplease Enter $min_initial_range in weight field";
+                            ."\nHello";
                 }
             } else {
                 $error = "No hay tarifa configurada para";
