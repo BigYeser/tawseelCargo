@@ -84,7 +84,6 @@ if (!empty($errors)) {
           <i class="icon-double-angle-right"></i>
           <?php
           echo $error;
-          echo "Hello";
           ?>
 
         </li>

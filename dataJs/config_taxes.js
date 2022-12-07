@@ -4,7 +4,7 @@ $("#save_config").on('submit', function (event) {
     var parametros = $(this).serialize();
     $.ajax({
         type: "POST",
-        url: "ajax/tools/config_taxes_ajax.php",
+        url: "ajax/tools/cHelloonfig_taxes_ajax.php",
         data: parametros,
         beforeSend: function (objeto) {
             $("#resultados_ajax").html("Wait a moment...");
