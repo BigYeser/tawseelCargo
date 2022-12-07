@@ -95,7 +95,7 @@ if ($numrows > 0) { ?>
 					<td class="text-center"><?php echo cdp_userStatus($user->active, $user->id);  ?></td>
 					<td class="text-center"><?php 
 					echo cdp_isAdmin($user->userlevel); 
-					echo "<script>console.log(".$user.") ;</script>";
+					//echo "<script>console.log(".$user.") ;</script>";
 					?></td>
 					<td class="text-center"><?php echo ($user->adate) ? $user->adate : "-/-"; ?></td>
 					<td align='center'>
