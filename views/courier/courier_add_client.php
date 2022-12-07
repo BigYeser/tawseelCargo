@@ -771,7 +771,7 @@ $order_prefix = $settings->prefix;
                             </div>
                             <input type="hidden" value="<?php echo $core->value_weight; ?>" name="price_lb" id="price_lb">
                             <input type="hidden" value="0" name="discount_value" id="discount_value">
-                            <input type="hidden" value="100" name="insured_value" id="insured_value">
+                            <input type="hidden" value="0" name="insured_value" id="insured_value">
                             <input type="hidden" value="<?php echo $core->insurance; ?>" name="insurance_value" id="insurance_value">
                             <input type="hidden" value="<?php echo $core->c_tariffs; ?>" name="tariffs_value" id="tariffs_value">
                             <input type="hidden" value="<?php echo $core->tax; ?>" name="tax_value" id="tax_value">

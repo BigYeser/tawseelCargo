@@ -1402,7 +1402,7 @@ if (isset($_POST["create_invoice"])) {
                                                     <td colspan="2"></td>
                                                     <td class="text-right" colspan="2"><b>Insured Value</b></td>
                                                     <td colspan="2">
-                                                        <input type="text" onkeypress="return isNumberKey(event, this)" onblur="cdp_cal_final_total();" class="form-control form-control-sm is-invalid" value="100" name="insured_value" id="insured_value">
+                                                        <input type="text" onkeypress="return isNumberKey(event, this)" onblur="cdp_cal_final_total();" class="form-control form-control-sm is-invalid" value="0" name="insured_value" id="insured_value">
                                                     </td>
                                                     <td class="text-center" id="insured_label"></td>
                                                     <td></td>

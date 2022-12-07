@@ -721,7 +721,7 @@ $order_prefix = $settings->prefix;
                                                         <td colspan="2"></td>
                                                         <td class="text-right" colspan="2"><b>Insured Value</b></td>
                                                         <td colspan="1">
-                                                            <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="100" name="insured_value" id="insured_value">
+                                                            <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="0" name="insured_value" id="insured_value">
                                                         </td>
                                                         <td class="text-center" id="insured_label"></td>
                                                         <td></td>
