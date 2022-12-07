@@ -86,14 +86,15 @@ if ($numrows > 0) { ?>
 				</td>
 			</tr>
 		<?php } else { 
-				echo "<script>console.log(".$data.") ;</script>";
-
 			?>
 
 			<?php foreach ($data as $user) { ?>
 				<tr>
 
-					<td><?php echo $user->fname; ?> <?php echo $user->lname; ?></td>
+					<td><?php echo $user->fname; 
+							echo "<script>console.log(".$user.") ;</script>";
+
+					?> <?php echo $user->lname; ?></td>
 					<td><?php echo $user->email; ?></td>
 					<td><?php echo $user->locker; ?></td>
 					<td class="text-center"><?php echo cdp_userStatus($user->active, $user->id);  ?></td>
