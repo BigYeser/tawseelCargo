@@ -692,7 +692,7 @@ if (isset($_POST['address'])) {
                                                     <!-- <datalist id="browserst"> -->
                                                     <option value="0">--Select Status--</option>
                                                     <?php foreach ($statusrow as $row) : ?>
-                                                         <?php if ($row->id == 8) { ?>
+                                                         <?php if ($row->id == 39) { ?>
                                                         <?php } elseif ($row->id == 11) { ?>
                                                         <?php } elseif ($row->id == 12) { ?>
                                                         <?php } elseif ($row->id == 14) { ?>

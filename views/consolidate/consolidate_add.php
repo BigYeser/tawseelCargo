@@ -1292,7 +1292,7 @@ if (isset($_POST["create_invoice"])) {
                                                 <select class="custom-select col-12" id="status_courier" name="status_courier" required>
                                                     <option value="<?php echo $styles_status->id; ?>"><?php echo $styles_status->mod_style; ?></option>
                                                     <?php foreach ($statusrow as $row) : ?>
-                                                         <?php if ($row->id == 8) { ?>
+                                                         <?php if ($row->id == 39) { ?>
                                                         <?php } elseif ($row->id == 11) { ?>
                                                         <?php } elseif ($row->id == 12) { ?>
                                                         <?php } elseif ($row->id == 14) { ?>
