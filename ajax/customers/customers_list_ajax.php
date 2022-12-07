@@ -91,15 +91,8 @@ if ($numrows > 0) { ?>
 			<?php foreach ($data as $user) { ?>
 				<tr>
 
-					<td><?php echo $user->fname; 
-							echo "<script>console.log(".($user->fname).") ;</script>";
-							echo "<script>console.log(".($user->lname).") ;</script>";
-							echo "<script>console.log(".($user->email).") ;</script>";
-							echo "<script>console.log(".($user->locker).") ;</script>";
-							echo "<script>console.log(".($user->active).") ;</script>";
-							echo "<script>console.log(".($user->userlevel).") ;</script>";
-
-					?> <?php echo $user->lname; ?></td>
+					<td><?php echo $user->fname;?> 
+					<?php echo $user->lname; ?></td>
 					<td><?php echo $user->email; ?></td>
 					<td><?php echo $user->locker; ?></td>
 					<td class="text-center"><?php echo cdp_userStatus($user->active, $user->id);  ?></td>

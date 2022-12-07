@@ -55,9 +55,11 @@ function cdp_userStatus($status, $id)
         default:
             return $display;
     }
+    return $display;
 }
 function cdp_paymentStatus($status, $id)
 {
+    $display = $status;
     switch ($status) {
         case 1:
             $display = "<span style=\"font-size:15px;color:#48CFAD;\" class=\"ti-check\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Active\"></span> Active";
@@ -68,9 +70,13 @@ function cdp_paymentStatus($status, $id)
         default:
             return $display;
     }
+        $display = $status;
+        return $display;
+
 }
 function cdp_isAdmin($userlevel)
 {
+    $display = $userlevel;
     switch ($userlevel) {
         case 9:
             $display = "<span style=\"font-size:20px;color:red;\" class=\"ti-user\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Super Admin\"></span>";
@@ -99,6 +105,7 @@ function cdp_isAdmin($userlevel)
         default:
             return $display;
     }
+    return $display;
 }
 function cdp_generarCodigo($longitud)
 {
