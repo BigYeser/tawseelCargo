@@ -89,11 +89,10 @@ if ($numrows > 0) { ?>
 			<?php foreach ($data as $user) { ?>
 				<tr>
 
-
 					<td><?php echo $user->fname; ?> <?php echo $user->lname; ?></td>
 					<td><?php echo $user->email; ?></td>
 					<td><?php echo $user->locker; ?></td>
-					<td class="text-center"><?php echo cdp_userStatus($user->active, $user->id); ?></td>
+					<td class="text-center"><?php echo cdp_userStatus($user->active, $user->id);  echo $user ?></td>
 					<td class="text-center"><?php echo cdp_isAdmin($user->userlevel); ?></td>
 					<td class="text-center"><?php echo ($user->adate) ? $user->adate : "-/-"; ?></td>
 					<td align='center'>
