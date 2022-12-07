@@ -239,7 +239,7 @@ $userData = $user->cdp_getUserData();
                                                     <label class="control-label col-form-label">Country</label>
                                                     <select class="select2 form-control custom-select" name="country[]" id="country1">
                                                     </select>
-                                                </div>v
+                                                </div>
                                             </div>
 
                                             <div class="col-md-4 mb-3">

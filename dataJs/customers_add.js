@@ -183,6 +183,13 @@ $(function () {
 
     html_code += '<div class="row">';
 
+    html_code += '<div class="col-md-4 mb-3">' +
+      '<div class="form-group" >' +
+      '<label class="control-label col-form-label">Country</label>' +
+      '<select  class="select2 form-control custom-select" name="country[]" id="country' + count + '">' +
+      '</select>' +
+      '</div >' +
+      '</div > ';
 
     html_code += '<div class="col-md-4 mb-3">' +
       '<div class="form-group" >' +
