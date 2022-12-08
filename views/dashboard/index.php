@@ -519,13 +519,13 @@ $db = new Conexion;
                                         <a class="nav-link" id="pills-profile-tab" href="consolidate_list.php"><?php echo $lang['dashnew21'] ?></a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" href="prealert_list.php"><?php echo $lang['dashnew22'] ?></a>
-                                    </li>
+                                    </li> -->
 
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" href="customer_packages_list.php"><?php echo $lang['dashnew23'] ?></a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-shipment" role="tabpanel" aria-labelledby="pills-home-tab">

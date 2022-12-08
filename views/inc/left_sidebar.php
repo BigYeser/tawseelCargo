@@ -48,7 +48,7 @@
 						<ul aria-expanded="false" class="collapse  first-level">
 
 							<!-- Module online shopping-->
-							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
+							<!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
 								<ul aria-expanded="false" class="collapse  first-level">
 
 									<li class="sidebar-item"><a href="dashboard_admin_packages_customers.php" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> <?php echo $lang['leftnew02'] ?></span></a></li>
@@ -67,7 +67,7 @@
 									<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="payments_gateways_list.php" aria-expanded="false"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"><?php echo $lang['leftnew03'] ?> </span></a></li>
 
 								</ul>
-							</li>
+							</li> -->
 
 
 
@@ -342,7 +342,7 @@
 						<ul aria-expanded="false" class="collapse  first-level">
 
 							<!-- Module online shopping-->
-							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
+							<!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
 								<ul aria-expanded="false" class="collapse  first-level">
 
 									<li class="sidebar-item"><a href="dashboard_admin_packages_customers.php" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> <?php echo $lang['leftnew02'] ?></span></a></li>
@@ -361,7 +361,7 @@
 									<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="payments_gateways_list.php" aria-expanded="false"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"><?php echo $lang['leftnew03'] ?> </span></a></li>
 
 								</ul>
-							</li>
+							</li> -->
 
 
 
@@ -494,8 +494,8 @@
 
 					<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> <?php echo $lang['dashboard'] ?> </span></a></li>
 
-
-					<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-codepen"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
+					
+					<!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-codepen"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
 						<ul aria-expanded="false" class="collapse  first-level">
 
 							<li class="sidebar-item"><a href="prealert_add.php" class="sidebar-link"><i class="mdi mdi-bell"></i><span class="hide-menu"> <?php echo $lang['left4'] ?> </span></a></li>
@@ -508,7 +508,7 @@
 
 
 						</ul>
-					</li>
+					</li> -->
 
 					<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-package"></i><span class="hide-menu"> <?php echo $lang['shipment'] ?></span></a>
 						<ul aria-expanded="false" class="collapse  first-level">
@@ -586,13 +586,13 @@
 
 					<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> <?php echo $lang['dashboard'] ?> </span></a></li>
 
-					<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-codepen"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
+					<!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-codepen"></i><span class="hide-menu"><?php echo $lang['leftnew01'] ?></span></a>
 						<ul aria-expanded="false" class="collapse  first-level">
 
 							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="customer_packages_list.php" aria-expanded="false"><i class="mdi mdi-check"></i><span class="hide-menu"> <?php echo $lang['list_customer_packages'] ?> </span></a></li>
 
 						</ul>
-					</li>
+					</li> -->
 
 
 					<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-package"></i><span class="hide-menu"> <?php echo $lang['shipment'] ?></span></a>

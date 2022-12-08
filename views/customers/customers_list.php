@@ -138,10 +138,10 @@ $userData = $user->cdp_getUserData();
                                                 <li class="nav-item">
                                                     <a class="btn btn-light btn active"  href="courier_add.php"><i class="mdi mdi-cube-send" style="color:#f62d51"></i> <?php echo $lang['left1'] ?></a>
                                                 </li>
-                                                &nbsp;&nbsp;
+                                                <!-- &nbsp;&nbsp;
                                                 <li class="nav-item">
                                                     <a class="btn btn-light btn active"  href="customer_packages_add.php"><i class="mdi mdi-cart-outline"></i> <?php echo $lang['leftnew01'] ?></a>
-                                                </li>
+                                                </li> -->
                                                 &nbsp;&nbsp;
                                                 <li class="nav-item">
                                                     <a class="btn btn-light btn active"  href="pickup_add_full.php"><i class="mdi mdi-cube-send" style="color:#f62d51"></i> <?php echo $lang['left702'] ?></a>

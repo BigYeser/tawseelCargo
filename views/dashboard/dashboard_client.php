@@ -190,7 +190,7 @@ foreach ($data as $row) {
                             <div class="card-body">
                                 <div class="row m-t-10">
 
-                                    <div class="col-lg-6 col-md-6">
+                                    <!-- <div class="col-lg-6 col-md-6">
                                         <div class="d-flex align-items-center">
                                             <div class="m-r-10"><a href="prealert_list.php"><span class="text-warning display-6"><i class="mdi mdi-clock-alert"></i></span></a></div>
                                             <div><span>Pre Alerts</span>
@@ -208,10 +208,10 @@ foreach ($data as $row) {
                                                 </h4>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
 
-                                    <div class="col-lg-6 col-md-6">
+                                    <!-- <div class="col-lg-6 col-md-6">
                                         <div class="d-flex align-items-center">
                                             <div class="m-r-10">
                                                 <span class="text-primary display-6">
@@ -233,7 +233,7 @@ foreach ($data as $row) {
                                                 </h4>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- col -->
                                     <div class="col-lg-6 col-md-6">

@@ -207,7 +207,7 @@ $db = new Conexion;
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <!-- col -->
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="d-flex align-items-center">
@@ -228,7 +228,7 @@ $db = new Conexion;
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
