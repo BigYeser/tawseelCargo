@@ -206,11 +206,7 @@ $payrow = $core->cdp_getPayment();
                             <h4 class="card-title  ml-4 mt-3"> Packages Registered report general</h4>
 
                             <div class="card-body">
-
-
                                 <div class="outer_div"></div>
-
-
                             </div>
                         </div>
                     </div>

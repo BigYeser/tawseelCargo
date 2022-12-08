@@ -562,13 +562,13 @@ foreach ($data as $row) {
                                         <input type="hidden" name="userid" id="userid" value="<?php echo $_SESSION['userid']; ?>">
                                     </li>
 
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" href="prealert_list.php">Pre Alerts</a>
-                                    </li>
+                                    </li> -->
 
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" href="customer_packages_list.php">Packages Registered</a>
-                                    </li>
+                                    </li> -->
 
                                     <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" href="consolidate_list.php">Consolidated</a>
