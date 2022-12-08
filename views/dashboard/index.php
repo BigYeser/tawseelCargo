@@ -199,7 +199,7 @@ $db = new Conexion;
                                             </div>
 
                                             <!-- col -->
-                                            <div class="col-lg-6 col-md-6">
+                                            <!-- <div class="col-lg-6 col-md-6">
                                                 <div class="d-flex align-items-center">
                                                     <div class="m-r-10"><a href="prealert_list.php"><span class="text-warning display-6"><i class="mdi mdi-clock-alert"></i></span></a></div>
                                                     <div><span><?php echo $lang['dashnew11'] ?></span>
@@ -217,7 +217,7 @@ $db = new Conexion;
                                                         </h3>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
 
                                             <!-- col -->
                                             <!-- <div class="col-lg-6 col-md-6">
