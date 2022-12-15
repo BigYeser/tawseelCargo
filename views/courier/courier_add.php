@@ -645,7 +645,7 @@ $order_prefix = $settings->prefix;
                                                 <tfoot>
                                                     <tr class="card-hover">
                                                         <td colspan="4" class="text-right"><b>Subtotal</b></td>
-                                                        <td colspan="1"></td>
+                                                        <td></td>
                                                         <td class="text-right">
                                                             <?php
                                                             if ($core->for_symbol !== null) {
@@ -664,7 +664,7 @@ $order_prefix = $settings->prefix;
                                                             <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="<?php echo $core->value_weight; ?>" name="price_lb" id="price_lb" style="width: 160px;">
                                                         </td>
                                                           <!-- <td colspan="2"><b><?php echo $lang['left236'] ?></b>: <span id="total_peso">0.00</span></td> -->
-                                                          <td colspan="4" class="text-right"><b>Tax % </b></td>
+                                                          <td colspan="3" class="text-right"><b>Tax % </b></td>
                                                         <td colspan="1">
                                                             <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="<?php echo $core->tax; ?>" name="tax_value" id="tax_value">
                                                         </td>
