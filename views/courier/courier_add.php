@@ -438,7 +438,7 @@ $order_prefix = $settings->prefix;
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-md-3" style="display:none;">
+                                        <div class="form-group col-md-3">
                                             <label for="inputEmail3" class="control-label col-form-label"><?php echo $lang['add-title22'] ?></label>
                                             <div class="input-group mb-3">
                                                 <select class="select2 form-control custom-select" id="order_service_options" name="order_service_options" required style="width: 100%;">
@@ -645,7 +645,7 @@ $order_prefix = $settings->prefix;
                                                 <tfoot>
                                                     <tr class="card-hover">
                                                         <td colspan="4" class="text-right"><b>Subtotal</b></td>
-                                                        <td></td>
+                                                        <td colspan="1"></td>
                                                         <td class="text-right">
                                                             <?php
                                                             if ($core->for_symbol !== null) {
@@ -663,10 +663,9 @@ $order_prefix = $settings->prefix;
                                                         <td colspan="1">
                                                             <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="<?php echo $core->value_weight; ?>" name="price_lb" id="price_lb" style="width: 160px;">
                                                         </td>
-                                                          <!-- <td colspan="2"><b><?php echo $lang['left236'] ?></b>: <span id="total_peso">0.00</span></td> -->
-                                                          <td colspan="3" class="text-right"><b>Tax % </b></td>
-                                                        <td colspan="1">
-                                                            <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="<?php echo $core->tax; ?>" name="tax_value" id="tax_value">
+                                                        <td colspan="2" class="text-right"> <b>Discount % </b></td>
+                                                        <td colspan="1" class="text-right">
+                                                            <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" value="0" name="discount_value" id="discount_value" class="form-control form-control-sm">
                                                         </td>
                                                         <td class="text-right">
                                                             <?php
@@ -676,7 +675,7 @@ $order_prefix = $settings->prefix;
                                                             <?php
                                                             }
                                                             ?>
-                                                            <span id="impuesto"> 0.00</span>
+                                                            <span id="discount"> 0.00</span>
                                                         </td>
                                                         <td></td>
                                                     </tr>
@@ -727,7 +726,26 @@ $order_prefix = $settings->prefix;
                                                             <span id="total_impuesto_aduanero"> 0.00</span>
                                                         </td>
                                                         <td></td>
-                                                    </tr>                                            
+                                                    </tr>
+
+                                                    <tr class="card-hover">
+                                                        <!-- <td colspan="2"><b><?php echo $lang['left236'] ?></b>: <span id="total_peso">0.00</span></td> -->
+                                                        <td colspan="4" class="text-right"><b>Tax % </b></td>
+                                                        <td colspan="1">
+                                                            <input type="text" onchange="calculateFinalTotal(this);" onkeypress="return isNumberKey(event, this)" class="form-control form-control-sm" value="<?php echo $core->tax; ?>" name="tax_value" id="tax_value">
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <?php
+                                                            if ($core->for_symbol !== null) {
+                                                            ?>
+                                                                <b> <?php echo $core->for_symbol; ?> </b>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                            <span id="impuesto"> 0.00</span>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
 
                                                     <tr class="card-hover" style="display:hidden;">
                                                         <!-- <td colspan="2"><b>Total declared value:</b> <span id="total_declared">0.00</span></td> -->
@@ -748,7 +766,7 @@ $order_prefix = $settings->prefix;
                                                         <td></td>
                                                     </tr>
 
-                                                    <tr class="card-hover" style="display:hidden;">
+                                                    <tr class="card-hover">
                                                         <td class="text-right" colspan="4"><b>Fixed Charge</b></td>
                                                         <td class="text-right" colspan="2">
                                                             <?php
