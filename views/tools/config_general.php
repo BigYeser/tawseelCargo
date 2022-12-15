@@ -27,8 +27,6 @@
 	<!-- Action part -->
 	<?php
 	 	$zonerow = $core->cdp_getZone();
-		echo '<script>console.log("'.$zonerow.'");</script>';
-		echo $zonerow;
 	 ?>
 	<?php $code_currency = $core->cdp_getCodeCountries(); ?>
 
@@ -41,7 +39,7 @@
 					<h4 class="card-title"><b><?php echo $lang['tools-config33'] ?></b></h4>
 					<br>
 					<section>
-						<div class="row">
+						<div class="row" style="display: none;">
 							<div class="col-md-12">
 								<div class="form-group">
 									<label for="phoneNumber1"><?php echo $lang['tools-config34'] ?></label>

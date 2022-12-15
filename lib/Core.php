@@ -161,7 +161,6 @@ class Core
     $this->db->cdp_execute();
     $row = $this->db->cdp_registros();
 		echo '<script>console.log("\n\n'.$sql .'\n'.$row.'\n\n");</script>';
-
     return $row;
   }
 
