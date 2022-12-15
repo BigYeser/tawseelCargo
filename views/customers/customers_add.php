@@ -147,7 +147,7 @@ $userData = $user->cdp_getUserData();
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <div class="row" style="display: none;">
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-group">
                                                     <label for="phoneNumber1"><?php echo $lang['leftorder164'] ?></label>
