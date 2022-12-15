@@ -35,7 +35,7 @@ if (!isset($_GET['id']) or $data['rowCount'] != 1) {
 }
 
 $row_data = $data['data'];
-echo '<script>console.log("'.$row_data.'");</script>';
+
 $db->cdp_query("SELECT * FROM cdb_countries where id= '" . $row_data->origin . "'");
 $origin = $db->cdp_registro();
 
@@ -158,8 +158,7 @@ $destinycity = $db->cdp_registro();
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>Destiny State</label>
-                                                    <select style="width: 100% !important;" class="select2 form-control" name="state_destinystates" id="state_destinystates">
-                                                    <option value="<?php echo $destinystate->id; ?>"><?php echo $destinystate->name; ?></option>
+                                                    <select style="width: 100% !important;" class="select2 form-control" name="state_destinystates" id="state_destinystates"><option value="<?php echo $destinystate->id; ?>"><?php echo $destinystate->name; ?></option>
                                                     </select>
                                                 </div>
                                             </div>
