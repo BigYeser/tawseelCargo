@@ -380,7 +380,7 @@ function loadPackages() {
             '</div>' +
             '</div>';
 
-        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1" style="display:none;">' +
             '<div class="form-group">' +
             '<label for="emailAddress1">F. charge</label> ' +
             '<div class="input-group">' +
@@ -513,7 +513,7 @@ function calculateFinalTotal(element = null) {
     reexpedicion_value = parseFloat(reexpedicion_value);
     insured_value = parseFloat(insured_value);
     price_lb = parseFloat(price_lb);
-
+    var total_weight = 0;
     packagesItems.forEach(function (item, i) {
         var quantity = parseFloat(item.qty);
         var description = parseFloat(item.description);
@@ -541,7 +541,7 @@ function calculateFinalTotal(element = null) {
 
         sumador_libras += weight;
         sumador_volumetric += total_metric;
-
+        total_weight += calculate_weight;
         precio_total = calculate_weight * price_lb;
         sumador_total += precio_total;
         sumador_valor_declarado += declared_value;
@@ -556,13 +556,20 @@ function calculateFinalTotal(element = null) {
         }
 
     })
-
+   
     total_descuento = sumador_total * discount_value / 100;
     total_peso = sumador_libras + sumador_volumetric;
     total_seguro = insured_value * insurance_value / 100;
     total_impuesto_aduanero = total_peso * tariffs_value;
     var total_envio = (sumador_total - total_descuento) + total_seguro + total_impuesto + total_impuesto_aduanero + total_valor_declarado + max_fixed_charge + reexpedicion_value;
-
+    //todo:
+    var order_package = $('#order_package').val();
+    if(order_package == "Plastic Bag"){
+        total_envio +=  Math.ceil(total_weight / 2.5);
+        console.log("Add (total_weight / 2.5) to value");
+    }
+    total_envio += 60;
+    console.log("Add 60 to total");
     if (total_descuento > sumador_total) {
         alert('Discount cannot be greater than the subtotal');
         $('#discount_value').val(0);

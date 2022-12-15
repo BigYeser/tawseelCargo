@@ -438,7 +438,7 @@ function loadPackages() {
             '</div>' +
             '</div>';
 
-        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1" style="display:none;">' +
             '<div class="form-group">' +
             '<label for="emailAddress1">F. charge</label> ' +
             '<div class="input-group">' +
