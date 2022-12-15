@@ -450,7 +450,7 @@ $order_prefix = $settings->prefix;
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4" style="display:none">
+                                        <div class="col-md-4" style="display:none;">
                                             <label for="inputcontact" class="control-label col-form-label"><?php echo $lang['add-title15'] ?></i></label>
                                             <div class="input-group">
                                                 <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
@@ -689,7 +689,7 @@ $order_prefix = $settings->prefix;
                                                         <td class="text-center" id="insured_label"></td>
                                                         <td></td>
                                                     </tr>
-                                                    <tr class="card-hover" style="display:hidden;">
+                                                    <tr class="card-hover" style="display:none;">
                                                         <!-- <td colspan="2"><b><?php echo $lang['left232'] ?>:</b> <span id="total_libras">0.00</span></td> -->
 
                                                         <td colspan="4" class="text-right"> <b>Shipping insurance % </b></td>
@@ -709,7 +709,7 @@ $order_prefix = $settings->prefix;
                                                         <td></td>
                                                     </tr>
 
-                                                    <tr class="card-hover" style="display:hidden;">
+                                                    <tr class="card-hover" style="display:none;">
                                                         <!-- <td colspan="2"><b><?php echo $lang['left234'] ?>:</b> <span id="total_volumetrico">0.00</span></td> -->
                                                         <td colspan="4" class="text-right"><b>Customs tariffs %</b></td>
                                                         <td colspan="1" class="text-right">
@@ -747,7 +747,7 @@ $order_prefix = $settings->prefix;
                                                         <td></td>
                                                     </tr>
 
-                                                    <tr class="card-hover" style="display:hidden;">
+                                                    <tr class="card-hover" style="display:none;">
                                                         <!-- <td colspan="2"><b>Total declared value:</b> <span id="total_declared">0.00</span></td> -->
                                                         <td class="text-right" colspan="4"><b>Declared tax % </b></td>
                                                         <td colspan="1">
