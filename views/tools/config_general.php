@@ -27,7 +27,7 @@
 	<!-- Action part -->
 	<?php
 	 	$zonerow = $core->cdp_getZone();
-		echo '<script>console.log('.$zonerow.')</script>';
+		echo '<script>console.log("'.$zonerow.'");</script>';
 		echo $zonerow;
 	 ?>
 	<?php $code_currency = $core->cdp_getCodeCountries(); ?>
