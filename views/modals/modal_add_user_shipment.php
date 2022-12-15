@@ -20,7 +20,7 @@
 	                        </div>
 	                        <div class="col-md-6">
 	                            <div class="form-group">
-	                                <label for="phoneNumber1"><?php echo $lang['user_manage7'] ?></label>
+	                                <label for="lname"><?php echo $lang['user_manage7'] ?></label>
 	                                <input type="text" class="form-control" name="lname" id="lname" placeholder="<?php echo $lang['user_manage7'] ?>">
 	                            </div>
 	                        </div>
@@ -29,14 +29,14 @@
 	                    <div class="row">
 	                        <div class="col-md-6">
 	                            <div class="form-group">
-	                                <label for="emailAddress1"><?php echo $lang['user_manage5'] ?></label>
+	                                <label for="email"><?php echo $lang['user_manage5'] ?></label>
 	                                <input type="text" class="form-control" id="email" name="email" placeholder="<?php echo $lang['user_manage5'] ?>">
 	                            </div>
 	                        </div>
 
 	                        <div class="col-md-6">
 	                            <div class="form-group">
-	                                <label for="phoneNumber1"><?php echo $lang['user_manage9'] ?></label>
+	                                <label for="phone_custom"><?php echo $lang['user_manage9'] ?></label>
 	                                <br>
 	                                <input type="tel" class="form-control" name="phone_custom" id="phone_custom">
 

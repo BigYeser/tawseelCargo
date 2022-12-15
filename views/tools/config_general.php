@@ -25,7 +25,11 @@
 		</div>
 	</div>
 	<!-- Action part -->
-	<?php $zonerow = $core->cdp_getZone(); ?>
+	<?php
+	 	$zonerow = $core->cdp_getZone();
+		echo '<script>console.log('.$zonerow.')</script>';
+		echo $zonerow;
+	 ?>
 	<?php $code_currency = $core->cdp_getCodeCountries(); ?>
 
 	<div class="row">
@@ -56,9 +60,8 @@
 									<select class="custom-select form-control" name="language" id="language">
 										<optgroup label="Select language">
 											<option value="en" <?php if ($core->language == "en") echo " selected=\"selected\""; ?> data-flag="us"> <?php echo $lang['tools-config63'] ?></option>
-											<option value="es" <?php if ($core->language == "es") echo " selected=\"selected\""; ?> data-flag="es"> <?php echo $lang['tools-config64'] ?></option>
-
-											<option value="he" <?php if ($core->language == "he") echo " selected=\"selected\""; ?> data-flag="he"> <?php echo $lang['tools-config66'] ?></option>
+											<option value="ar" <?php if ($core->language == "ar") echo " selected=\"selected\""; ?> data-flag="ar"> <?php echo $lang['tools-config66'] ?></option>
+											
 										</optgroup>
 									</select>
 								</div>

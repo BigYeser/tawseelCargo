@@ -522,7 +522,7 @@ $db = new Conexion;
                                     <!-- <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" href="prealert_list.php"><?php echo $lang['dashnew22'] ?></a>
                                     </li> -->
-
+                                                
                                     <!-- <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" href="customer_packages_list.php"><?php echo $lang['dashnew23'] ?></a>
                                     </li> -->
