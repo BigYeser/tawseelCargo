@@ -42,11 +42,11 @@ $origin = $db->cdp_registro();
 $db->cdp_query("SELECT * FROM cdb_countries where id= '" . $row_data->destiny . "'");
 $destiny = $db->cdp_registro();
 
-$db->cdp_query("SELECT * FROM cdb_states where id= '" . $row->state . "'");
+$db->cdp_query("SELECT * FROM cdb_states where id= '" . $row_data->state . "'");
 $destinystate = $db->cdp_registro();
 
 
-$db->cdp_query("SELECT * FROM cdb_cities where id= '" . $row->city . "'");
+$db->cdp_query("SELECT * FROM cdb_cities where id= '" . $row_data->city . "'");
 $destinycity = $db->cdp_registro();
 
 ?>
@@ -136,7 +136,7 @@ $destinycity = $db->cdp_registro();
                             <div class="card-body">
                                 <form class="form-horizontal form-material" id="save_data" name="save_data" method="post">
                                     <header><span>Edit tariffs</span></header> <br><br>
-                                    <?php echo '<script>console.log("'.$row_data->origin.'");</script>'; ?>
+                                    <?php echo '<script>console.log("'.$row_data->state.'");</script>'; ?>
                                     <section>
                                         <div class="row">
                                             <div class="col-md-12">
