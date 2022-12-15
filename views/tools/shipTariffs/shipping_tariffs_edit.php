@@ -146,7 +146,6 @@ $destinycity = $db->cdp_registro();
                                                     </select>
                                                 </div>
                                             </div>
-                                            <?php echo '<script>console.log("'.$row_data.'");</script>';?>
                                             <?php echo '<script>console.log("'.$destiny.'");</script>';?>
 
                                             <div class="col-md-4">
