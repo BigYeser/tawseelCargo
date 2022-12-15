@@ -467,26 +467,7 @@ $order_prefix = $settings->prefix;
 
 
                                     <div class="row">
-                                    <div class="form-group col-md-3">
-                                            <label for="inputcontact" class="control-label col-form-label"><?php echo $lang['add-title19'] ?> <i style="color:#ff0000" class="fas fa-shipping-fast"></i></label>
-                                            <div class="input-group mb-3">
-                                                <select class="custom-select col-12" id="status_courier" name="status_courier" required>
-                                                    <option value="<?php echo $styles_status->id; ?>"><?php echo $styles_status->mod_style; ?></option>
-                                                    <?php foreach ($statusrow as $row) : ?>
-                                                        <?php if ($row->id == 39) { ?>
-                                                        <?php } elseif ($row->id == 11) { ?>
-                                                        <?php } elseif ($row->id == 12) { ?>
-                                                        <?php } elseif ($row->id == 14) { ?>
-                                                        <?php } elseif ($row->id == 15) { ?>
-                                                        <?php } elseif ($row->id == 16) { ?>
-                                                        <?php } elseif ($row->id == 13) { ?>
-                                                        <?php } else { ?>
-                                                            <option value="<?php echo $row->id; ?>"><?php echo $row->mod_style; ?></option>
-                                                        <?php } ?>
-                                                    <?php endforeach; ?>
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <div class="col-md-4" style="display:none">
                                             <label for="inputcontact" class="control-label col-form-label"><?php echo $lang['add-title15'] ?></i></label>
                                             <div class="input-group">
@@ -535,7 +516,26 @@ $order_prefix = $settings->prefix;
                                             </div>
                                         </div>
 
-                                       
+                                        <div class="form-group col-md-3">
+                                            <label for="inputcontact" class="control-label col-form-label"><?php echo $lang['add-title19'] ?> <i style="color:#ff0000" class="fas fa-shipping-fast"></i></label>
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select col-12" id="status_courier" name="status_courier" required>
+                                                    <option value="<?php echo $styles_status->id; ?>"><?php echo $styles_status->mod_style; ?></option>
+                                                    <?php foreach ($statusrow as $row) : ?>
+                                                        <?php if ($row->id == 39) { ?>
+                                                        <?php } elseif ($row->id == 11) { ?>
+                                                        <?php } elseif ($row->id == 12) { ?>
+                                                        <?php } elseif ($row->id == 14) { ?>
+                                                        <?php } elseif ($row->id == 15) { ?>
+                                                        <?php } elseif ($row->id == 16) { ?>
+                                                        <?php } elseif ($row->id == 13) { ?>
+                                                        <?php } else { ?>
+                                                            <option value="<?php echo $row->id; ?>"><?php echo $row->mod_style; ?></option>
+                                                        <?php } ?>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                        </div>
 
 
 
