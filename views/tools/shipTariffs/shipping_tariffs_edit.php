@@ -136,7 +136,7 @@ $destinycity = $db->cdp_registro();
                             <div class="card-body">
                                 <form class="form-horizontal form-material" id="save_data" name="save_data" method="post">
                                     <header><span>Edit tariffs</span></header> <br><br>
-                                    <?php echo 'Hello'; ?>
+                                    <?php echo '<script>console.log("Hello");</script>'; ?>
                                     <section>
                                         <div class="row">
                                             <div class="col-md-12">
