@@ -1236,7 +1236,7 @@ if (isset($_POST["create_invoice"])) {
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-md-3">
+                                        <div class="form-group col-md-3" style="display:none;">
                                             <label for="inputEmail3" class="control-label col-form-label"><?php echo $lang['add-title22'] ?></label>
                                             <div class="input-group mb-3">
                                                 <select class="select2 form-control custom-select" id="order_service_options" name="order_service_options" required style="width: 100%;">
