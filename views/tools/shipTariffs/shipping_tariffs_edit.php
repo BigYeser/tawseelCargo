@@ -35,7 +35,6 @@ if (!isset($_GET['id']) or $data['rowCount'] != 1) {
 }
 
 $row_data = $data['data'];
-echo $row_data;
 
 $db->cdp_query("SELECT * FROM cdb_countries where id= '" . $row_data->origin . "'");
 $origin = $db->cdp_registro();
@@ -79,6 +78,9 @@ $destinycity = $db->cdp_registro();
 </head>
 
 <body>
+    <?php
+        echo $row_data;
+    ?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
