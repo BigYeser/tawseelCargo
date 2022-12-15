@@ -146,7 +146,6 @@ $destinycity = $db->cdp_registro();
                                                     </select>
                                                 </div>
                                             </div>
-                                            <?php echo $destiny; ?>
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
