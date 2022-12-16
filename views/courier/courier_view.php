@@ -1000,7 +1000,7 @@ if ($row_order->status_invoice == 1) {
                                                 <th><b><?php echo $lang['left217'] ?></b></th>
                                                 <th><b><?php echo $lang['left218'] ?></b></th>
                                                 <th><b>Weight vol. (lb)</b></th>
-                                                <th><b>Fixed Charge</b></th>
+                                                <!-- <th><b>Fixed Charge</b></th> -->
                                                 <th><b>Declared value</b></th>
                                             </tr>
                                         </thead>

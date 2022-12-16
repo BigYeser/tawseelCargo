@@ -454,14 +454,14 @@ function loadPackages() {
             '</div>' +
             '</div>';
 
-        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
-            '<div class="form-group">' +
-            '<label for="emailAddress1">Fixed charge</label> ' +
-            '<div class="input-group">' +
-            '<input type="text" onchange="changePackage(this)" value="' + item.fixed_value + '" onkeypress="return isNumberKey(event, this)"  name="fixed_value" id="fixedValue_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Fixed charge"/>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
+        // html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+        //     '<div class="form-group">' +
+        //     '<label for="emailAddress1">Fixed charge</label> ' +
+        //     '<div class="input-group">' +
+        //     '<input type="text" onchange="changePackage(this)" value="' + item.fixed_value + '" onkeypress="return isNumberKey(event, this)"  name="fixed_value" id="fixedValue_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Fixed charge"/>' +
+        //     '</div>' +
+        //     '</div>' +
+        //     '</div>';
 
         html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
             '<div class="form-group">' +
@@ -704,11 +704,11 @@ $("#invoice_form").on('submit', function (event) {
             $('#height_' + i).focus();
             return false;
         }
-        if ($.trim($('#fixedValue_' + i).val()).length == 0) {
-            alert("Please enter Fixed charge value");
-            $('#fixedValue_' + i).focus();
-            return false;
-        }
+        // if ($.trim($('#fixedValue_' + i).val()).length == 0) {
+        //     alert("Please enter Fixed charge value");
+        //     $('#fixedValue_' + i).focus();
+        //     return false;
+        // }
         if ($.trim($('#declaredValue_' + i).val()).length == 0) {
             alert("Please enter Declared value");
             $('#declaredValue_' + i).focus();

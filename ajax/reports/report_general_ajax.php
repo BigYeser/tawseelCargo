@@ -112,7 +112,7 @@ if ($numrows > 0) { ?>
 					<th class="text-center"><b><?php echo $lang['lorigin'] ?></b></th>
 					<th class="text-center"><b><?php echo $lang['lstatusshipment'] ?></b></th>
 					<th class="text-center"><b>Weight</b></th>
-					<th class="text-center"><b>Fixed Charge</b></th>
+					<!-- <th class="text-center"><b>Fixed Charge</b></th> -->
 					<th class="text-center"><b>Subtotal</b></th>
 					<th class="text-center"><b>Discount</b></th>
 					<th class="text-center"><b>Insurance</b></th>
@@ -206,26 +206,18 @@ if ($numrows > 0) { ?>
 
 
 						<tr class="card-hover">
-
 							<td><b><a href="courier_view.php?id=<?php echo $row->order_id; ?>"><?php echo $row->order_prefix . $row->order_no; ?></a></b></td>
 							<td class="text-center">
 								<?php echo $row->order_date; ?>
 							</td>
-
 							<td class="text-center">
 								<?php echo $sender_data->fname; ?> <?php echo $sender_data->lname; ?>
 							</td>
-
-
-
 							<td class="text-center"><?php echo $address_order->sender_country; ?>-<?php echo $address_order->sender_city; ?></td>
-
-
 							<td class="">
 
 								<span style="background: <?php echo $row->color; ?>;" class="label label-large"><?php echo $row->mod_style; ?></span>
 								<br>
-
 								<?php
 								if ($row->is_pickup == true) { ?>
 
@@ -248,10 +240,10 @@ if ($numrows > 0) { ?>
 
 							</td>
 
-							<td class="text-center">
+							<!-- <td class="text-center">
 								<?php echo cdb_money_format_bar($row->total_fixed_value); ?>
 
-							</td>
+							</td> -->
 
 							<td class="text-center">
 								<?php echo cdb_money_format_bar($row->sub_total); ?>
@@ -310,10 +302,10 @@ if ($numrows > 0) { ?>
 
 					</td>
 
-					<td class="text-center">
+					<!-- <td class="text-center">
 						<b> <?php echo cdb_money_format($sumador_fixed_charge); ?> </b>
 
-					</td>
+					</td> -->
 
 					<td class="text-center">
 						<b> <?php echo cdb_money_format($sumador_subtotal); ?> </b>

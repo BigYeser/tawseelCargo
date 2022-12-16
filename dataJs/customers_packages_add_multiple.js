@@ -233,14 +233,14 @@ function loadPackages() {
             '</div>' +
             '</div>';
 
-        html_code += '<div class="col-sm-12 col-md-6 col-lg-1" style="display:none;">' +
-            '<div class="form-group">' +
-            '<label for="emailAddress1">F. charge</label> ' +
-            '<div class="input-group">' +
-            '<input type="text" onchange="changePackage(this)" value="' + item.fixed_value + '" onkeypress="return isNumberKey(event, this)"  name="fixed_value" id="fixedValue_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Fixed charge"/>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
+        // html_code += '<div class="col-sm-12 col-md-6 col-lg-1" style="display:none;">' +
+        //     '<div class="form-group">' +
+        //     '<label for="emailAddress1">F. charge</label> ' +
+        //     '<div class="input-group">' +
+        //     '<input type="text" onchange="changePackage(this)" value="' + item.fixed_value + '" onkeypress="return isNumberKey(event, this)"  name="fixed_value" id="fixedValue_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Fixed charge"/>' +
+        //     '</div>' +
+        //     '</div>' +
+        //     '</div>';
 
         html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
             '<div class="form-group">' +
