@@ -577,7 +577,7 @@ function calculateFinalTotal(element = null) {
     console.log("Math.ceil(total_weight / 2.5): " + Math.ceil(total_weight / 2.5));
 
     total_envio += 60;
-    console.log("Add 60 to total");
+    //console.log("Add 60 to total");
     if (total_descuento > sumador_total) {
         alert('Discount cannot be greater than the subtotal');
         $('#discount_value').val(0);
