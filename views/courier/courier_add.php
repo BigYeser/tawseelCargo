@@ -157,7 +157,7 @@ $items_type = $db->cdp_registro();
         <!-- ============================================================== -->
         <div class="page-wrapper">
         <?php
-            echo '<h1>'.$order_prefix.'</h1>';
+            echo '<h1>'.$items_type[0]->name.'</h1>';
         ?>
 
         <select class="custom-select" id="items_type" name="items_type" required="">
