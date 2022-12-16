@@ -65,8 +65,9 @@ $order_prefix = $settings->prefix;
 $sql = "SELECT * FROM `cdb_items` WHERE 1";
 echo $sql;
 $db->cdp_query($sql);
+$db->cdp_execute();
 $items_type = $db->cdp_registro();
-
+echo $items_type;
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
