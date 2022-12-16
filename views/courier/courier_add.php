@@ -155,19 +155,22 @@ $items_type = $db->cdp_registro();
         <?php $trackDigitsx = $core->cdp_trackDigits(); ?>
 
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+       
+
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
         <h1>Hello</h1>
-        <select class="custom-select input-sm" id="items_type" name="items_type" required="">
-            <option value="0">--Select country code--</option>
+        <?php 
+            echo "HI\n";
+            echo $items_type;
+        ?>
+        <select class="custom-select" id="items_type" name="items_type" required="">
             <?php foreach ($items_type as $row) : ?>
                 <option value="<?php echo $row->id; ?>"><?php echo $row->name . ' - ' . $row->pric; ?></option>
             <?php endforeach; ?>
         </select>
         <h1>Hello</h1>
-
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
-        <div class="page-wrapper">
-
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
