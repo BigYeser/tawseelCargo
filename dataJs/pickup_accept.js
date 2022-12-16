@@ -621,7 +621,11 @@ function calculateFinalTotal(element = null) {
     total_seguro = insured_value * insurance_value / 100;
     total_impuesto_aduanero = total_peso * tariffs_value;
     var total_envio = (sumador_total - total_descuento) + total_seguro + total_impuesto + total_impuesto_aduanero + total_valor_declarado + max_fixed_charge + reexpedicion_value;
-
+    if(order_package == "40"){
+        total_envio +=  (parseInt(Math.ceil(total_weight / 25)) * 10);
+        console.log("Add (total_weight / 2.5) to value");
+      }
+      total_envio += 60;
     if (total_descuento > sumador_total) {
         alert('Discount cannot be greater than the subtotal');
         $('#discount_value').val(0);

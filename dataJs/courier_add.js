@@ -570,13 +570,7 @@ function calculateFinalTotal(element = null) {
         total_envio +=  (parseInt(Math.ceil(total_weight / 25)) * 10);
         console.log("Add (total_weight / 2.5) to value");
     }
-
-    // console.log("total_weight: " + total_weight);
-    // console.log("order_package: " + order_package);
-    // console.log("((int)(total_weight / 25) * 10): " + (parseInt(total_weight / 25) * 10));
-
     total_envio += 60;
-    console.log("Add 60 to total");
     if (total_descuento > sumador_total) {
         alert('Discount cannot be greater than the subtotal');
         $('#discount_value').val(0);

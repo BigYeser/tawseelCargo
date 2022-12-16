@@ -62,6 +62,11 @@ $db->cdp_execute();
 $settings = $db->cdp_registro();
 $order_prefix = $settings->prefix;
 
+$sql = "SELECT * FROM `cdb_items` WHERE 1";
+$db->cdp_query($sql);
+$db->cdp_execute();
+$items_type = $db->cdp_registro();
+
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -150,7 +155,13 @@ $order_prefix = $settings->prefix;
         <?php $trackDigitsx = $core->cdp_trackDigits(); ?>
 
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-
+        
+        <select class="custom-select input-sm hide" id="code_prefix2" name="code_prefix2" required="">
+            <option value="0">--Select country code--</option>
+            <?php foreach ($items_type as $row) : ?>
+                <option value="<?php echo $row->id; ?>"><?php echo $row->name . ' - ' . $row->price; ?></option>
+            <?php endforeach; ?>
+        </select>
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
@@ -489,7 +500,6 @@ $order_prefix = $settings->prefix;
                                                 </select>
                                             </div>
                                         </div>
-
 
                                         <div class="form-group col-md-3">
                                             <label for="inputEmail3" class="control-label col-form-label"><?php echo $lang['payment_methods'] ?></label>
