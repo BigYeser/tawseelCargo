@@ -567,13 +567,13 @@ function calculateFinalTotal(element = null) {
     //todo:
     var order_package = $('#order_package');
     if(order_package == "Plastic Bag"){
-        total_envio +=  (int)(total_weight / 25) * 10;
+        total_envio +=  parseInt(total_weight / 25) * 10;
         console.log("Add (total_weight / 2.5) to value");
     }
 
     console.log("total_weight: " + total_weight);
     console.log("order_package: " + order_package.val());
-    console.log("((int)(total_weight / 25) * 10): " + ((int)(total_weight / 25) * 10));
+    console.log("((int)(total_weight / 25) * 10): " + (parseInt(total_weight / 25) * 10));
 
     total_envio += 60;
     console.log("Add 60 to total");
