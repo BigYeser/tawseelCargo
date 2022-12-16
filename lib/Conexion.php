@@ -48,10 +48,11 @@ class Conexion
     }
 
     public function my_cdb_query($sql){
-        $sth = $this->dbh->query($sql);
-        $rows = $this->stm->fetchAll();
+        $stm = $this->dbh->query($sql);
+        $rows = $stm->fetchAll();
+        echo "Hello";
         foreach($rows as $row) {
-            printf("$row[0] $row[1] $row[2]\n");
+            printf("$row \n");
         }
         return $row;
     }
