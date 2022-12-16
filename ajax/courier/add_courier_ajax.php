@@ -411,9 +411,10 @@ if (empty($errors)) {
         }
 
         //NOTIFY WHATSAPP API
+        echo '<script>console.log("HHHHHHI");</script>';
 
         if (isset($_POST['notify_whatsapp_sender']) && intval($_POST['notify_whatsapp_sender']) == 1) {
-            // echo '<script>console.log("yes");</script>';
+            echo '<script>console.log("yes");</script>';
 
             if ($core->twilio_sid != null && $core->twilio_token != null && $core->twilio_number != null) {
                 $phone_sender = $sender_data->phone;
@@ -429,11 +430,11 @@ if (empty($errors)) {
                                 "body" => "a new shipment has been registered, *Tracking #$fullshipment* Follow up on your package by entering the following link and you will have detailed information on the status of your packages $app_url"
                             )
                         );
-                    // echo '<script>console.log("message");</script>';
-                    // echo '<script>console.log("'.$message.'");</script>';
+                    echo '<script>console.log("message");</script>';
+                    echo '<script>console.log("'.$message.'");</script>';
                 } catch (Exception $e) {
-                    // echo '<script>console.log("whatsapp");</script>';
-                    // echo '<script>console.log("'.$e.'");</script>';
+                    echo '<script>console.log("whatsapp");</script>';
+                    echo '<script>console.log("'.$e.'");</script>';
                 }
             }
         }
