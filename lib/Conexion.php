@@ -50,10 +50,7 @@ class Conexion
     public function my_cdb_query($sql){
         $stm = $this->dbh->query($sql);
         $rows = $stm->fetchAll();
-        foreach($rows as $row) {
-            printf("$row[0] $row[1] $row[2] \n");
-        }
-        return $row;
+        return $rows;
     }
 
     //Se prepara la consulta

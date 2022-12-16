@@ -160,13 +160,9 @@ $items_type = $db->my_cdb_query($sql);
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            <?php
-                 printf("$items_type\n");
-
-            ?>
             <select class="custom-select" id="items_type" name="items_type" required="">
                 <?php foreach ($items_type as $row) : ?>
-                    <option value="<?php echo $row->id; ?>"><?php echo $row->name . ' - ' . $row->pric; ?></option>
+                    <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . ' - ' . $row[2]; ?></option>
                 <?php endforeach; ?>
             </select>
             <div class="page-breadcrumb">
