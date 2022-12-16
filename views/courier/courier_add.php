@@ -160,11 +160,7 @@ $items_type = $db->my_cdb_query($sql);
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            <select class="custom-select" id="items_type" name="items_type" required="">
-                <?php foreach ($items_type as $row) : ?>
-                    <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . ' - ' . $row[2]; ?></option>
-                <?php endforeach; ?>
-            </select>
+            
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
@@ -628,7 +624,13 @@ $items_type = $db->my_cdb_query($sql);
                                     </div>
 
                                     <div id="data_items"></div>
-
+                                    <div class="row">
+                                    <select class="custom-select" id="items_type" name="items_type">
+                                        <?php foreach ($items_type as $row) : ?>
+                                            <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . '  (' . $row[2].' AED)' ; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <span class="text-secondary text-left">TOTALS</span>
