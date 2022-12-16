@@ -565,15 +565,15 @@ function calculateFinalTotal(element = null) {
     total_impuesto_aduanero = total_peso * tariffs_value;
     var total_envio = (sumador_total - total_descuento) + total_seguro + total_impuesto + total_impuesto_aduanero + total_valor_declarado + max_fixed_charge + reexpedicion_value;
     //todo:
-    var order_package = $('#order_package') ;
-    if(order_package == 40){
+    var order_package = $('#order_package').val();
+    if(order_package == "40"){
         total_envio +=  (parseInt(total_weight / 25) * 10);
         console.log("Add (total_weight / 2.5) to value");
     }
 
-    // console.log("total_weight: " + total_weight);
-    // console.log("order_package: " + order_package.val());
-    // console.log("((int)(total_weight / 25) * 10): " + (parseInt(total_weight / 25) * 10));
+    console.log("total_weight: " + total_weight);
+    console.log("order_package: " + order_package.val());
+    console.log("((int)(total_weight / 25) * 10): " + (parseInt(total_weight / 25) * 10));
 
     total_envio += 60;
     console.log("Add 60 to total");
