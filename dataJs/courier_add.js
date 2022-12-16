@@ -567,7 +567,7 @@ function calculateFinalTotal(element = null) {
     //todo:
     var order_package = $('#order_package').val();
     if(order_package == "Plastic Bag"){
-        total_envio +=  Math.ceil(total_weight / 2.5);
+        //total_envio +=  Math.ceil(total_weight / 2.5);
         console.log("Add (total_weight / 2.5) to value");
     }
 
