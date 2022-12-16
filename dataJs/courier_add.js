@@ -565,19 +565,18 @@ function calculateFinalTotal(element = null) {
     total_impuesto_aduanero = total_peso * tariffs_value;
     var total_envio = (sumador_total - total_descuento) + total_seguro + total_impuesto + total_impuesto_aduanero + total_valor_declarado + max_fixed_charge + reexpedicion_value;
     //todo:
-    var order_package = $('#order_package').val();
+    var order_package = $('#order_package');
     if(order_package == "Plastic Bag"){
-        //total_envio +=  Math.ceil(total_weight / 2.5);
+        total_envio +=  (int)(total_weight / 25) * 10;
         console.log("Add (total_weight / 2.5) to value");
     }
 
     console.log("total_weight: " + total_weight);
     console.log("order_package: " + order_package);
-    console.log("Hello: ");
-    console.log("Math.ceil(total_weight / 2.5): " + Math.ceil(total_weight / 2.5));
+    console.log("((int)(total_weight / 25) * 10): " + ((int)(total_weight / 25) * 10));
 
     total_envio += 60;
-    //console.log("Add 60 to total");
+    console.log("Add 60 to total");
     if (total_descuento > sumador_total) {
         alert('Discount cannot be greater than the subtotal');
         $('#discount_value').val(0);
