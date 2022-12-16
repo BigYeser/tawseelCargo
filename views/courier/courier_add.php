@@ -152,14 +152,14 @@ $items_type = $db->cdp_registro();
         <?php $trackDigitsx = $core->cdp_trackDigits(); ?>
 
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <?php
-            echo $order_prefix;
-        ?>
-
+   
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-       
+        <?php
+            echo '<h1>'.$order_prefix.'</h1>';
+        ?>
+
         <select class="custom-select" id="items_type" name="items_type" required="">
             <?php foreach ($items_type as $row) : ?>
                 <option value="<?php echo $row->id; ?>"><?php echo $row->name . ' - ' . $row->pric; ?></option>
