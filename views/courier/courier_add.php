@@ -625,12 +625,15 @@ $items_type = $db->my_cdb_query($sql);
 
                                     <div id="data_items"></div>
                                     <div class="row">
-                                    <select class="custom-select" id="items_type" name="items_type">
-                                        <?php foreach ($items_type as $row) : ?>
-                                            <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . '  (' . $row[2].' AED)' ; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                        <select class="custom-select" id="items_type" name="items_type">
+                                            <?php foreach ($items_type as $row) : ?>
+                                                <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . '  (' . $row[2].' AED)' ; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
                                     </div>
+                                    
+                                    
+                                    <hr>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <span class="text-secondary text-left">TOTALS</span>
