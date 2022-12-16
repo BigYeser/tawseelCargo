@@ -65,8 +65,7 @@ $order_prefix = $settings->prefix;
 $sql = "SELECT * FROM `cdb_items` WHERE 1";
 echo $sql;
 $db->cdp_query($sql);
-$db->cdp_execute();
-echo $sql;
+echo $db;
 $items_type = $db->cdp_registro();
 
 ?>
@@ -162,16 +161,12 @@ $items_type = $db->cdp_registro();
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-        <h1>Hello</h1>
-        <?php 
-            echo "HI\n";
-        ?>
+       
         <select class="custom-select" id="items_type" name="items_type" required="">
             <?php foreach ($items_type as $row) : ?>
                 <option value="<?php echo $row->id; ?>"><?php echo $row->name . ' - ' . $row->pric; ?></option>
             <?php endforeach; ?>
         </select>
-        <h1>Hello</h1>
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
