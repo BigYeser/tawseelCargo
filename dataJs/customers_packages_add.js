@@ -622,11 +622,11 @@ $("#invoice_form").on('submit', function (event) {
             $('#height_' + i).focus();
             return false;
         }
-        if ($.trim($('#fixedValue_' + i).val()).length == 0) {
-            alert("Please enter Fixed charge value");
-            $('#fixedValue_' + i).focus();
-            return false;
-        }
+        // if ($.trim($('#fixedValue_' + i).val()).length == 0) {
+        //     alert("Please enter Fixed charge value");
+        //     $('#fixedValue_' + i).focus();
+        //     return false;
+        // }
         if ($.trim($('#declaredValue_' + i).val()).length == 0) {
             alert("Please enter Declared value");
             $('#declaredValue_' + i).focus();

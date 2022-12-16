@@ -769,7 +769,7 @@ $address_order = $db->cdp_registro();
                                                         <td></td>
                                                     </tr>
 
-                                                    <tr class="card-hover">
+                                                    <!-- <tr class="card-hover">
 
                                                         <td class="text-right" colspan="4"><b>Fixed Charge</b></td>
                                                         <td class="text-right" colspan="2">
@@ -783,7 +783,7 @@ $address_order = $db->cdp_registro();
                                                             <span id="fixed_value_label"> 0.00</span>
                                                         </td>
                                                         <td></td>
-                                                    </tr>
+                                                    </tr> -->
 
                                                     <tr class="card-hover">
                                                         <td colspan="2"></td>

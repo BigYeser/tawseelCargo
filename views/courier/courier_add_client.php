@@ -698,7 +698,7 @@ $order_prefix = $settings->prefix;
                                                         <td></td>
                                                     </tr>
 
-                                                    <tr class="card-hover">
+                                                    <!-- <tr class="card-hover">
                                                         <td class="text-right" colspan="4"><b>Fixed Charge</b></td>
                                                         <td colspan="1">
                                                             <span> 0 </span>
@@ -714,7 +714,7 @@ $order_prefix = $settings->prefix;
                                                             <span id="fixed_value_label"> 0.00</span>
                                                         </td>
                                                         <td></td>
-                                                    </tr>
+                                                    </tr> -->
 
 
                                                     <tr class="card-hover">

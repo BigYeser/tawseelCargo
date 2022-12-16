@@ -137,7 +137,7 @@ $html = '
 				<th><b>' . $lang['lorigin'] . '</b></th>
 				<th><b>' . $lang['lstatusshipment'] . '</b></th>
 				<th><b>Weight</b></th>
-				<th><b>Fixed charge</b></th>
+				// <th><b>Fixed charge</b></th>
 				<th><b>Subtotal</b></th>
 				<th><b>Discount</b></th>
 				<th><b>Insurance</b></th>
@@ -226,7 +226,7 @@ if ($numrows > 0) {
 		$html .= '<td>' . $address_order->sender_country . '-' . $address_order->sender_city . '</td>';
 		$html .= '<td>' . $row->mod_style . '</td>';
 		$html .= '<td>' . $row->total_weight . '</td>';
-		$html .= '<td>' . cdb_money_format_bar($row->total_fixed_value) . '</td>';
+		// $html .= '<td>' . cdb_money_format_bar($row->total_fixed_value) . '</td>';
 		$html .= '<td>' . cdb_money_format_bar($row->sub_total) . '</td>';
 		$html .= '<td>' . cdb_money_format_bar($row->total_tax_discount) . '</td>';
 		$html .= '<td>' . cdb_money_format_bar($row->total_tax_insurance) . '</td>';

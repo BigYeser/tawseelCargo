@@ -1007,7 +1007,7 @@ if ($row_order->status_invoice == 1) {
                                                 <th><b><?php echo $lang['left217'] ?></b></th>
                                                 <th><b><?php echo $lang['left218'] ?></b></th>
                                                 <th><b>Weight vol</b></th>
-                                                <th><b>Fixed Charge</b></th>
+                                                <!-- <th><b>Fixed Charge</b></th> -->
                                                 <th><b>Declared value</b></th>
                                             </tr>
                                         </thead>
@@ -1077,7 +1077,7 @@ if ($row_order->status_invoice == 1) {
                                                         <td><?php echo $row_order_item->order_item_width; ?></td>
                                                         <td><?php echo $row_order_item->order_item_height; ?></td>
                                                         <td><?php echo $total_metric; ?></td>
-                                                        <td class="text-center"><?php echo $row_order_item->order_item_fixed_value; ?></td>
+                                                        <!-- <td class="text-center"><?php echo $row_order_item->order_item_fixed_value; ?></td> -->
                                                         <td class="text-center"><?php echo $row_order_item->order_item_declared_value; ?></td>
 
                                                     </tr>
@@ -1118,7 +1118,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="2" class="text-right"><b><?php echo $lang['left240'] ?></b></td>
+                                                <td colspan="1" class="text-right"><b><?php echo $lang['left240'] ?></b></td>
                                                 <td class="text-center"><?php echo $sumador_total; ?></td>
                                                 <td></td>
                                             </tr>
@@ -1130,7 +1130,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="2" class="text-right"><b>Discount <?php echo $row_order->tax_discount; ?> % </b></td>
+                                                <td colspan="1" class="text-right"><b>Discount <?php echo $row_order->tax_discount; ?> % </b></td>
                                                 <td class="text-center"><?php echo $total_descuento; ?></td>
                                                 <td></td>
                                             </tr>
@@ -1140,7 +1140,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="3" class="text-right"><b>Shipping insurance <?php echo $row_order->tax_insurance_value; ?> % </b></td>
+                                                <td colspan="2" class="text-right"><b>Shipping insurance <?php echo $row_order->tax_insurance_value; ?> % </b></td>
                                                 <td class="text-center" id="insurance"><?php echo $total_seguro; ?></td>
                                                 <td></td>
                                             </tr>
@@ -1150,7 +1150,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="3" class="text-right"> <b>Customs tariffs <?php echo $row_order->tax_custom_tariffis_value; ?> %</b></td>
+                                                <td colspan="2" class="text-right"> <b>Customs tariffs <?php echo $row_order->tax_custom_tariffis_value; ?> %</b></td>
                                                 <td class="text-center" id="total_impuesto_aduanero"><?php echo $total_impuesto_aduanero; ?></td>
                                                 <td></td>
 
@@ -1162,7 +1162,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="2" class="text-right"><b>Tax <?php echo $row_order->tax_value; ?> % </b></td>
+                                                <td colspan="1" class="text-right"><b>Tax <?php echo $row_order->tax_value; ?> % </b></td>
                                                 <td class="text-center" id="impuesto"><?php echo $total_impuesto; ?></td>
                                                 <td></td>
                                             </tr>
@@ -1173,12 +1173,12 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="2" class="text-right"><b>Declared tax <?php echo $row_order->declared_value; ?> % </b></td>
+                                                <td colspan="1" class="text-right"><b>Declared tax <?php echo $row_order->declared_value; ?> % </b></td>
                                                 <td class="text-center" id="impuesto"><?php echo $total_valor_declarado; ?></td>
                                                 <td></td>
                                             </tr>
 
-                                            <tr>
+                                            <!-- <tr>
                                                 <td colspan="3"></td>
                                                 <td></td>
                                                 <td></td>
@@ -1188,7 +1188,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td colspan="2" class="text-right"><b>Total fixed charge: </b></td>
                                                 <td class="text-center" id="reexp"><?php echo $sumador_fixed_charge; ?></td>
                                                 <td></td>
-                                            </tr>
+                                            </tr> -->
 
                                             <tr>
                                                 <td colspan="3"></td>
@@ -1196,7 +1196,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="2" class="text-right"><b>Customs tariffs </b></td>
+                                                <td colspan="1" class="text-right"><b>Customs tariffs </b></td>
                                                 <td class="text-center" id="reexp"><?php echo cdb_money_format_bar($row_order->total_reexp); ?></td>
                                                 <td></td>
                                             </tr>
@@ -1208,7 +1208,7 @@ if ($row_order->status_invoice == 1) {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td colspan="3" class="text-right"><b><?php echo $lang['add-title44'] ?> &nbsp; <?php echo $core->currency; ?></b></td>
+                                                <td colspan="2" class="text-right"><b><?php echo $lang['add-title44'] ?> &nbsp; <?php echo $core->currency; ?></b></td>
                                                 <td class="text-center" id="total_envio"><?php echo $total_envio; ?></td>
                                                 <td></td>
 

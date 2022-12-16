@@ -1134,7 +1134,7 @@ if (isset($_POST["create_invoice"])) {
                                                         <td></td>
                                                     </tr>
 
-                                                    <tr class="card-hover">
+                                                    <!-- <tr class="card-hover">
                                                         <td class="text-right" colspan="4"><b>Fixed Charge</b></td>
                                                         <td colspan="1">
                                                             <span> 0 </span>
@@ -1150,7 +1150,7 @@ if (isset($_POST["create_invoice"])) {
                                                             <span id="fixed_value_label"> 0.00</span>
                                                         </td>
                                                         <td></td>
-                                                    </tr>
+                                                    </tr> -->
 
 
                                                     <tr class="card-hover">

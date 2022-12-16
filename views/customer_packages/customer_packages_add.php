@@ -671,7 +671,7 @@ $order_prefix = $settings->prefix_online_shopping;
                                                         <td></td>
                                                     </tr>
 
-                                                    <tr class="card-hover">
+                                                    <!-- <tr class="card-hover">
                                                         <td class="text-right" colspan="4"><b>Fixed Charge</b></td>
                                                         <td class="text-right" colspan="2">
                                                             <?php
@@ -684,7 +684,7 @@ $order_prefix = $settings->prefix_online_shopping;
                                                             <span id="fixed_value_label"> 0.00</span>
                                                         </td>
                                                         <td></td>
-                                                    </tr>
+                                                    </tr> -->
 
 
                                                     <tr class="card-hover">

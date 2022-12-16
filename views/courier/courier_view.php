@@ -1162,7 +1162,7 @@ if ($row_order->status_invoice == 1) {
                                                     <td></td>
                                                 </tr>
 
-                                                <tr>
+                                                <!-- <tr>
                                                     <td colspan="3"></td>
                                                     <td></td>
                                                     <td></td>
@@ -1171,7 +1171,7 @@ if ($row_order->status_invoice == 1) {
                                                     <td colspan="2" class="text-right"><b>Total fixed charge: </b></td>
                                                     <td class="text-center" id="reexp"><?php echo $sumador_fixed_charge; ?></td>
                                                     <td></td>
-                                                </tr>
+                                                </tr> -->
 
                                                 <tr>
                                                     <td colspan="3"></td>

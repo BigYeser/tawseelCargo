@@ -162,7 +162,7 @@ $fecha = str_replace('-', '/', $fecha);
                 <th class="text-center"><b><?php echo $lang['lorigin']; ?></b></th>
                 <th class="text-center"><b><?php echo $lang['lstatusshipment']; ?></b></th>
                 <th class="text-center"><b>Weight</b></th>
-                <th class="text-center"><b>Fixed Charge</b></th>
+                <!-- <th class="text-center"><b>Fixed Charge</b></th> -->
                 <th class="text-center"><b>Subtotal</b></th>
                 <th class="text-center"><b>Discount</b></th>
                 <th class="text-center"><b>Insurance</b></th>
@@ -253,7 +253,7 @@ $fecha = str_replace('-', '/', $fecha);
                         <td><?php echo $address_order->sender_country . ' ' . $address_order->sender_city; ?></td>
                         <td><?php echo $row->mod_style; ?></td>
                         <td><?php echo  $row->total_weight; ?></td>
-                        <td><?php echo  cdb_money_format_bar($row->total_fixed_value); ?></td>
+                        <!-- <td><?php echo  cdb_money_format_bar($row->total_fixed_value); ?></td> -->
                         <td><?php echo  cdb_money_format_bar($row->sub_total); ?></td>
                         <td><?php echo  cdb_money_format_bar($row->total_tax_discount); ?></td>
                         <td><?php echo  cdb_money_format_bar($row->total_tax_insurance); ?></td>

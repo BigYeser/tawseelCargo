@@ -184,7 +184,7 @@ $address_order = $db->cdp_registro();
             <th style="color:white;" width="12%"><b><?php echo $lang['left217'] ?></b></th>
             <th style="color:white;" width="12%"><b><?php echo $lang['left218'] ?></b></th>
             <th style="color:white;" width="12%"><b>Weight vol. &nbsp; <?php echo $core->weight_p; ?></b></th>
-            <th style="color:white;" width="12%"><b>Fixed charge</b></th>
+            <!-- <th style="color:white;" width="12%"><b>Fixed charge</b></th> -->
             <th style="color:white;" width="12%"><b>Declared value</b></th>
         </tr>
 
@@ -252,7 +252,7 @@ $address_order = $db->cdp_registro();
                 <td><?php echo $row_item->order_item_width; ?></td>
                 <td><?php echo $row_item->order_item_height; ?></td>
                 <td><?php echo $total_metric; ?></td>
-                <td><?php echo $row_item->order_item_fixed_value; ?></td>
+                <!-- <td><?php echo $row_item->order_item_fixed_value; ?></td> -->
                 <td><?php echo $row_item->order_item_declared_value; ?></td>
 
             </tr>
@@ -289,7 +289,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"><b><?php echo $lang['left240'] ?></b></td>
+            <td colspan="2" class="text-right"><b><?php echo $lang['left240'] ?></b></td>
             <td class="text-center"><?php echo $sumador_total; ?></td>
 
         </tr>
@@ -300,7 +300,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
 
-            <td colspan="3" class="text-right"><b><b>Discount <?php echo $row->tax_discount; ?> % </b></td>
+            <td colspan="2" class="text-right"><b><b>Discount <?php echo $row->tax_discount; ?> % </b></td>
             <td class="text-center"><?php echo $total_descuento; ?></td>
 
         </tr>
@@ -309,7 +309,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"><b>Shipping insurance <?php echo $row->tax_insurance_value; ?> % </b></td>
+            <td colspan="2" class="text-right"><b>Shipping insurance <?php echo $row->tax_insurance_value; ?> % </b></td>
             <td class="text-center" id="insurance"><?php echo $total_seguro; ?></td>
 
         </tr>
@@ -319,7 +319,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"> <b>Customs tariffs <?php echo $row->tax_custom_tariffis_value; ?> %</b></td>
+            <td colspan="2" class="text-right"> <b>Customs tariffs <?php echo $row->tax_custom_tariffis_value; ?> %</b></td>
             <td class="text-center" id="total_impuesto_aduanero"><?php echo $total_impuesto_aduanero; ?></td>
 
 
@@ -330,7 +330,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"><b>Tax <?php echo $row->tax_value; ?> % </b></td>
+            <td colspan="2" class="text-right"><b>Tax <?php echo $row->tax_value; ?> % </b></td>
             <td class="text-center" id="impuesto"><?php echo $total_impuesto; ?></td>
 
         </tr>
@@ -341,7 +341,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"><b>Declared tax <?php echo $row->declared_value; ?> % </b></td>
+            <td colspan="2" class="text-right"><b>Declared tax <?php echo $row->declared_value; ?> % </b></td>
             <td class="text-center" id="impuesto"><?php echo $total_valor_declarado; ?></td>
 
         </tr>
@@ -351,7 +351,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"><b>Customs tariffs</b></td>
+            <td colspan="2" class="text-right"><b>Customs tariffs</b></td>
             <td class="text-center" id="impuesto"><?php echo cdb_money_format_bar($row->total_reexp); ?></td>
 
         </tr>
@@ -361,7 +361,7 @@ $address_order = $db->cdp_registro();
             <td></td>
             <td></td>
             <td></td>
-            <td colspan="3" class="text-right"><b><?php echo $lang['add-title44'] ?> &nbsp; <?php echo $core->currency; ?></b></td>
+            <td colspan="2" class="text-right"><b><?php echo $lang['add-title44'] ?> &nbsp; <?php echo $core->currency; ?></b></td>
             <td class="text-center" id="total_envio"><?php echo $total_envio; ?></td>
 
         </tr>
