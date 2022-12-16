@@ -333,7 +333,7 @@ function loadPackages() {
       '</div>' +
       '</div>';
 
-    html_code += '<div class="col-sm-12 col-md-1">' +
+    html_code += '<div class="col-sm-12 col-md-2">' +
 
       '<div class="form-group">' +
       '<label for="emailAddress1">Vol. Weight</label> ' +
