@@ -963,9 +963,9 @@ if (isset($_POST["total_item"])) {
                                         <div class="col-md-1 offset-3">
                                             <span class="text-secondary text-center" id="total_vol_weight">0.00</span>
                                         </div>
-                                        <div class="col-md-1">
+                                        <!-- <div class="col-md-1">
                                             <span class="text-secondary text-center" id="total_fixed">0.00</span>
-                                        </div>
+                                        </div> -->
                                         <div class="col-md-1">
                                             <span class="text-secondary text-center" id="total_declared">0.00</span>
                                         </div>
