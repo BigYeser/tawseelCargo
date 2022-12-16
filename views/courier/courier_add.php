@@ -58,16 +58,15 @@ $styles_status = $db->cdp_registro();
 //Prefix tracking   
 $sql = "SELECT * FROM cdb_settings";
 $db->cdp_query($sql);
-$db->cdp_execute();
 $settings = $db->cdp_registro();
 $order_prefix = $settings->prefix;
+echo $settings;
 
-$sql = "SELECT * FROM `cdb_items` WHERE 1";
+$sql = "SELECT * FROM cdb_items";
 echo $sql;
 $db->cdp_query($sql);
-$db->cdp_execute();
+// $db->cdp_execute();
 $items_type = $db->cdp_registro();
-echo $items_type;
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
