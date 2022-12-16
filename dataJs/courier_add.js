@@ -572,7 +572,7 @@ function calculateFinalTotal(element = null) {
     }
 
     console.log("total_weight: " + total_weight);
-    console.log("order_package: " + order_package);
+    console.log("order_package: " + order_package.val());
     console.log("((int)(total_weight / 25) * 10): " + ((int)(total_weight / 25) * 10));
 
     total_envio += 60;
