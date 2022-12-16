@@ -573,6 +573,7 @@ function calculateFinalTotal(element = null) {
 
     console.log("total_weight: " + total_weight);
     console.log("order_package: " + order_package);
+    console.log("Hello: ");
     console.log("Math.ceil(total_weight / 2.5): " + Math.ceil(total_weight / 2.5));
 
     total_envio += 60;
