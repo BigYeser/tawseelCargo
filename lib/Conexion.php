@@ -46,6 +46,16 @@ class Conexion
             echo $this->error;
         }
     }
+
+    public function my_cdb_query($sql){
+        $sth = $this->dbh->query($sql);
+        $rows = $this->stm->fetchAll();
+        foreach($rows as $row) {
+            printf("$row[0] $row[1] $row[2]\n");
+        }
+        return $row;
+    }
+
     //Se prepara la consulta
     public function cdp_query($sql)
     {

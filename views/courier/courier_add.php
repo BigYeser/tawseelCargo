@@ -62,8 +62,11 @@ $settings = $db->cdp_registro();
 $order_prefix = $settings->prefix;
 
 $sql = "SELECT * FROM cdb_items";
-$db->cdp_query($sql);
-$items_type = $db->cdp_registro();
+// echo $sql;
+// $db->cdp_query($sql);
+// $db->cdp_execute();
+$sql = $dp->my_cdb_query($sql);
+// $items_type = $db->cdp_registro();
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -152,19 +155,19 @@ $items_type = $db->cdp_registro();
         <?php $trackDigitsx = $core->cdp_trackDigits(); ?>
 
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-   
+       
+
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-        <?php
-            echo '<h1>'.$items_type[0]->name.'</h1>';
-        ?>
-
-        <select class="custom-select" id="items_type" name="items_type" required="">
-            <?php foreach ($items_type as $row) : ?>
-                <option value="<?php echo $row->id; ?>"><?php echo $row->name . ' - ' . $row->pric; ?></option>
-            <?php endforeach; ?>
-        </select>
+            <?php
+                echo $items_type;
+            ?>
+            <select class="custom-select" id="items_type" name="items_type" required="">
+                <?php foreach ($items_type as $row) : ?>
+                    <option value="<?php echo $row->id; ?>"><?php echo $row->name . ' - ' . $row->pric; ?></option>
+                <?php endforeach; ?>
+            </select>
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
