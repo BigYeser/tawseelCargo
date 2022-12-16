@@ -542,6 +542,8 @@ function calculateFinalTotal(element = null) {
         sumador_libras += weight;
         sumador_volumetric += total_metric;
         total_weight += calculate_weight;
+
+      
         precio_total = calculate_weight * price_lb;
         sumador_total += precio_total;
         sumador_valor_declarado += declared_value;
@@ -568,6 +570,11 @@ function calculateFinalTotal(element = null) {
         total_envio +=  Math.ceil(total_weight / 2.5);
         console.log("Add (total_weight / 2.5) to value");
     }
+
+    console.log("total_weight: " + total_weight);
+    console.log("order_package: " + order_package);
+    console.log("Math.ceil(total_weight / 2.5): " + Math.ceil(total_weight / 2.5));
+
     total_envio += 60;
     console.log("Add 60 to total");
     if (total_descuento > sumador_total) {
