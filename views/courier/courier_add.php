@@ -153,7 +153,7 @@ $items_type = $db->cdp_registro();
 
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <?php
-            echo $settings;
+            echo $order_prefix;
         ?>
 
         <!-- Page wrapper  -->
