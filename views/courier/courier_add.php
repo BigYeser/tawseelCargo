@@ -60,12 +60,9 @@ $sql = "SELECT * FROM cdb_settings";
 $db->cdp_query($sql);
 $settings = $db->cdp_registro();
 $order_prefix = $settings->prefix;
-echo $settings;
 
 $sql = "SELECT * FROM cdb_items";
-echo $sql;
 $db->cdp_query($sql);
-// $db->cdp_execute();
 $items_type = $db->cdp_registro();
 ?>
 <!DOCTYPE html>
@@ -155,7 +152,9 @@ $items_type = $db->cdp_registro();
         <?php $trackDigitsx = $core->cdp_trackDigits(); ?>
 
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-       
+        <?php
+            echo $settings;
+        ?>
 
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
