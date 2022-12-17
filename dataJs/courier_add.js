@@ -20,7 +20,7 @@ var items = [
     {
         qty: 1,
         name: "",
-        total = 0,
+        total: 0,
     },
 ];
 
