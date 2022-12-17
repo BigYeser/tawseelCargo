@@ -628,7 +628,11 @@ $items_type = $db->my_cdb_query($sql);
                                     <hr/>
                                     
                                     <div class="items_type">
-                                        <script> console.log("Hello My Friend");</script>    
+                                        <script>
+                                             console.log("Hello My Friend");
+                                             loadItems();
+
+                                        </script>    
                                     </div>
 
                                     <hr>
