@@ -13,10 +13,20 @@ var packagesItems = [
         declared_value: 0,
         fixed_value: 0
     }
-]
+];
+
+
+var items = [
+    {
+        qty: 1,
+        name: "",
+        total = 0,
+    },
+];
 
 $(function () {
-    loadPackages()
+    loadPackages();
+    loadItems();
     $("#main-wrapper").AdminSettings({
         Theme: false, // this can be true or false ( true means dark and false means light ),
         Layout: 'vertical',
@@ -415,6 +425,124 @@ function loadPackages() {
     })
 }
 
+function loadItems(){
+    console.log("Hi");
+    $('#data_items').html('');
+    packagesItems.forEach(function (item, index) {
+        var html_code = '';
+        html_code += '<div  class= "card-hover" id="row_id_' + index + '">';
+        html_code += '<hr>';
+        html_code += '<div class="row"> ';
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Quantity</label>' +
+            '<div class="input-group">' +
+
+            '<input type="text" onchange="changePackage(this)" value="' + item.qty + '" onkeypress="return isNumberKey(event, this)"  name="qty" id="qty_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Quantity"  value="1"  />' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-3">' +
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Description</label>' +
+            '<div class="input-group">' +
+            '<input type="text" onchange="changePackage(this)" value="' + item.description + '" name="description" id="description_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" placeholder="Package description" >' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Weight</label>' +
+            '<div class="input-group">' +
+            '<input type="text" onchange="changePackage(this)" value="' + item.weight + '" onkeypress="return isNumberKey(event, this)"  name="weight" id="weight_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Weight (lb)"/>' +
+
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Length</label>' +
+            '<div class="input-group">' +
+            '<input type="text" onchange="changePackage(this)" value="' + item.length + '" onkeypress="return isNumberKey(event, this)" name="length" id="length_' + index + '" class="form-control input-sm text_only" data-toggle="tooltip" data-placement="bottom" title="Length (cm)"/>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Width</label>' +
+            '<div class="input-group">' +
+            '<input type="text" onchange="changePackage(this)" value="' + item.width + '" onkeypress="return isNumberKey(event, this)" name="width" id="width_' + index + '" class="form-control input-sm text_only" data-toggle="tooltip" data-placement="bottom" title="Width (cm)"/>' +
+
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Height</label> ' +
+            '<div class="input-group">' +
+            '<input type="text" onchange="changePackage(this)" value="' + item.height + '" onkeypress="return isNumberKey(event, this)"  name="height" id="height_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Height (cm)" />' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-2">' +
+
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Vol. Weight</label> ' +
+            '<div class="input-group">' +
+            '<input type="text" readonly value="0" onkeypress="return isNumberKey(event, this)"  name="weightVol" id="weightVol_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Vol. Weight" />' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        // html_code += '<div class="col-sm-12 col-md-6 col-lg-1" style="display:none;">' +
+        //     '<div class="form-group">' +
+        //     '<label for="emailAddress1">F. charge</label> ' +
+        //     '<div class="input-group">' +
+        //     '<input type="text" onchange="changePackage(this)" value="' + item.fixed_value + '" onkeypress="return isNumberKey(event, this)"  name="fixed_value" id="fixedValue_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Fixed charge"/>' +
+        //     '</div>' +
+        //     '</div>' +
+        //     '</div>';
+
+        html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+            '<div class="form-group">' +
+            '<label for="emailAddress1">Declared v.</label> ' +
+            '<div class="input-group">' +
+            '<input type="text" onchange="changePackage(this)" value="' + item.declared_value + '" onkeypress="return isNumberKey(event, this)"  name="declared_value" id="declaredValue_' + index + '" class="form-control input-sm number_only" data-toggle="tooltip" data-placement="bottom" title="Declared value"/>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        if (index > 0) {
+            html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+                '<div class="form-group  mt-4">' +
+                '<button type="button"  onclick="deletePackage(' + index + ')"  name="remove_rows"  class="btn btn-danger mt-2 "><i class="fa fa-trash"></i>   </button>' +
+                '</div>' +
+                '</div>';
+        }
+        html_code += '</div>';
+
+        html_code += '<hr>';
+
+        html_code += '</div>';
+
+        $('#data_items').append(html_code);
+    });
+    // <div class="col-md-2">
+    //     <select class="custom-select" id="items_type" name="items_type">
+    //         <?php foreach ($items_type as $row) : ?>
+    //             <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . '  (' . $row[2].' AED)' ; ?></option>
+    //         <?php endforeach; ?>
+    //     </select>
+    // </div>
+}
+
 function addPackage() {
 
     packagesItems.push({
@@ -474,11 +602,12 @@ function changePackage(e) {
                 item[e.name] = 0;
             }
         }
-        return item
+        return item;
     })
     calculateFinalTotal();
     $('#create_invoice').attr("disabled", true);
 }
+
 function calculateFinalTotal(element = null) {
 
     if (element) {

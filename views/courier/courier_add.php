@@ -624,15 +624,13 @@ $items_type = $db->my_cdb_query($sql);
                                     </div>
 
                                     <div id="data_items"></div>
-                                    <div class="row">
-                                        <select class="custom-select" id="items_type" name="items_type">
-                                            <?php foreach ($items_type as $row) : ?>
-                                                <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . '  (' . $row[2].' AED)' ; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
+                                    <br/>
+                                    <hr/>
+                                    
+                                    <div class="items_type">
+                                        <script> console.log("Hello My Friend");</script>    
                                     </div>
-                                    
-                                    
+
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-4">
@@ -901,6 +899,7 @@ $items_type = $db->my_cdb_query($sql);
     <script src="assets/js/input-js/intlTelInput.js"></script>
     <script src="assets/libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <script src="dataJs/courier_add.js"></script>
+    
 </body>
 
 </html>
