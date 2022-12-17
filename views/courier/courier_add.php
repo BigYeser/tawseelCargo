@@ -627,14 +627,7 @@ $items_type = $db->my_cdb_query($sql);
                                     <br/>
                                     <hr/>
                                     
-                                    <div class="items_type">
-                                        <script>
-                                             console.log("Hello My Friend");
-                                             loadItems();
-
-                                        </script>    
-                                    </div>
-
+                                    <div class="items_type"></div>
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-4">
@@ -903,7 +896,6 @@ $items_type = $db->my_cdb_query($sql);
     <script src="assets/js/input-js/intlTelInput.js"></script>
     <script src="assets/libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <script src="dataJs/courier_add.js"></script>
-    
 </body>
 
 </html>
