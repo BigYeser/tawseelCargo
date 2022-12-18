@@ -929,11 +929,11 @@ $items_type = $db->my_cdb_query($sql);
     }
 
     function addItem(){
-        items_type.push({
-            qty: 1,
-            name: "",
-            total: 0,
-        });
+        // items_type.push({
+        //     qty: 1,
+        //     name: "",
+        //     total: 0,
+        // });
         loadItems();
     }       
     </script>
