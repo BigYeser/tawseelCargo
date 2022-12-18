@@ -629,7 +629,7 @@ $items_type = $db->my_cdb_query($sql);
                                     
                                     <div class="items_type">
                                        <div class="item">
-                                             <select class="custom-select col-12" id="driver_id" name="driver_id">
+                                             <select class="custom-select col-12" id="item_id" name="item_id">
                                                 <option value="0">--<?php echo $lang['left209'] ?>--</option>
                                                 <?php foreach ($items_type as $row) : ?>
                                                     <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . ' (+' . $row[2].')'; ?></option>
@@ -912,7 +912,7 @@ $items_type = $db->my_cdb_query($sql);
     <script src="assets/libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <script src="dataJs/courier_add.js"></script>
     <script>
-        
+    loadItems();
         var items_type = [{
             qty: 1,
             name: "",
@@ -929,7 +929,7 @@ $items_type = $db->my_cdb_query($sql);
     }
 
     function addItem(){
-        items.push({
+        items_type.push({
             qty: 1,
             name: "",
             total: 0,
