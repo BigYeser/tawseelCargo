@@ -627,7 +627,22 @@ $items_type = $db->my_cdb_query($sql);
                                     <br/>
                                     <hr/>
                                     
-                                    <div class="items_type"></div>
+                                    <div class="items_type">
+                                       <div class="item">
+                                             <select class="custom-select col-12" id="driver_id" name="driver_id">
+                                                <option value="0">--<?php echo $lang['left209'] ?>--</option>
+                                                <?php foreach ($items_type as $row) : ?>
+                                                    <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . ' (+' . $row[2].')'; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <div class="col-md-2">
+                                            <div align="">
+                                                <button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['left999'] ?></button>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-4">
@@ -896,6 +911,32 @@ $items_type = $db->my_cdb_query($sql);
     <script src="assets/js/input-js/intlTelInput.js"></script>
     <script src="assets/libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <script src="dataJs/courier_add.js"></script>
+    <script>
+        
+        var items_type = [{
+            qty: 1,
+            name: "",
+            total: 0,
+        }];
+
+    function loadItems(){
+        console.log("Hi");
+        $('#items_type').html('');
+        packagesItems.forEach(function (item, index) {
+            console.log("Abd");
+            console.log(item+" -> "+index);
+        });
+    }
+
+    function addItem(){
+        items.push({
+            qty: 1,
+            name: "",
+            total: 0,
+        });
+        loadItems();
+    }       
+    </script>
 </body>
 
 </html>

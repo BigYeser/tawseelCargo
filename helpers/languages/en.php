@@ -816,6 +816,7 @@ $lang = array(
 	"left229" => "Close",
 	"left230" => "Add the box",
 	"left231" => "Add Boxes or Packages",
+	"left999" => "Add another Item",
 	"left232" => "Total pounds weight",
 	"left233" => "Total amount",
 	"left234" => "Total volumetric weight",
