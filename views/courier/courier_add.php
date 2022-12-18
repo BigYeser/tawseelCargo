@@ -922,7 +922,7 @@ $items_type = $db->my_cdb_query($sql);
     function loadItems(){
         console.log("Hi");
         $('#items_type').html('');
-        packagesItems.forEach(function (item, index) {
+        items_type.forEach(function (item, index) {
             console.log("Abd");
             console.log(item+" -> "+index);
         });
