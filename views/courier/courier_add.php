@@ -625,7 +625,6 @@ $items_type = $db->my_cdb_query($sql);
 
                                     <div id="data_items"></div>
                                     <br/>
-                                    <hr/>
                                     
                                     <div id="items_type">
                                        <!-- 
@@ -640,7 +639,7 @@ $items_type = $db->my_cdb_query($sql);
                                        </div> -->
                                     </div>
 
-                                    <hr>
+                                    <hr/>
                                     <div class="row">
                                       <div class="col-sm-12 col-md-6 col-lg-1">
                                             <div align="">
@@ -648,6 +647,7 @@ $items_type = $db->my_cdb_query($sql);
                                             </div>
                                         </div>
                                     </div>
+                                    <hr/>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <span class="text-secondary text-left">TOTALS</span>
@@ -793,7 +793,7 @@ $items_type = $db->my_cdb_query($sql);
                                                         </td>
                                                         <td></td>
                                                     </tr>
-<div  class= "card-hover" id="row_id_0"><hr><div class="row"> <div class="col-sm-12 col-md-6 col-lg-1"><div class="form-group"><label for="item_qty">Quantity</label><div class="input-group"><input type="text" value="1" onkeypress="return isNumberKey(event, this)"  name="item_qty_" id="item_qty_0" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Quantity"  value="1"  /></div></div></div><div class="col-sm-12 col-md-6 col-lg-3" name="item_id"><div class="form-group"><label for="item_name">item</label><div class="input-group"><select name="item_name" class="form-control input-sm" id="item_select"><option value="1" onchange="changeItem(this)">Test - 100</option><option value="2" onchange="changeItem(this)">Test 2 - 200</option> </select></div> <div> </div><div class="col-sm-12 col-md-6 col-lg-1"><div class="form-group"><label for="total_0">Total</label><div class="input-group"><input type="text" value="0" name="total_0" id="total_0" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/></div></div></div></div></div>
+                                        <div  class= "card-hover" id="row_id_0"><hr><div class="row"> <div class="col-sm-12 col-md-6 col-lg-1"><div class="form-group"><label for="item_qty">Quantity</label><div class="input-group"><input type="text" value="1" onkeypress="return isNumberKey(event, this)"  name="item_qty_" id="item_qty_0" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Quantity"  value="1"  /></div></div></div><div class="col-sm-12 col-md-6 col-lg-3" name="item_id"><div class="form-group"><label for="item_name">item</label><div class="input-group"><select name="item_name" class="form-control input-sm" id="item_select"><option value="1" onchange="changeItem(this)">Test - 100</option><option value="2" onchange="changeItem(this)">Test 2 - 200</option> </select></div> <div> </div><div class="col-sm-12 col-md-6 col-lg-1"><div class="form-group"><label for="total_0">Total</label><div class="input-group"><input type="text" value="0" name="total_0" id="total_0" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/></div></div></div></div></div>
 
                                                     <!-- <tr class="card-hover">
                                                         <td class="text-right" colspan="4"><b>Fixed Charge</b></td>

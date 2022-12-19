@@ -311,14 +311,40 @@ var items_type = [{
     item: [
         {
             id: 1,
-            name: "Test",
+            name: "Mobile",
             price: 100,
         },
         {
             id: 2,
-            name: "Test 2",
-            price: 200,
+            name: "Laptop",
+            price: 160,
         },
+        {
+            id: 3,
+            name: "Playstation / Xbox",
+            price: 160,
+        },
+        {
+            id: 4,
+            name: "Ipad / Tablet",
+            price: 110,
+        },
+        {
+            id: 5,
+            name: "Monitor 32 inch",
+            price: 330,
+        },
+        {
+            id: 6,
+            name: "Monitor 40 inch",
+            price: 360,
+        },
+        {
+            id: 7,
+            name: "documents",
+            price: 55,
+        }
+
     ],
     total: 0,
 }];
@@ -366,7 +392,7 @@ function loadItems(){
              item.item.forEach(function (description_item, index){
                 html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - ' + description_item.price +'</option>';
              });
-            html_code += ' </select> </div> </div> </div>';
+            html_code += ' </select> </div> <div> </div>';
     
             html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
@@ -403,17 +429,43 @@ function addItem(){
                 item: [
                     {
                         id: 1,
-                        name: "Test",
+                        name: "Mobile",
                         price: 100,
                     },
                     {
                         id: 2,
-                        name: "Test 2",
-                        price: 200,
+                        name: "Laptop",
+                        price: 160,
                     },
+                    {
+                        id: 3,
+                        name: "Playstation / Xbox",
+                        price: 160,
+                    },
+                    {
+                        id: 4,
+                        name: "Ipad / Tablet",
+                        price: 110,
+                    },
+                    {
+                        id: 5,
+                        name: "Monitor 32 inch",
+                        price: 330,
+                    },
+                    {
+                        id: 6,
+                        name: "Monitor 40 inch",
+                        price: 360,
+                    },
+                    {
+                        id: 7,
+                        name: "documents",
+                        price: 55,
+                    }
+
                 ],
                 total: 0,
-            });
+    });
         clearInterval(interval);
      }
     }, 500);
