@@ -366,7 +366,6 @@ function loadItems(){
              item.forEach(function (description_item, index){
              console.log("AA" +description_item);
                 html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - ' + description_item.price +'</option>';
-                });
              });
                 html_code + '</select> </div> </div>';
 
