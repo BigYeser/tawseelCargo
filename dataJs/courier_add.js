@@ -308,11 +308,18 @@ $('input[type=file]').on('change', function () {
 loadItems();
 var items_type = [{
     qty: 1,
-    item: {
-        id: 1,
-        name: "Test",
-        price: 100,
-    },
+    item: [
+        {
+            id: 1,
+            name: "Test",
+            price: 100,
+        },
+        {
+            id: 2,
+            name: "Test 2",
+            price: 200,
+        },
+    ],
     total: 0,
 }];
 
@@ -328,10 +335,7 @@ function loadItems(){
             html_code += '<hr>';
             html_code += '<div class="row"> ';
 
-
-
-
-
+            
             html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="item_qty">Quantity</label>' +
@@ -341,8 +345,15 @@ function loadItems(){
                 '</div>' +
                 '</div>' +
                 '</div>';
-    
-            html_code += '<div class="col-sm-12 col-md-6 col-lg-3">' +
+            
+            html += 
+            '<div class="item">'+
+            '<select class="class="col-sm-12 col-md-6 col-lg-1" name="item_id">';
+                items_type.item.forEach(function (item){
+                    html_code += '<option value="'+ item.id+'">'+ item.name +' - ' + item.price +'</option>';
+                });
+                html_code + '</select> </div>';
+                html_code += '<div class="col-sm-12 col-md-6 col-lg-3">' +
                 '<div class="form-group">' +
                 '<label for="item_name">Special Item</label>' +
                 '<div class="input-group">' +
@@ -388,11 +399,18 @@ function addItem(){
         if(items_type) {
             items_type.push({
                 qty: 1,
-                item: {
-                    id: 1,
-                    name: "Test",
-                    price: 100,
-                },
+                item: [
+                    {
+                        id: 1,
+                        name: "Test",
+                        price: 100,
+                    },
+                    {
+                        id: 2,
+                        name: "Test 2",
+                        price: 200,
+                    },
+                ],
                 total: 0,
             });
         clearInterval(interval);

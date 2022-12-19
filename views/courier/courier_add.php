@@ -628,22 +628,26 @@ $items_type = $db->my_cdb_query($sql);
                                     <hr/>
                                     
                                     <div id="items_type">
-                                       <!-- <div class="item">
-                                             <select class="custom-select col-12" id="item_id" name="item_id">
-                                                <option value="0">--<?php echo $lang['left209'] ?>--</option>
-                                                <?php foreach ($items_type as $row) : ?>
+                                       <!-- 
+                                            <div class="item">
+                                                <select class="custom-select col-12" id="item_id" name="item_id">
+                                                    <option value="0">--<?php echo $lang['left209'] ?>--</option>
+                                                        <?php foreach ($items_type as $row) : ?>
                                                     <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . ' (+' . $row[2].')'; ?></option>
-                                                <?php endforeach; ?>
+                                                        <?php endforeach; ?>
                                             </select>
-                                            <div class="col-md-2">
-                                                <div align="">
-                                                    <button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['left999'] ?></button>
-                                                </div>
-                                            </div>
+                                            
                                        </div> -->
                                     </div>
 
                                     <hr>
+                                    <div class="row">
+                                      <div class="col-sm-12 col-md-6 col-lg-1">
+                                            <div align="">
+                                                <button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['left999'] ?></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <span class="text-secondary text-left">TOTALS</span>
