@@ -362,8 +362,8 @@ function loadItems(){
             '<label for="item_name">item</label>' +
             '<div class="input-group">' +
             '<select name="item_id" class="form-control input-sm">';
-             console.log(item);
-             item.forEach(function (description_item, index){
+             console.log(item.item);
+             item.item.forEach(function (description_item, index){
              console.log("AA" +description_item);
                 html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - ' + description_item.price +'</option>';
              });
