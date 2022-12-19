@@ -346,8 +346,11 @@ function loadItems(){
                 '</div>' +
                 '</div>';
             
-            html_code +=  '<div class="item">'+
-            '<select class="class="col-sm-12 col-md-6 col-lg-1" name="item_id">';
+            html_code +=  '<div class="col-sm-12 col-md-6 col-lg-1" name="item_id">'+
+            '<div class="form-group">' +
+            '<label for="item_name">item</label>' +
+            '<div class="input-group">' +
+            '<select name="item_id" class="form-control input-sm">';
             var interval2 = setInterval(function(){
             if(items_type.item) {
              items_type.item.forEach(function (item, index){
@@ -356,7 +359,9 @@ function loadItems(){
             } clearInterval(interval2);
         
              }, 500);
-                html_code + '</select> </div>';
+                html_code + '</select> </div> </div>';
+
+
                 html_code += '<div class="col-sm-12 col-md-6 col-lg-3">' +
                 '<div class="form-group">' +
                 '<label for="item_name">Special Item</label>' +
@@ -375,12 +380,12 @@ function loadItems(){
                 '</div>' +
                 '</div>' +
                 '</div>';
-            html_code += 
-                '<div class="col-sm-12 col-md-6 col-lg-1">' +
-                    '<div align="">'+
-                        '<button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus">Add Item</button>'+
-                    '</div>'+
-                '</div>';
+            // html_code += 
+            //     '<div class="col-sm-12 col-md-6 col-lg-1">' +
+            //         '<div align="">'+
+            //             '<button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus">Add Item</button>'+
+            //         '</div>'+
+            //     '</div>';
 
             html_code += '</div>';
 
