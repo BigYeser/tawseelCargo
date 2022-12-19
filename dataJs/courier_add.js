@@ -305,7 +305,51 @@ $('input[type=file]').on('change', function () {
 
     $('#selectItem').html('attached files (' + count_files + ')');
 });
+loadItems();
+var items_type = [{
+    qty: 1,
+    item: {
+        id: 1,
+        name: "Test",
+        price: 100,
+    },
+    total: 0,
+}];
 
+function loadItems(){
+    console.log("Hi");
+    // $('#items_type').html('');
+    var interval = setInterval(function(){
+    if(items_type) {
+        // console.log(items_type);
+        items_type.forEach(function (item, index) {
+        // console.log("Abd");
+         console.log(item.qty+" - "+item.item.name +" - "+item.total);
+    });
+        clearInterval(interval);
+     }
+    }, 500);
+    
+}
+
+function addItem(){
+    var interval = setInterval(function(){
+        if(items_type) {
+            items_type.push({
+                qty: 1,
+                item: {
+                    id: 1,
+                    name: "Test",
+                    price: 100,
+                },
+                total: 0,
+            });
+        clearInterval(interval);
+     }
+    }, 500);
+   
+    loadItems();
+}       
 function loadPackages() {
 
     $('#data_items').html('');

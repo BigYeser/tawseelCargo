@@ -911,53 +911,7 @@ $items_type = $db->my_cdb_query($sql);
     <script src="assets/js/input-js/intlTelInput.js"></script>
     <script src="assets/libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <script src="dataJs/courier_add.js"></script>
-    <script>
-    loadItems();
-    var items_type = [{
-        qty: 1,
-        item: {
-            id: 1,
-            name: "Test",
-            price: 100,
-        },
-        total: 0,
-    }];
-
-    function loadItems(){
-        console.log("Hi");
-        // $('#items_type').html('');
-        var interval = setInterval(function(){
-        if(items_type) {
-            // console.log(items_type);
-            items_type.forEach(function (item, index) {
-            // console.log("Abd");
-             console.log(item.qty+" - "+item.item.name +" - "+item.total);
-        });
-            clearInterval(interval);
-         }
-        }, 500);
-        
-    }
-
-    function addItem(){
-        var interval = setInterval(function(){
-            if(items_type) {
-                items_type.push({
-                    qty: 1,
-                    item: {
-                        id: 1,
-                        name: "Test",
-                        price: 100,
-                    },
-                    total: 0,
-                });
-            clearInterval(interval);
-         }
-        }, 500);
-       
-        loadItems();
-    }       
-    </script>
+    
 </body>
 
 </html>
