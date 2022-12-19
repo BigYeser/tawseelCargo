@@ -927,7 +927,7 @@ $items_type = $db->my_cdb_query($sql);
             console.log(items_type);
             items_type.forEach(function (item, index) {
             console.log("Abd");
-            console.log(item+" -> "+index);
+            console.log(item.qty+" - "+item.name +" "+item.total);
         });
             clearInterval(interval);
          }
@@ -936,11 +936,17 @@ $items_type = $db->my_cdb_query($sql);
     }
 
     function addItem(){
-        // items_type.push({
-        //     qty: 1,
-        //     name: "",
-        //     total: 0,
-        // });
+        var interval = setInterval(function(){
+            if(items_type) {
+                items_type.push({
+                    qty: 1,
+                    name: "",
+                    total: 0,
+            });
+            clearInterval(interval);
+         }
+        }, 500);
+       
         loadItems();
     }       
     </script>
