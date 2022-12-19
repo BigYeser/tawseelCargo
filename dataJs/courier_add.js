@@ -366,7 +366,7 @@ function loadItems(){
              item.item.forEach(function (description_item, index){
                 html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - ' + description_item.price +'</option>';
              });
-            html_code += ' </select></div> <div> </div>';
+            html_code += ' </select> </div> </div> </div>';
     
             html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
