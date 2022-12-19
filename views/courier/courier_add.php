@@ -628,7 +628,7 @@ $items_type = $db->my_cdb_query($sql);
                                     <hr/>
                                     
                                     <div class="items_type">
-                                       <div class="item">
+                                       <!-- <div class="item">
                                              <select class="custom-select col-12" id="item_id" name="item_id">
                                                 <option value="0">--<?php echo $lang['left209'] ?>--</option>
                                                 <?php foreach ($items_type as $row) : ?>
@@ -636,11 +636,11 @@ $items_type = $db->my_cdb_query($sql);
                                                 <?php endforeach; ?>
                                             </select>
                                             <div class="col-md-2">
-                                            <div align="">
-                                                <button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['left999'] ?></button>
+                                                <div align="">
+                                                    <button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['left999'] ?></button>
+                                                </div>
                                             </div>
-                                        </div>
-                                       </div>
+                                       </div> -->
                                     </div>
 
                                     <hr>
