@@ -368,6 +368,7 @@ function loadItems(){
             html_code += '</div>';
         
             $('#items_type').append(html_code);
+            console.log(html_code);
          console.log(item.qty+" - "+item.item.name +" - "+item.total);
     });
         clearInterval(interval);
