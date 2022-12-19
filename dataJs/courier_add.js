@@ -348,10 +348,11 @@ function loadItems(){
 
            
             var interval2 = setInterval(function(){
-                console.log(items_type.item);
-                console.log(items_type.item[0]);
-                console.log(items_type.item[1]);
-
+                if(items_type.item){
+                    console.log(items_type.item);
+                    console.log(items_type.item[0]);
+                    console.log(items_type.item[1]);
+                }
                 clearInterval(interval2);
             }, 500);
  
