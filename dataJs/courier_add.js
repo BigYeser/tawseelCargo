@@ -353,12 +353,13 @@ function loadItems(){
             '<select name="item_id" class="form-control input-sm">';
             var interval2 = setInterval(function(){
             if(items_type.item) {
+                console.log("Hello" + items_type.item);
              items_type.item.forEach(function (item, index){
+                console.log("AA" + item);
                     html_code += '<option value="'+ item.id+'">'+ item.name +' - ' + item.price +'</option>';
-                });
-            } clearInterval(interval2);
-        
-             }, 500);
+                    });
+                } clearInterval(interval2);
+            }, 500);
                 html_code + '</select> </div> </div>';
 
 
@@ -394,8 +395,7 @@ function loadItems(){
             html_code += '</div>';
         
             $('#items_type').append(html_code);
-            console.log(html_code);
-         console.log(item.qty+" - "+item.item.name +" - "+item.total);
+
     });
         clearInterval(interval);
      }
