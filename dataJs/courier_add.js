@@ -337,7 +337,7 @@ function loadItems(){
             html_code += '<div class="row"> ';
 
             
-            html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+            html_code += '<div class="col-sm-3 col-md-3 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="item_qty">Quantity</label>' +
                 '<div class="input-group">' +
@@ -357,22 +357,20 @@ function loadItems(){
             //     clearInterval(interval2);
             // }, 500);
  
-            html_code +=  '<div class="col-sm-12 col-md-6 col-lg-1" name="item_id">'+
+            html_code +=  '<div class="col-sm-3 col-md-3 col-lg-1" name="item_id">'+
             '<div class="form-group">' +
             '<label for="item_name">item</label>' +
-            '<div class="input-group">' +
-            '<select name="item_id" class="form-control input-sm" id="item_select">';
+            '<select name="item_name" class="form-control input-sm" id="item_select">';
              item.item.forEach(function (description_item, index){
                 html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - ' + description_item.price +'</option>';
              });
-            html_code + '</select> </div> </div> </div>';
+            html_code + '</select> </div> </div>';
     
-            html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
+            html_code += '<div class="col-sm-3 col-md-3 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="total">Total</label>' +
                 '<div class="input-group">' +
-                '<input type="text" value="' + 0 + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" disabled/>' +
-    
+                '<input type="text" value="' + 0 + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
