@@ -361,10 +361,12 @@ function loadItems(){
             '<div class="form-group">' +
             '<label for="item_name">item</label>' +
             '<select name="item_name" class="form-control input-sm" id="item_select">';
+            '<div class="input-group">' +
+
              item.item.forEach(function (description_item, index){
                 html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - ' + description_item.price +'</option>';
              });
-            html_code + '</select> </div> </div>';
+            html_code + '</select> </div> <div></div>';
     
             html_code += '<div class="col-sm-12 col-md-4 col-lg-1">' +
                 '<div class="form-group">' +
