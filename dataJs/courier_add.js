@@ -305,7 +305,7 @@ $('input[type=file]').on('change', function () {
 
     $('#selectItem').html('attached files (' + count_files + ')');
 });
-loadItems();
+
 var items_type = [{
     qty: 1,
     item: [
@@ -322,12 +322,13 @@ var items_type = [{
     ],
     total: 0,
 }];
+loadItems();
 
 function loadItems(){
     // $('#items_type').html('');
     var interval = setInterval(function(){
     if(items_type) {
-        // console.log(items_type);
+         console.log(items_type);
         $('#items_type').html('');
         items_type.forEach(function (item, index) {
             var html_code = '';
@@ -347,20 +348,21 @@ function loadItems(){
                 '</div>';
 
            
-            var interval2 = setInterval(function(){
-                if(items_type.item){
-                    console.log(items_type.item);
-                    console.log(items_type.item[0]);
-                    console.log(items_type.item[1]);
-                }
-                clearInterval(interval2);
-            }, 500);
+            // var interval2 = setInterval(function(){
+            //     if(items_type.item){
+            //         console.log(items_type.item);
+            //         console.log(items_type.item[0]);
+            //         console.log(items_type.item[1]);
+            //     }
+            //     clearInterval(interval2);
+            // }, 500);
  
             html_code +=  '<div class="col-sm-12 col-md-6 col-lg-1" name="item_id">'+
             '<div class="form-group">' +
             '<label for="item_name">item</label>' +
             '<div class="input-group">' +
-            '<select name="item_id" class="form-control input-sm">';
+            '<select name="item_id" class="form-control input-sm">'+
+            '<optrion>Hello</option>'
             // var interval2 = setInterval(function(){
             // if(items_type.item) {
             //     console.log("Hello" + items_type.item);
