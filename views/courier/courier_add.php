@@ -627,7 +627,7 @@ $items_type = $db->my_cdb_query($sql);
                                     <br/>
                                     <hr/>
                                     
-                                    <div class="items_type">
+                                    <div id="items_type">
                                        <!-- <div class="item">
                                              <select class="custom-select col-12" id="item_id" name="item_id">
                                                 <option value="0">--<?php echo $lang['left209'] ?>--</option>
