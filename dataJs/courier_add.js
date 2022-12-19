@@ -346,8 +346,7 @@ function loadItems(){
                 '</div>' +
                 '</div>';
             
-            html += 
-            '<div class="item">'+
+            html_code +=  '<div class="item">'+
             '<select class="class="col-sm-12 col-md-6 col-lg-1" name="item_id">';
                 items_type.item.forEach(function (item){
                     html_code += '<option value="'+ item.id+'">'+ item.name +' - ' + item.price +'</option>';
