@@ -912,7 +912,31 @@ $items_type = $db->my_cdb_query($sql);
     <script src="assets/libs/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <script src="dataJs/courier_add.js"></script>
     <script>
-     
+    loadItems();
+    var items_type = [{
+        qty: 1,
+        name: "",
+        total: 0,
+    }];
+
+    function loadItems(){
+        console.log("Hi");
+        // $('#items_type').html('');
+        console.log(items_type);
+        items_type.forEach(function (item, index) {
+            console.log("Abd");
+            console.log(item+" -> "+index);
+        });
+    }
+
+    function addItem(){
+        // items_type.push({
+        //     qty: 1,
+        //     name: "",
+        //     total: 0,
+        // });
+        loadItems();
+    }       
     </script>
 </body>
 
