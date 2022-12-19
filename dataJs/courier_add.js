@@ -361,29 +361,17 @@ function loadItems(){
             '<div class="form-group">' +
             '<label for="item_name">item</label>' +
             '<div class="input-group">' +
-            '<select name="item_id" class="form-control input-sm">';
-             console.log(item.item);
+            '<select name="item_id" class="form-control input-sm" id="item_select">';
              item.item.forEach(function (description_item, index){
-             console.log("AA" +description_item);
-                html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - ' + description_item.price +'</option>';
+                html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - ' + description_item.price +'</option>';
              });
-                html_code + '</select> </div> </div>';
-
-
-                html_code += '<div class="col-sm-12 col-md-6 col-lg-3">' +
-                '<div class="form-group">' +
-                '<label for="item_name">Special Item</label>' +
-                '<div class="input-group">' +
-                '<input type="text" value="' + item.item.name + '" name="item_name" id="item_name_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" placeholder="Select Your Item" >' +
-                '</div>' +
-                '</div>' +
-                '</div>';
+            html_code + '</select> </div> </div>';
     
             html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="total">Total</label>' +
                 '<div class="input-group">' +
-                '<input type="text" value="' + (item.qty * item.item.price) + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom"/>' +
+                '<input type="text" value="' + 0 + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom"/>' +
     
                 '</div>' +
                 '</div>' +
