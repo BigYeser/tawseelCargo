@@ -358,7 +358,7 @@ function loadItems(){
                 '</div>';
                 html_code += ' <div class="col-md-2">' +
                 '<div align="">'+
-                    '<button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang["left999"] ?></button>'+
+                    '<button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus">Add Item</button>'+
                 '</div>'+
                 '</div>';
             html_code += '</div>';
