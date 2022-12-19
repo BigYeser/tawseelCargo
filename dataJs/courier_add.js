@@ -366,14 +366,14 @@ function loadItems(){
              });
             html_code + '</select> </div> </div>';
     
-            // html_code += '<div class="col-sm-3 col-md-3 col-lg-1">' +
-            //     '<div class="form-group">' +
-            //     '<label for="total">Total</label>' +
-            //     '<div class="input-group">' +
-            //     '<input type="text" value="' + 0 + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
-            //     '</div>' +
-            //     '</div>' +
-            //     '</div>';
+            html_code += '<div class="col-sm-3 col-md-3 col-lg-1">' +
+                '<div class="form-group">' +
+                '<label for="total">Total</label>' +
+                '<div class="input-group">' +
+                '<input type="text" value="' + 0 + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
             // html_code += 
             //     '<div class="col-sm-12 col-md-6 col-lg-1">' +
             //         '<div align="">'+
@@ -381,10 +381,7 @@ function loadItems(){
             //         '</div>'+
             //     '</div>';
 
-            html_code += '</div>';
-
-            html_code += '<hr>';
-    
+            html_code += '</div>';    
             html_code += '</div>';
             console.log(html_code);
             $('#items_type').append(html_code);
