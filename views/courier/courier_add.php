@@ -922,11 +922,17 @@ $items_type = $db->my_cdb_query($sql);
     function loadItems(){
         console.log("Hi");
         // $('#items_type').html('');
-        console.log(items_type);
-        items_type.forEach(function (item, index) {
+        var interval = setInterval(function(){
+        if(items_type) {
+            console.log(items_type);
+            items_type.forEach(function (item, index) {
             console.log("Abd");
             console.log(item+" -> "+index);
         });
+            clearInterval(interval);
+         }
+        }, 500);
+        
     }
 
     function addItem(){
