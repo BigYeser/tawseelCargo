@@ -915,7 +915,11 @@ $items_type = $db->my_cdb_query($sql);
     loadItems();
     var items_type = [{
         qty: 1,
-        name: "",
+        item: {
+            id: 1,
+            name: "Test",
+            price: 100,
+        },
         total: 0,
     }];
 
@@ -924,10 +928,10 @@ $items_type = $db->my_cdb_query($sql);
         // $('#items_type').html('');
         var interval = setInterval(function(){
         if(items_type) {
-            console.log(items_type);
+            // console.log(items_type);
             items_type.forEach(function (item, index) {
-            console.log("Abd");
-            console.log(item.qty+" - "+item.name +" "+item.total);
+            // console.log("Abd");
+             console.log(item.qty+" - "+item.item.name +" - "+item.total);
         });
             clearInterval(interval);
          }
@@ -940,9 +944,13 @@ $items_type = $db->my_cdb_query($sql);
             if(items_type) {
                 items_type.push({
                     qty: 1,
-                    name: "",
+                    item: {
+                        id: 1,
+                        name: "Test",
+                        price: 100,
+                    },
                     total: 0,
-            });
+                });
             clearInterval(interval);
          }
         }, 500);
