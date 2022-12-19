@@ -322,18 +322,22 @@ function loadItems(){
     if(items_type) {
         // console.log(items_type);
         $('#items_type').html('');
-
         items_type.forEach(function (item, index) {
             var html_code = '';
             html_code += '<div  class= "card-hover" id="row_id_' + index + '">';
             html_code += '<hr>';
             html_code += '<div class="row"> ';
+
+
+
+
+
             html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="item_qty">Quantity</label>' +
                 '<div class="input-group">' +
     
-                '<input type="text" onchange="changePackage(this)" value="' + item.qty + '" onkeypress="return isNumberKey(event, this)"  name="item_qty_" id="item_qty_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Quantity"  value="1"  />' +
+                '<input type="text" value="' + item.qty + '" onkeypress="return isNumberKey(event, this)"  name="item_qty_" id="item_qty_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Quantity"  value="1"  />' +
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -342,7 +346,7 @@ function loadItems(){
                 '<div class="form-group">' +
                 '<label for="item_name">Special Item</label>' +
                 '<div class="input-group">' +
-                '<input type="text" onchange="changePackage(this)" value="' + item.name + '" name="item_name" id="item_name_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" placeholder="Select Your Item" >' +
+                '<input type="text" value="' + item.item.name + '" name="item_name" id="item_name_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" placeholder="Select Your Item" >' +
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -351,16 +355,18 @@ function loadItems(){
                 '<div class="form-group">' +
                 '<label for="total">Total</label>' +
                 '<div class="input-group">' +
-                '<input type="text" onchange="changePackage(this)" value="' + item.item.name + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom"/>' +
+                '<input type="text" value="' + (item.qty * item.item.price) + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom"/>' +
     
                 '</div>' +
                 '</div>' +
                 '</div>';
-                html_code += ' <div class="col-md-2">' +
-                '<div align="">'+
-                    '<button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus">Add Item</button>'+
-                '</div>'+
+            html_code += 
+                '<div class="col-sm-12 col-md-6 col-lg-1">' +
+                    '<div align="">'+
+                        '<button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus">Add Item</button>'+
+                    '</div>'+
                 '</div>';
+
             html_code += '</div>';
 
             html_code += '<hr>';
