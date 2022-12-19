@@ -348,9 +348,14 @@ function loadItems(){
             
             html_code +=  '<div class="item">'+
             '<select class="class="col-sm-12 col-md-6 col-lg-1" name="item_id">';
-                items_type.item.forEach(function (item){
+            var interval2 = setInterval(function(){
+            if(items_type.item) {
+             items_type.item.forEach(function (item, index){
                     html_code += '<option value="'+ item.id+'">'+ item.name +' - ' + item.price +'</option>';
                 });
+            } clearInterval(interval2);
+        
+             }, 500);
                 html_code + '</select> </div>';
                 html_code += '<div class="col-sm-12 col-md-6 col-lg-3">' +
                 '<div class="form-group">' +
