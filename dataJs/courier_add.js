@@ -337,7 +337,7 @@ function loadItems(){
             html_code += '<div class="row"> ';
 
             
-            html_code += '<div class="col-sm-12 col-md-4 col-lg-1">' +
+            html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="item_qty">Quantity</label>' +
                 '<div class="input-group">' +
@@ -357,7 +357,7 @@ function loadItems(){
             //     clearInterval(interval2);
             // }, 500);
  
-            html_code +=  '<div class="col-sm-12 col-md-4 col-lg-3" name="item_id">'+
+            html_code +=  '<div class="col-sm-12 col-md-6 col-lg-3" name="item_id">'+
             '<div class="form-group">' +
             '<label for="item_name">item</label>' +
             '<select name="item_name" class="form-control input-sm" id="item_select">';
@@ -366,13 +366,13 @@ function loadItems(){
              item.item.forEach(function (description_item, index){
                 html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - ' + description_item.price +'</option>';
              });
-            html_code + '</select> </div> <div></div>';
+            html_code += '</select> </div> <div> </div>';
     
-            html_code += '<div class="col-sm-12 col-md-4 col-lg-1">' +
+            html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="total_'+index+'">Total</label>' +
                 '<div class="input-group">' +
-                '<input type="text" value="' + 0 + '" onkeypress="return isNumberKey(event, this)"  name="total" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
+                '<input type="text" value="' + 0 + '" name="total_' + index + '" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
