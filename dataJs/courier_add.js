@@ -337,7 +337,7 @@ function loadItems(){
             html_code += '<div class="row"> ';
 
             
-            html_code += '<div class="col-sm-3 col-md-3 col-lg-1">' +
+            html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="item_qty">Quantity</label>' +
                 '<div class="input-group">' +
@@ -357,7 +357,7 @@ function loadItems(){
             //     clearInterval(interval2);
             // }, 500);
  
-            html_code +=  '<div class="col-sm-3 col-md-3 col-lg-1" name="item_id">'+
+            html_code +=  '<div class="col-sm-12 col-md-6 col-lg-3" name="item_id">'+
             '<div class="form-group">' +
             '<label for="item_name">item</label>' +
             '<select name="item_name" class="form-control input-sm" id="item_select">';
