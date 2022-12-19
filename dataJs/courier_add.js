@@ -345,21 +345,24 @@ function loadItems(){
                 '</div>' +
                 '</div>' +
                 '</div>';
-            
+
+            console.log(items_type.item);
+            console.log(items_type.item[0]);
+            console.log(items_type.item[1]);
             html_code +=  '<div class="col-sm-12 col-md-6 col-lg-1" name="item_id">'+
             '<div class="form-group">' +
             '<label for="item_name">item</label>' +
             '<div class="input-group">' +
             '<select name="item_id" class="form-control input-sm">';
-            var interval2 = setInterval(function(){
-            if(items_type.item) {
-                console.log("Hello" + items_type.item);
-             items_type.item.forEach(function (item, index){
-                console.log("AA" + item);
-                    html_code += '<option value="'+ item.id+'">'+ item.name +' - ' + item.price +'</option>';
-                    });
-                } clearInterval(interval2);
-            }, 500);
+            // var interval2 = setInterval(function(){
+            // if(items_type.item) {
+            //     console.log("Hello" + items_type.item);
+            //  items_type.item.forEach(function (item, index){
+            //     console.log("AA" +item);
+            //         html_code += '<option value="'+ item.id+'">'+ item.name +' - ' + item.price +'</option>';
+            //         });
+            //     } clearInterval(interval2);
+            // }, 500);
                 html_code + '</select> </div> </div>';
 
 
