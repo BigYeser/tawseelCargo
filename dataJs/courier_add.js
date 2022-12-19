@@ -366,7 +366,7 @@ function loadItems(){
              });
             html_code + '</select> </div> </div>';
     
-            html_code += '<div class="col-sm-3 col-md-3 col-lg-1">' +
+            html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
                 '<label for="total">Total</label>' +
                 '<div class="input-group">' +
