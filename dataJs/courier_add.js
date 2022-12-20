@@ -385,10 +385,10 @@ function loadItems(){
             '<div class="form-group">' +
             '<label for="item_name">Item</label>' +
             '<div class="input-group">' +
-            '<select name="item_name" class="form-control input-sm" id="itemSelect_ '+ index +'">';
+            '<select name="item_name"  onchange="changeItem(this)" class="form-control input-sm" id="itemSelect_ '+ index +'">';
 
              item.item.forEach(function (description_item, index){
-                html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - (' + description_item.price +' AED)</option>';
+                html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - (' + description_item.price +' AED)</option>';
              });
              
             html_code += ' </select> </div> </div> </div>';
