@@ -783,20 +783,7 @@ function calculateFinalTotal(element = null) {
     var total_envio = (sumador_total - total_descuento) + total_seguro + total_impuesto + total_impuesto_aduanero + total_valor_declarado + max_fixed_charge + reexpedicion_value;
     //todo:
     var total_items = 0;
-    var interval = setInterval(function(){
-        if(items_type) {
-            items_type.forEach(function(item,index){
-                total_items += item.total;
-            });
-            $('#items_total').val(total_items);
-            $('#items_total_span').html(total_items);
-            console.log(total_items);
-            console.log(total_envio);
-            total_envio += total_items;
-            console.log(total_envio);
-            clearInterval(interval);
-        }
-    }, 500);
+   
     var order_package = $('#order_package').val();
     if(order_package == "40"){
         total_envio +=  (parseInt(Math.ceil(total_weight / 25)) * 10);
@@ -811,7 +798,22 @@ function calculateFinalTotal(element = null) {
         $('#discount_value').val(0);
         return false;
     }
+    var interval = setInterval(function(){
+        if(items_type) {
+            items_type.forEach(function(item,index){
+                total_items += item.total;
+            });
+            $('#items_total').val(total_items);
+            $('#items_total_span').html(total_items);
+            console.log(total_items);
+            console.log(total_envio);
+            total_envio += total_items;
+            $('#total_envio').html(total_envio.toFixed(2));
 
+            console.log(total_envio);
+            clearInterval(interval);
+        }
+    }, 500);
     $('#subtotal').html(sumador_total.toFixed(2));
     // $('#total_declared').html(sumador_valor_declarado);
     $('#discount').html(total_descuento.toFixed(2));
@@ -823,7 +825,6 @@ function calculateFinalTotal(element = null) {
     // $('#total_volumetrico').html(sumador_volumetric);
     // $('#total_peso').html(total_peso);
     $('#total_impuesto_aduanero').html(total_impuesto_aduanero.toFixed(2));
-    $('#total_envio').html(total_envio.toFixed(2));
     $('#total_weight').html(sumador_libras.toFixed(2));
     $('#total_vol_weight').html(sumador_volumetric.toFixed(2));
     $('#total_fixed').html(max_fixed_charge.toFixed(2));
