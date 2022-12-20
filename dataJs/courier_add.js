@@ -483,7 +483,9 @@ function changeItem(e) {
                 if (index === parseInt(field[1])) {
                     item[e.name] = e.value;
                 }
-                $('#total_' + index).val(5);
+                var qty = $('$itemQty_'+index).val();
+                console.log(e);
+                $('#total_' + index).val(qty * 5);
                 return item
             });
             clearInterval(interval);
