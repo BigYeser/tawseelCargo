@@ -678,7 +678,6 @@ function deletePackage(index) {
 
 function changePackage(e) {
 
-    console.log("Hello");
     var field = e.id.split('_')
     packagesItems = packagesItems.map(function (item, index) {
 
@@ -789,10 +788,12 @@ function calculateFinalTotal(element = null) {
             items_type.forEach(function(item,index){
                 total_items += item.total;
             });
-            console.log(total_items);
             $('#items_total').val(total_items);
             $('#items_total_span').html(total_items);
+            console.log(total_items);
+            console.log(total_envio);
             total_envio += total_items;
+            console.log(total_envio);
             clearInterval(interval);
         }
     }, 500);
