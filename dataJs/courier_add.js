@@ -405,7 +405,7 @@ function loadItems(){
                 '<div class="form-group">' +
                 '<label for="total_'+index+'">Total</label>' +
                 '<div class="input-group">' +
-                '<input type="text" value="' + 100 + '" name="total_' + index + '" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
+                '<input type="text" value="' + 0 + '" name="total_' + index + '" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -780,14 +780,13 @@ function calculateFinalTotal(element = null) {
         if(items_type) {
             items_type.forEach(function(item,index){
                 total_items += item.total;
+                console.log(item);
             });
             clearInterval(interval);
         }
     }, 500);
-    console.log(total_items);
     total_envio += total_items;
-    console.log(total_envio);
-
+    $('items_total').val(total_items);
     var order_package = $('#order_package').val();
     if(order_package == "40"){
         total_envio +=  (parseInt(Math.ceil(total_weight / 25)) * 10);
