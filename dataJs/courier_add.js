@@ -385,7 +385,7 @@ function loadItems(){
             '<div class="form-group">' +
             '<label for="item_name">Item</label>' +
             '<div class="input-group">' +
-            '<select name="item_name_'+index+'"  onchange="changeItem(this)" class="form-control input-sm" id="itemSelect_ '+ index +'">';
+            '<select name="item_name_'+index+'"  onchange="changeItem(this)" class="form-control input-sm" id="item_name_'+index+'">';
 
              item.item.forEach(function (description_item, i){
                 html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - (' + description_item.price +' AED)</option>';
@@ -485,9 +485,8 @@ function changeItem(e) {
                 }
                 var qty = $('#itemQty_'+index).val();               
                 var id = $('#item_name_'+index).val();
-                console.log(id);
-                var price = items_type[index].item[0].price;
-                console.log(price);
+                var price = items_type[index].item[id].price;
+                console.log(id+" "+price);
                 $('#total_' + index).val(qty * price);
                 return item
             });
