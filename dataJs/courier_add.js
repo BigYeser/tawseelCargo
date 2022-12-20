@@ -360,7 +360,6 @@ function loadItems(){
     // $('#items_type').html('');
     var interval = setInterval(function(){
     if(items_type) {
-         console.log(items_type);
         $('#items_type').html('');
         items_type.forEach(function (item, index) {
             var html_code = '';
@@ -420,7 +419,6 @@ function loadItems(){
             html_code += '</div>';    
             html_code += '</div>';
             html_code += '<hr>';
-
             $('#items_type').append(html_code);
 
     });
@@ -499,11 +497,13 @@ function changeItem(e) {
                 }
                 var qty = $('#itemQty_'+index).val();               
                 var id = $('#item_name_'+index).val();
-                var price = items_type[index].item[id - 1].price;
-                console.log(id+" "+price);
-                $('#total_' + index).val(qty * price);
+                var price = items_type[index].item[id].price;
+                var total  = price * qty;
+                items_type[index].total = total;
+                $('#total_' + index).val(total);
                 return item
             });
+
             clearInterval(interval);
             calculateFinalTotal();
             $('#create_invoice').attr("disabled", true);
@@ -775,6 +775,19 @@ function calculateFinalTotal(element = null) {
     total_impuesto_aduanero = total_peso * tariffs_value;
     var total_envio = (sumador_total - total_descuento) + total_seguro + total_impuesto + total_impuesto_aduanero + total_valor_declarado + max_fixed_charge + reexpedicion_value;
     //todo:
+    var total_items = 0;
+    var interval = setInterval(function(){
+        if(items_type) {
+            items_type.forEach(function(item,index){
+                total_items += item.total;
+            });
+            clearInterval(interval);
+        }
+    }, 500);
+    console.log(total_items);
+    total_envio += total_items;
+    console.log(total_envio);
+
     var order_package = $('#order_package').val();
     if(order_package == "40"){
         total_envio +=  (parseInt(Math.ceil(total_weight / 25)) * 10);
