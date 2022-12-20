@@ -483,7 +483,7 @@ function changeItem(e) {
                 if (index === parseInt(field[1])) {
                     item[e.name] = e.value;
                 }
-
+                $('#total_' + index).val(5);
                 return item
             });
             clearInterval(interval);
