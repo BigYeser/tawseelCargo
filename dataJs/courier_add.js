@@ -310,6 +310,11 @@ var items_type = [{
     qty: 1,
     item: [
         {
+            id: 0,
+            name: "Select Item",
+            price: 0,
+        },
+        {
             id: 1,
             name: "Mobile",
             price: 100,
@@ -348,6 +353,7 @@ var items_type = [{
     ],
     total: 100,
 }];
+
 loadItems();
 
 function loadItems(){
@@ -397,7 +403,7 @@ function loadItems(){
                 '<div class="form-group">' +
                 '<label for="total_'+index+'">Total</label>' +
                 '<div class="input-group">' +
-                '<input type="text" value="' + 0 + '" name="total_' + index + '" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
+                '<input type="text" value="' + 100 + '" name="total_' + index + '" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -427,6 +433,11 @@ function addItem(){
             items_type.push({
                 qty: 1,
                 item: [
+                    {
+                        id: 0,
+                        name: "Select Item",
+                        price: 0,
+                    },
                     {
                         id: 1,
                         name: "Mobile",
@@ -485,7 +496,7 @@ function changeItem(e) {
                 }
                 var qty = $('#itemQty_'+index).val();               
                 var id = $('#item_name_'+index).val();
-                var price = items_type[index].item[id].price;
+                var price = items_type[index].item[id - 1].price;
                 console.log(id+" "+price);
                 $('#total_' + index).val(qty * price);
                 return item
