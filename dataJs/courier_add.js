@@ -351,7 +351,7 @@ var items_type = [{
         }
 
     ],
-    total: 100,
+    total: 0,
 }];
 
 loadItems();
@@ -394,7 +394,10 @@ function loadItems(){
             '<select name="item_name_'+index+'"  onchange="changeItem(this)" class="form-control input-sm" id="item_name_'+index+'">';
 
              item.item.forEach(function (description_item, i){
-                html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - (' + description_item.price +' AED)</option>';
+                if(i == 0)
+                    html_code += '<option value="'+ description_item.id+'">'+ description_item.name+'</option>';
+                else
+                    html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - (' + description_item.price +' AED)</option>';
              });
              
             html_code += ' </select> </div> </div> </div>';
@@ -475,7 +478,7 @@ function addItem(){
                     }
 
                 ],
-                total: 100,
+                total: 0,
     });
         clearInterval(interval);
      }
