@@ -791,7 +791,7 @@ function calculateFinalTotal(element = null) {
             });
             console.log(total_items);
             $('#items_total').val(total_items);
-            $('#items_total_span').val(total_items);
+            $('#items_total_span').html(total_items);
             total_envio += total_items;
             clearInterval(interval);
         }
