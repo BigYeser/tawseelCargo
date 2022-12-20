@@ -346,7 +346,7 @@ var items_type = [{
         }
 
     ],
-    total: 0,
+    total: 100,
 }];
 loadItems();
 
@@ -359,16 +359,14 @@ function loadItems(){
         items_type.forEach(function (item, index) {
             var html_code = '';
             html_code += '<div  class= "card-hover" id="row_id_' + index + '">';
-            html_code += '<hr>';
             html_code += '<div class="row"> ';
 
-            
             html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
                 '<div class="form-group">' +
-                '<label for="item_qty">Quantity</label>' +
+                '<label for="itemQty_">Quantity</label>' +
                 '<div class="input-group">' +
     
-                '<input type="text" value="' + item.qty + '" onkeypress="return isNumberKey(event, this)"  name="item_qty_" id="item_qty_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Quantity"  value="1"  />' +
+                '<input type="text" value="' + item.qty + '" onchange="changeItem(this)" onkeypress="return isNumberKey(event, this)"  name="itemQty_" id="itemQty_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" title="Quantity"  value="1"  />' +
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -385,13 +383,14 @@ function loadItems(){
  
             html_code +=  '<div class="col-sm-12 col-md-6 col-lg-3" name="item_id">'+
             '<div class="form-group">' +
-            '<label for="item_name">item</label>' +
+            '<label for="item_name">Item</label>' +
             '<div class="input-group">' +
-            '<select name="item_name" class="form-control input-sm" id="item_select">';
+            '<select name="item_name" class="form-control input-sm" id="itemSelect_ '+ index +'">';
 
              item.item.forEach(function (description_item, index){
-                html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - ' + description_item.price +'</option>';
+                html_code += '<option value="'+ description_item.id+'" onchange="changeItem(this)">'+ description_item.name +' - (' + description_item.price +' AED)</option>';
              });
+             
             html_code += ' </select> </div> </div> </div>';
     
             html_code += '<div class="col-sm-12 col-md-6 col-lg-1">' +
@@ -411,7 +410,8 @@ function loadItems(){
 
             html_code += '</div>';    
             html_code += '</div>';
-            console.log(html_code);
+            html_code += '<hr>';
+
             $('#items_type').append(html_code);
 
     });
@@ -464,7 +464,7 @@ function addItem(){
                     }
 
                 ],
-                total: 0,
+                total: 100,
     });
         clearInterval(interval);
      }
@@ -472,6 +472,28 @@ function addItem(){
    
     loadItems();
 }       
+
+function changeItem(e) {
+
+    var field = e.id.split('_')
+    var interval = setInterval(function(){
+        if(items_type) {
+            items_type = items_type.map(function (item, index) {
+
+                if (index === parseInt(field[1])) {
+                    item[e.name] = e.value;
+                }
+
+                return item
+            });
+            clearInterval(interval);
+            calculateFinalTotal();
+            $('#create_invoice').attr("disabled", true);
+        }
+       }, 500);
+   
+}
+
 function loadPackages() {
 
     $('#data_items').html('');
@@ -584,7 +606,6 @@ function loadPackages() {
 }
 
 
-
 function addPackage() {
 
     packagesItems.push({
@@ -631,6 +652,7 @@ function deletePackage(index) {
 
 function changePackage(e) {
 
+    console.log("Hello");
     var field = e.id.split('_')
     packagesItems = packagesItems.map(function (item, index) {
 

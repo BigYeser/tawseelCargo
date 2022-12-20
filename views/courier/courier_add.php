@@ -639,7 +639,6 @@ $items_type = $db->my_cdb_query($sql);
                                        </div> -->
                                     </div>
 
-                                    <hr/>
                                     <div class="row">
                                       <div class="col-sm-12 col-md-6 col-lg-1">
                                             <div align="">
