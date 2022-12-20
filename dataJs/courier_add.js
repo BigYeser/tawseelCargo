@@ -484,8 +484,9 @@ function changeItem(e) {
                     item[e.name] = e.value;
                 }
                 var qty = $('#itemQty_'+index).val();
-                console.log(e);
-                $('#total_' + index).val(qty * 5);
+                var price = items_type[index].item.price;
+                console.log(price);
+                $('#total_' + index).val(qty * price);
                 return item
             });
             clearInterval(interval);
