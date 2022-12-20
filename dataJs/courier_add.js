@@ -781,13 +781,13 @@ function calculateFinalTotal(element = null) {
         if(items_type) {
             items_type.forEach(function(item,index){
                 total_items += item.total;
-                console.log(item);
             });
+            console.log(total_items);
+            total_envio += total_items;
+            $('#items_total').val(total_items);
             clearInterval(interval);
         }
     }, 500);
-    total_envio += total_items;
-    $('#items_total').val(total_items);
     var order_package = $('#order_package').val();
     if(order_package == "40"){
         total_envio +=  (parseInt(Math.ceil(total_weight / 25)) * 10);
