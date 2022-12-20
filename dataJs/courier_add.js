@@ -352,6 +352,7 @@ var items_type = [{
 
     ],
     total: 0,
+    selectedInedx : 0,
 }];
 
 loadItems();
@@ -393,10 +394,14 @@ function loadItems(){
             '<select name="item_name_' + index + '"  onchange="changeItem(this)" class="form-control input-sm" id="item_name_'+index+'">';
 
              item.item.forEach(function (description_item, i){
+                var isSelected = "";
+                if(i == item.selectedInedx)
+                    isSelected = "selected";
+
                 if(i == 0)
-                    html_code += '<option value="'+ description_item.id+'">'+ description_item.name+'</option>';
+                    html_code += '<option value="'+ description_item.id+'" '+isSelected+'>'+ description_item.name+'</option>';
                 else
-                    html_code += '<option value="'+ description_item.id+'">'+ description_item.name +' - (' + description_item.price +' AED)</option>';
+                    html_code += '<option value="'+ description_item.id+'" '+isSelected+'>'+ description_item.name +' - (' + description_item.price +' AED)</option>';
              });
              
             html_code += ' </select> </div> </div> </div>';
@@ -405,7 +410,7 @@ function loadItems(){
                 '<div class="form-group">' +
                 '<label for="total_'+index+'">Total</label>' +
                 '<div class="input-group">' +
-                '<input type="text" value="' + 0 + '" name="total_' + index + '" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
+                '<input type="text" value="' + item.total + '" name="total_' + index + '" id="total_' + index + '" class="form-control input-sm" data-toggle="tooltip" data-placement="bottom" readonly/>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -477,6 +482,7 @@ function addItem(){
 
                 ],
                 total: 0,
+                selectedInedx: 0,
     });
         clearInterval(interval);
      }
@@ -498,6 +504,7 @@ function changeItem(e) {
                 var qty = $('#itemQty_'+index).val();               
                 var id = $('#item_name_'+index).val();
                 var price = items_type[index].item[id].price;
+                items_type[index].selectedInedx = id;
                 var total  = price * qty;
                 items_type[index].total = total;
                 items_type[index].qty = qty;
