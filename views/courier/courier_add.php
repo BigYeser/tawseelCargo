@@ -626,27 +626,7 @@ $items_type = $db->my_cdb_query($sql);
                                     <div id="data_items"></div>
                                     <br/>
                                     
-                                    <div id="items_type">
-                                       <!-- 
-                                            <div class="item">
-                                                <select class="custom-select col-12" id="item_id" name="item_id">
-                                                    <option value="0">--<?php echo $lang['left209'] ?>--</option>
-                                                        <?php foreach ($items_type as $row) : ?>
-                                                    <option value="<?php echo $row[0]; ?>"><?php echo $row[1] . ' (+' . $row[2].')'; ?></option>
-                                                        <?php endforeach; ?>
-                                            </select>
-                                            
-                                       </div> -->
-                                    </div>
-
-                                    <div class="row">
-                                      <div class="col-sm-12 col-md-6 col-lg-1">
-                                            <div align="">
-                                                <button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['left999'] ?></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr/>
+                                  
                                     <div class="row">
                                         <div class="col-md-4">
                                             <span class="text-secondary text-left">TOTALS</span>
@@ -664,8 +644,18 @@ $items_type = $db->my_cdb_query($sql);
                                             <span class="text-secondary text-center" id="total_declared">0.00</span>
                                         </div>
                                     </div>
-                                    <hr>
+                                    <div id="items_type">
+                                    
+                                    </div>
 
+                                    <div class="row">
+                                      <div class="col-sm-12 col-md-6 col-lg-1">
+                                            <div align="">
+                                                <button type="button" onclick="addItem()" name="add_item" id="add_item" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['left999'] ?></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
                                     <div class="row" style="margin-top: 20px;">
                                         <div class="table-responsive d-none" id="table-totals">
                                             <table id="insvoice-item-table" class="table">

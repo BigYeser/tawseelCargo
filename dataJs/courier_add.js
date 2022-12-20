@@ -500,6 +500,7 @@ function changeItem(e) {
                 var price = items_type[index].item[id].price;
                 var total  = price * qty;
                 items_type[index].total = total;
+                items_type[index].qty = qty;
                 $('#total_' + index).val(total);
                 return item
             });
@@ -786,11 +787,10 @@ function calculateFinalTotal(element = null) {
         }
     }, 500);
     total_envio += total_items;
-    $('items_total').val(total_items);
+    $('#items_total').val(total_items);
     var order_package = $('#order_package').val();
     if(order_package == "40"){
         total_envio +=  (parseInt(Math.ceil(total_weight / 25)) * 10);
-        console.log("Add (total_weight / 2.5) to value");
     }
     total_envio += 60;
     if (total_descuento > sumador_total) {
