@@ -360,7 +360,7 @@ function loadItems(){
     // $('#items_type').html('');
     var interval = setInterval(function(){
     if(items_type) {
-        $('#items_type').html('');
+        // $('#items_type').html('');
         items_type.forEach(function (item, index) {
             var html_code = '';
             html_code += '<div  class= "card-hover" id="row_id_' + index + '">';
@@ -783,8 +783,9 @@ function calculateFinalTotal(element = null) {
                 total_items += item.total;
             });
             console.log(total_items);
-            total_envio += total_items;
             $('#items_total').val(total_items);
+            $('#items_total_span').val(total_items);
+            total_envio += total_items;
             clearInterval(interval);
         }
     }, 500);

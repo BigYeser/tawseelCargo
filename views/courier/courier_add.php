@@ -689,7 +689,7 @@ $items_type = $db->my_cdb_query($sql);
                                                             <?php
                                                             }
                                                             ?>
-                                                            <span id="impuesto"> 0.00</span>
+                                                            <span id="items_total_span"> 0.00</span>
                                                         </td>
                                                         <td></td>
                                                     </tr>
