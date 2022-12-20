@@ -360,7 +360,7 @@ function loadItems(){
     // $('#items_type').html('');
     var interval = setInterval(function(){
     if(items_type) {
-        // $('#items_type').html('');
+        $('#items_type').html('');
         items_type.forEach(function (item, index) {
             var html_code = '';
             html_code += '<div  class= "card-hover" id="row_id_' + index + '">';
@@ -390,7 +390,7 @@ function loadItems(){
             '<div class="form-group">' +
             '<label for="item_name">Item</label>' +
             '<div class="input-group">' +
-            '<select name="item_name_'+index+'"  onchange="changeItem(this)" class="form-control input-sm" id="item_name_'+index+'">';
+            '<select name="item_name_' + index + '"  onchange="changeItem(this)" class="form-control input-sm" id="item_name_'+index+'">';
 
              item.item.forEach(function (description_item, i){
                 if(i == 0)
