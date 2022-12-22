@@ -965,35 +965,36 @@ $("#invoice_form").on('submit', function (event) {
         data.append('filesMultiple[]', document.getElementById('filesMultiple').files[i])
     }
 
-    $.ajax({
-        type: "POST",
-        url: "ajax/courier/add_courier_ajax.php",
-        data: data,
-        contentType: false,
-        dataType: 'json',
-        cache: false,             // To unable request pages to be cached
-        processData: false,
-        beforeSend: function (objeto) {
-            $('#create_invoice').attr("disabled", true);
-            Swal.fire({
-                title: 'Wait a moment please...',
-                allowOutsideClick: false,
-                didOpen: () => {
-                    Swal.showLoading()
-                }
-            })
-        },
-        success: function (data) {
-            $('#create_invoice').attr("disabled", false);
-            if (data.success) {
-                cdp_showSuccess(data.messages, data.shipment_id)
-            } else {
-                cdp_showError(data.errors)
-            }
-        }
-    });
+    console.log(data);
+    // $.ajax({
+    //     type: "POST",
+    //     url: "ajax/courier/add_courier_ajax.php",
+    //     data: data,
+    //     contentType: false,
+    //     dataType: 'json',
+    //     cache: false,             // To unable request pages to be cached
+    //     processData: false,
+    //     beforeSend: function (objeto) {
+    //         $('#create_invoice').attr("disabled", true);
+    //         Swal.fire({
+    //             title: 'Wait a moment please...',
+    //             allowOutsideClick: false,
+    //             didOpen: () => {
+    //                 Swal.showLoading()
+    //             }
+    //         })
+    //     },
+    //     success: function (data) {
+    //         $('#create_invoice').attr("disabled", false);
+    //         if (data.success) {
+    //             cdp_showSuccess(data.messages, data.shipment_id)
+    //         } else {
+    //             cdp_showError(data.errors)
+    //         }
+    //     }
+    // });
 
-    event.preventDefault();
+    // event.preventDefault();
 
 })
 
