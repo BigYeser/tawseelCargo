@@ -72,23 +72,23 @@
 
 
 							<!-- Module shipment-->
-							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-package-variant"></i><span class="hide-menu"> <?php echo $lang['shipment'] ?></span></a>
+							<!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-package-variant"></i><span class="hide-menu"> <?php echo $lang['shipment'] ?></span></a>
 								<ul aria-expanded="false" class="collapse  first-level">
 
-									<li class="sidebar-item"><a href="dashboard_admin_shipments.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['leftnew04'] ?></span></a></li>
-
-									<li class="sidebar-item"><a href="courier_add.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['createshipment'] ?> </span></a></li>
-
-									<li class="sidebar-item" style="display: none;"><a href="courier_add_multiple.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['createshipment_multiple'] ?> </span></a></li>
-
-									<li class="sidebar-item"><a href="courier_list.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['shipmentlist'] ?> </span></a></li>
-
-									<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="payments_gateways_courier_list.php" aria-expanded="false"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"><?php echo $lang['leftnew03'] ?> </span></a></li>
-
-
+									
 
 								</ul>
-							</li>
+							</li> -->
+							<li class="sidebar-item"><a href="dashboard_admin_shipments.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['leftnew04'] ?></span></a></li>
+
+							<li class="sidebar-item"><a href="courier_add.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['createshipment'] ?> </span></a></li>
+
+							<li class="sidebar-item" style="display: none;"><a href="courier_add_multiple.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['createshipment_multiple'] ?> </span></a></li>
+
+							<li class="sidebar-item"><a href="courier_list.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['shipmentlist'] ?> </span></a></li>
+
+							<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="payments_gateways_courier_list.php" aria-expanded="false"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"><?php echo $lang['leftnew03'] ?> </span></a></li>
+
 
 							<!-- Module pickup-->
 							<li class="sidebar-item" style="display:none ;"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> Pickup</span></a>
