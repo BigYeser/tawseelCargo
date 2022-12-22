@@ -956,14 +956,13 @@ $("#invoice_form").on('submit', function (event) {
     if (declared_value_tax) { data.append('declared_value_tax', declared_value_tax) }
     if (tariffs_value) { data.append('tariffs_value', tariffs_value) }
     if (insurance_value) { data.append('insurance_value', insurance_value) }
-    if (items_total) {data.append('items_total', items_total)}
+    data.append('items_total', items_total);
     if (notify_whatsapp_sender) { data.append('notify_whatsapp_sender', notify_whatsapp_sender) }
     if (notify_sms_sender) { data.append('notify_sms_sender', notify_sms_sender) }
     if (notify_whatsapp_receiver) { data.append('notify_whatsapp_receiver', notify_whatsapp_receiver) }
     if (notify_sms_receiver) { data.append('notify_sms_receiver', notify_sms_receiver) }
     if (deleted_file_ids) { data.append('deleted_file_ids', deleted_file_ids) }
     data.append('plasticBag',plasticBag);
-    console.log("A" + items_total);
     var total_file = document.getElementById("filesMultiple").files.length;
 
     for (var i = 0; i < total_file; i++) {
