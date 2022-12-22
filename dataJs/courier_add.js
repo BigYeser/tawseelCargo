@@ -882,7 +882,11 @@ $("#invoice_form").on('submit', function (event) {
             return false;
         }
     }
-
+    var order_package = $('#order_package').val();
+    var plasticBag = 0;
+    if(order_package == "40"){
+        plasticBag = (parseInt(Math.ceil(total_weight / 25)) * 10);
+    }
     var prefix_check = $('#prefix_check').val();
     var code_prefix = $('#code_prefix').val();
     var code_prefix2 = $('#code_prefix2').val();
@@ -958,7 +962,7 @@ $("#invoice_form").on('submit', function (event) {
     if (notify_whatsapp_receiver) { data.append('notify_whatsapp_receiver', notify_whatsapp_receiver) }
     if (notify_sms_receiver) { data.append('notify_sms_receiver', notify_sms_receiver) }
     if (deleted_file_ids) { data.append('deleted_file_ids', deleted_file_ids) }
-
+    data.append('plasticBag',plasticBag);
     var total_file = document.getElementById("filesMultiple").files.length;
 
     for (var i = 0; i < total_file; i++) {

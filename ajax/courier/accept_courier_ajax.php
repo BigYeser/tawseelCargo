@@ -165,7 +165,7 @@ if (empty($errors)) {
             $reexpedicion_value = $_POST["reexpedicion_value"];
             $price_lb = $_POST["price_lb"];
             $insured_value = $_POST["insured_value"];
-
+            $plasticBag = $_POST['plasticBag'];
             foreach ($packages as $package) {
 
                 $dataAddresses = array(
@@ -213,7 +213,8 @@ if (empty($errors)) {
             $total_peso = $sumador_libras + $sumador_volumetric;
             $total_seguro = $insured_value * $insurance_value / 100;
             $total_impuesto_aduanero = $total_peso * $tariffs_value;
-            $total_envio = ($sumador_total - $total_descuento) + $total_seguro + $total_impuesto + $total_impuesto_aduanero + $total_valor_declarado + $max_fixed_charge + $reexpedicion_value;
+            
+            $total_envio = ($sumador_total - $total_descuento) + $total_seguro + $total_impuesto + $total_impuesto_aduanero + $total_valor_declarado + $max_fixed_charge + $reexpedicion_value + 60 + $items_total + $plasticBag;
         }
 
         $dataShipmentUpdateTotals = array(
