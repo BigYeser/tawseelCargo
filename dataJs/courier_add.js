@@ -962,7 +962,7 @@ $("#invoice_form").on('submit', function (event) {
     if (notify_whatsapp_receiver) { data.append('notify_whatsapp_receiver', notify_whatsapp_receiver) }
     if (notify_sms_receiver) { data.append('notify_sms_receiver', notify_sms_receiver) }
     if (deleted_file_ids) { data.append('deleted_file_ids', deleted_file_ids) }
-    data.append('plasticBag',plasticBag);
+    data.append('plasticBag', plasticBag);
     var total_file = document.getElementById("filesMultiple").files.length;
 
     for (var i = 0; i < total_file; i++) {

@@ -79,7 +79,7 @@
 
 									<li class="sidebar-item"><a href="courier_add.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['createshipment'] ?> </span></a></li>
 
-									<li class="sidebar-item"><a href="courier_add_multiple.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['createshipment_multiple'] ?> </span></a></li>
+									<li class="sidebar-item" style="display: none;"><a href="courier_add_multiple.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['createshipment_multiple'] ?> </span></a></li>
 
 									<li class="sidebar-item"><a href="courier_list.php" class="sidebar-link"><i class="ti ti-check" style="color:#975EF7"></i><span class="hide-menu"> <?php echo $lang['shipmentlist'] ?> </span></a></li>
 
@@ -91,7 +91,7 @@
 							</li>
 
 							<!-- Module pickup-->
-							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> Pickup</span></a>
+							<li class="sidebar-item" style="display:none ;"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-run-fast"></i><span class="hide-menu"> Pickup</span></a>
 								<ul aria-expanded="false" class="collapse  first-level">
 
 									<li class="sidebar-item"><a href="dashboard_admin_pickup.php" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> <?php echo $lang['leftnew05'] ?> </span></a></li>
@@ -116,7 +116,7 @@
 							</li>
 
 							<!-- Module consolidate-->
-							<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fas fa-boxes" style="color:#6610f2"></i><span class="hide-menu"> <?php echo $lang['conso-lidate'] ?></span></a>
+							<li class="sidebar-item" style="display:none ;"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fas fa-boxes" style="color:#6610f2"></i><span class="hide-menu"> <?php echo $lang['conso-lidate'] ?></span></a>
 								<ul aria-expanded="false" class="collapse  first-level">
 									<li class="sidebar-item"><a href="dashboard_admin_consolidated.php" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> <?php echo $lang['leftnew06'] ?></span></a></li>
 

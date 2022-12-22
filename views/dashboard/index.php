@@ -248,9 +248,10 @@ $db = new Conexion;
                                                 <div class="card-body border-bottom">
                                             
                                             </div>
-                                                <div class="d-flex align-items-center">
+                                                <div class="d-flex align-items-center" style="display:none;">
                                                     <div class="m-r-10"><span class="text-primary display-6"><i class="mdi mdi-basket"></i></span></div>
-                                                    <div><span class="text-muted"><?php echo $lang['dashnew13'] ?></span>
+                                                    <div>
+                                                        <span class="text-muted"><?php echo $lang['dashnew13'] ?></span>
                                                         <h4 class="font-medium m-b-0"><?php echo $core->currency; ?>
 
                                                             <?php
@@ -328,7 +329,7 @@ $db = new Conexion;
                                                     <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo cdb_money_format_bar($sum1) / 100; ?>%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </li>
-                                            <li class="m-t-30">
+                                            <li class="m-t-30" style="display: none;">
                                                 <div class="d-flex align-items-center">
                                                     <div>
                                                         <span class="text-muted"><?php echo $lang['dashnew17'] ?></span>
@@ -356,7 +357,7 @@ $db = new Conexion;
                                                     <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo cdb_money_format_bar($sum2) / 100; ?>%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </li>
-                                            <li class="m-t-30 m-b-40">
+                                            <li class="m-t-30 m-b-40" style="display: none;">
                                                 <div class="d-flex align-items-center">
                                                     <div>
                                                         <span class="text-muted"><?php echo $lang['dashnew18'] ?></span>
@@ -511,11 +512,11 @@ $db = new Conexion;
                                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-shipment" role="tab" aria-controls="pills-shipment" aria-selected="true"><?php echo $lang['dashnew19'] ?></a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    <li class="nav-item" style="display: none;">
                                         <a class="nav-link" id="pills-profile-tab" href="pickup_list.php"><?php echo $lang['dashnew20'] ?></a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    <li class="nav-item" style="display: none;">
                                         <a class="nav-link" id="pills-profile-tab" href="consolidate_list.php"><?php echo $lang['dashnew21'] ?></a>
                                     </li>
 
