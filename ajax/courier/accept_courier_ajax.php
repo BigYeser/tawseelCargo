@@ -161,6 +161,7 @@ if (empty($errors)) {
             $insurance_value = $_POST["insurance_value"];
             $tax_value = $_POST["tax_value"];
             $discount_value = $_POST["discount_value"];
+            $items_total = $_POST['items_total'];
             $reexpedicion_value = $_POST["reexpedicion_value"];
             $price_lb = $_POST["price_lb"];
             $insured_value = $_POST["insured_value"];
@@ -224,6 +225,7 @@ if (empty($errors)) {
             'tax_insurance_value' => floatval($insurance_value),
             'tax_custom_tariffis_value' => floatval($tariffs_value),
             'tax_value' => floatval($tax_value),
+            'items_total' => floatval($items_total),
             'declared_value' =>  floatval($declared_value_tax),
             'total_reexp' =>  floatval($reexpedicion_value),
             'total_declared_value' =>  floatval($total_valor_declarado),

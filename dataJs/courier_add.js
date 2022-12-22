@@ -917,7 +917,7 @@ $("#invoice_form").on('submit', function (event) {
     var tax_value = $('#tax_value').val();
     var declared_value_tax = $('#declared_value_tax').val();
     var tariffs_value = $('#tariffs_value').val();
-
+    var items_total = $('items_total').val();
     var deleted_file_ids = $('#deleted_file_ids').val();
 
     var data = new FormData();
@@ -952,7 +952,7 @@ $("#invoice_form").on('submit', function (event) {
     if (declared_value_tax) { data.append('declared_value_tax', declared_value_tax) }
     if (tariffs_value) { data.append('tariffs_value', tariffs_value) }
     if (insurance_value) { data.append('insurance_value', insurance_value) }
-
+    if (items_total) {data.append('items_total', items_total)}
     if (notify_whatsapp_sender) { data.append('notify_whatsapp_sender', notify_whatsapp_sender) }
     if (notify_sms_sender) { data.append('notify_sms_sender', notify_sms_sender) }
     if (notify_whatsapp_receiver) { data.append('notify_whatsapp_receiver', notify_whatsapp_receiver) }
@@ -965,36 +965,35 @@ $("#invoice_form").on('submit', function (event) {
         data.append('filesMultiple[]', document.getElementById('filesMultiple').files[i])
     }
 
-    console.log(data);
-    // $.ajax({
-    //     type: "POST",
-    //     url: "ajax/courier/add_courier_ajax.php",
-    //     data: data,
-    //     contentType: false,
-    //     dataType: 'json',
-    //     cache: false,             // To unable request pages to be cached
-    //     processData: false,
-    //     beforeSend: function (objeto) {
-    //         $('#create_invoice').attr("disabled", true);
-    //         Swal.fire({
-    //             title: 'Wait a moment please...',
-    //             allowOutsideClick: false,
-    //             didOpen: () => {
-    //                 Swal.showLoading()
-    //             }
-    //         })
-    //     },
-    //     success: function (data) {
-    //         $('#create_invoice').attr("disabled", false);
-    //         if (data.success) {
-    //             cdp_showSuccess(data.messages, data.shipment_id)
-    //         } else {
-    //             cdp_showError(data.errors)
-    //         }
-    //     }
-    // });
+    $.ajax({
+        type: "POST",
+        url: "ajax/courier/add_courier_ajax.php",
+        data: data,
+        contentType: false,
+        dataType: 'json',
+        cache: false,             // To unable request pages to be cached
+        processData: false,
+        beforeSend: function (objeto) {
+            $('#create_invoice').attr("disabled", true);
+            Swal.fire({
+                title: 'Wait a moment please...',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            })
+        },
+        success: function (data) {
+            $('#create_invoice').attr("disabled", false);
+            if (data.success) {
+                cdp_showSuccess(data.messages, data.shipment_id)
+            } else {
+                cdp_showError(data.errors)
+            }
+        }
+    });
 
-    // event.preventDefault();
+    event.preventDefault();
 
 })
 
