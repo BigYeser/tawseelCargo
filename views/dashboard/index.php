@@ -249,9 +249,9 @@ $db = new Conexion;
                                             
                                             </div>
                                                 <div class="d-flex align-items-center" style="display: none;">
-                                                    <div class="m-r-10"><span class="text-primary display-6"><i class="mdi mdi-basket"></i></span></div>
-                                                    <div>
-                                                        <span class="text-muted"><?php echo $lang['dashnew13'] ?></span>
+                                                    <div class="m-r-10" style="display: none;"><span class="text-primary" ><i class="mdi mdi-basket"></i></span></div>
+                                                    <div style="display: none;">
+                                                        <span class="text-muted" ><?php echo $lang['dashnew13'] ?></span>
                                                         <h4 class="font-medium m-b-0"><?php echo $core->currency; ?>
 
                                                             <?php
