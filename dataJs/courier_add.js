@@ -963,6 +963,7 @@ $("#invoice_form").on('submit', function (event) {
     if (notify_sms_receiver) { data.append('notify_sms_receiver', notify_sms_receiver) }
     if (deleted_file_ids) { data.append('deleted_file_ids', deleted_file_ids) }
     data.append('plasticBag',plasticBag);
+    console.log("A" + items_total);
     var total_file = document.getElementById("filesMultiple").files.length;
 
     for (var i = 0; i < total_file; i++) {
