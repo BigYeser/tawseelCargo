@@ -123,7 +123,7 @@ $userData = $user->cdp_getUserData();
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- ONLINE SHIPPING -->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6" style="display: none;">
                         <div class="card">
                             <div class="card-body">
                                 <!-- title -->
@@ -235,7 +235,7 @@ $userData = $user->cdp_getUserData();
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- PICK UP SHIPMENT -->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6" style="display: none;">
                         <div class="card">
                             <div class="card-body">
                                 <!-- title -->
@@ -291,7 +291,7 @@ $userData = $user->cdp_getUserData();
 
 
                     <!-- CONSOLIDATE -->
-                    <div class="col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-6" style="display: none;">
                         <div class="card">
                             <div class="card-body">
                                 <!-- title -->

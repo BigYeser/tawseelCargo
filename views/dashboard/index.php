@@ -158,9 +158,9 @@ $db = new Conexion;
                                             </div>
                                             <!-- col -->
                                             <div class="col-lg-6 col-md-6">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><a href="consolidate_list.php"><span class="text-danger display-6"><i class="mdi mdi-gift"></i></span></a></div>
-                                                    <div><span><?php echo $lang['dashnew09'] ?></span>
+                                                <div class="d-flex align-items-center" style="display: none ;">
+                                                    <div class="m-r-10" style="display: none ;"><a href="consolidate_list.php"><span class="text-danger display-6"><i class="mdi mdi-gift"></i></span></a></div>
+                                                    <div style="display: none ;"><span><?php echo $lang['dashnew09'] ?></span>
                                                         <h3 class="font-medium m-b-0">
                                                             <?php
 
