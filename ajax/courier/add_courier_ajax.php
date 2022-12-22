@@ -197,6 +197,8 @@ if (empty($errors)) {
             $reexpedicion_value = $_POST["reexpedicion_value"];
             $price_lb = $_POST["price_lb"];
             $insured_value = $_POST["insured_value"];
+            $items_total = $_POST['items_total'];
+            $plasticBag = $_POST['plasticBag'];
 
             foreach ($packages as $package) {
 
@@ -245,7 +247,7 @@ if (empty($errors)) {
             $total_peso = $sumador_libras + $sumador_volumetric;
             $total_seguro = $insured_value * $insurance_value / 100;
             $total_impuesto_aduanero = $total_peso * $tariffs_value;
-            $total_envio = ($sumador_total - $total_descuento) + $total_seguro + $total_impuesto + $total_impuesto_aduanero + $total_valor_declarado + $max_fixed_charge + $reexpedicion_value;
+            $total_envio = ($sumador_total - $total_descuento) + $total_seguro + $total_impuesto + $total_impuesto_aduanero + $total_valor_declarado + $max_fixed_charge + $reexpedicion_value + 60 + $items_total + $plasticBag;
         }
 
         $dataShipmentUpdateTotals = array(
@@ -257,6 +259,7 @@ if (empty($errors)) {
             'tax_insurance_value' => floatval($insurance_value),
             'tax_custom_tariffis_value' => floatval($tariffs_value),
             'tax_value' => floatval($tax_value),
+            'items_total' => floatval($items_total),
             'declared_value' =>  floatval($declared_value_tax),
             'total_reexp' =>  floatval($reexpedicion_value),
             'total_declared_value' =>  floatval($total_valor_declarado),
