@@ -956,7 +956,7 @@ $("#invoice_form").on('submit', function (event) {
     if (declared_value_tax) { data.append('declared_value_tax', declared_value_tax) }
     if (tariffs_value) { data.append('tariffs_value', tariffs_value) }
     if (insurance_value) { data.append('insurance_value', insurance_value) }
-    data.append('items_total', items_total);
+    data.append('items_total', 160);
     if (notify_whatsapp_sender) { data.append('notify_whatsapp_sender', notify_whatsapp_sender) }
     if (notify_sms_sender) { data.append('notify_sms_sender', notify_sms_sender) }
     if (notify_whatsapp_receiver) { data.append('notify_whatsapp_receiver', notify_whatsapp_receiver) }
