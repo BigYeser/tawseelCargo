@@ -248,7 +248,7 @@ $db = new Conexion;
                                                 <div class="card-body border-bottom">
                                             
                                             </div>
-                                                <div class="d-flex align-items-center" style="display:none;">
+                                                <div class="d-flex align-items-center" style="display: none;">
                                                     <div class="m-r-10"><span class="text-primary display-6"><i class="mdi mdi-basket"></i></span></div>
                                                     <div>
                                                         <span class="text-muted"><?php echo $lang['dashnew13'] ?></span>
