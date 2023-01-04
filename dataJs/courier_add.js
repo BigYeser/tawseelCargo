@@ -1539,6 +1539,7 @@ var reset = function () {
 // on blur: validate
 input.addEventListener('blur', function () {
     reset();
+    console.log(input)
     var iti = window.intlTelInput(input, {
         geoIpLookup: function (callback) {
             $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
