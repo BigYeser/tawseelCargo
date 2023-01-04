@@ -1514,19 +1514,18 @@ var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long
 
 
 var input = document.querySelector("#phone_custom");
-var iti = window.intlTelInput(input, {
-    geoIpLookup: function (callback) {
-        $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "";
-            callback(countryCode);
-        });
-    },
-    initialCountry: "auto",
-    nationalMode: true,
-
-    separateDialCode: true,
-    utilsScript: "assets/js/input-js/utils.js",
-});
+// var iti = window.intlTelInput(input, {
+//     geoIpLookup: function (callback) {
+//         $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+//             var countryCode = (resp && resp.country) ? resp.country : "";
+//             callback(countryCode);
+//         });
+//     },
+//     initialCountry: "auto",
+//     nationalMode: true,
+//     separateDialCode: true,
+//     utilsScript: "assets/js/input-js/utils.js",
+// });
 
 
 var reset = function () {
@@ -1556,18 +1555,13 @@ input.addEventListener('blur', function () {
     if (input.value.trim()) {
 
         if (iti.isValidNumber()) {
-
             $('#phone').val(iti.getNumber());
-
             validMsg.classList.remove("hide");
-
         } else {
-
             input.classList.add("error");
             var errorCode = iti.getValidationError();
             errorMsg.innerHTML = errorMap[errorCode];
             errorMsg.classList.remove("hide");
-
         }
     }
 });
