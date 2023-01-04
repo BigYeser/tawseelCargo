@@ -1261,7 +1261,8 @@
                 value: function isValidNumber() {
                     var val = this._getFullNumber().trim();
                     var countryCode = this.options.nationalMode ? this.selectedCountryData.iso2 : "";
-                    console.log(countryCode)
+                    console.log(this.selectedCountryData)
+                    console.log(this.options.nationalMode)
                     console.log("countryCode")
                     return window.intlTelInputUtils ? intlTelInputUtils.isValidNumber(val, countryCode) : null;
                 }
