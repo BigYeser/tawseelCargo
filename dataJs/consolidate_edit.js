@@ -1249,7 +1249,7 @@ var input = document.querySelector("#phone_custom");
 var iti = window.intlTelInput(input, {
 
   geoIpLookup: function (callback) {
-    $.get("http://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+    $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
       var countryCode = (resp && resp.country) ? resp.country : "";
       callback(countryCode);
     });
@@ -1302,7 +1302,7 @@ input.addEventListener('keyup', reset);
 var input_recipient = document.querySelector("#phone_custom_recipient");
 var iti = window.intlTelInput(input_recipient, {
   geoIpLookup: function (callback) {
-    $.get("http://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+    $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
       var countryCode = (resp && resp.country) ? resp.country : "";
       callback(countryCode);
     });
