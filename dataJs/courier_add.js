@@ -1547,7 +1547,7 @@ input.addEventListener('blur', function () {
             });
         },
         initialCountry: "auto",
-        nationalMode: false,
+        nationalMode: true,
     
         separateDialCode: true,
         utilsScript: "assets/js/input-js/utils.js",

@@ -836,6 +836,8 @@
                         if (number.charAt(0) !== "1") number = "1".concat(number);
                         number = "+".concat(number);
                     }
+                    console.log(number)
+                    console.log("abdd")
                     // update flag if user types area code for another country
                     if (this.options.separateDialCode && selectedDialCode && number.charAt(0) !== "+") {
                         number = "+".concat(selectedDialCode).concat(number);
