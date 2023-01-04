@@ -1165,8 +1165,6 @@
                         // we must set this even if there is an initial val in the input: in case the initial val is
                         // invalid and they delete it - they should see their auto country
                         this.defaultCountry = window.intlTelInputGlobals.autoCountry;
-                        console.log(window.intlTelInputGlobals.autoCountry)
-                        console.log("abddd")
                         // if there's no initial value in the input, then update the flag
                         if (!this.telInput.value) {
                             this.setCountry(this.defaultCountry);
@@ -1263,6 +1261,8 @@
                 value: function isValidNumber() {
                     var val = this._getFullNumber().trim();
                     var countryCode = this.options.nationalMode ? this.selectedCountryData.iso2 : "";
+                    console.log(countryCode)
+                    console.log("countryCode")
                     return window.intlTelInputUtils ? intlTelInputUtils.isValidNumber(val, countryCode) : null;
                 }
             }, {
