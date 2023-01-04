@@ -836,8 +836,6 @@
                         if (number.charAt(0) !== "1") number = "1".concat(number);
                         number = "+".concat(number);
                     }
-                    console.log(number)
-                    console.log("abdd")
                     // update flag if user types area code for another country
                     if (this.options.separateDialCode && selectedDialCode && number.charAt(0) !== "+") {
                         number = "+".concat(selectedDialCode).concat(number);
@@ -1167,6 +1165,8 @@
                         // we must set this even if there is an initial val in the input: in case the initial val is
                         // invalid and they delete it - they should see their auto country
                         this.defaultCountry = window.intlTelInputGlobals.autoCountry;
+                        console.log(window.intlTelInputGlobals.autoCountry)
+                        console.log("abddd")
                         // if there's no initial value in the input, then update the flag
                         if (!this.telInput.value) {
                             this.setCountry(this.defaultCountry);

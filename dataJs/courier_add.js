@@ -1514,18 +1514,18 @@ var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long
 
 
 var input = document.querySelector("#phone_custom");
-// var iti = window.intlTelInput(input, {
-//     geoIpLookup: function (callback) {
-//         $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
-//             var countryCode = (resp && resp.country) ? resp.country : "";
-//             callback(countryCode);
-//         });
-//     },
-//     initialCountry: "auto",
-//     nationalMode: true,
-//     separateDialCode: true,
-//     utilsScript: "assets/js/input-js/utils.js",
-// });
+var iti = window.intlTelInput(input, {
+    geoIpLookup: function (callback) {
+        $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+    },
+    initialCountry: "auto",
+    nationalMode: true,
+    separateDialCode: true,
+    utilsScript: "assets/js/input-js/utils.js",
+});
 
 
 var reset = function () {
