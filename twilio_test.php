@@ -5,7 +5,6 @@ use Twilio\Rest\Client;
     $phone_sender = "+971501743345";
     $sid    = "AC4021a82e9303879805e55b083a2e2615";
     $token  = "f734ab8e186cd07eeda02e3af27e13d4";
-    try {
         $twilio = new Client($sid, $token);
         $message = $twilio->messages
             ->create(
@@ -17,9 +16,4 @@ use Twilio\Rest\Client;
             );
         // echo '<script>console.log("message");</script>';
         // echo '<script>console.log("'.$message.'");</script>';
-    } catch (\Throwable $e) {
-        echo json_encode($e);
-        echo "abd";
-        // echo '<script>console.log("whatsapp");</script>';
-        // echo '<script>console.log("'.$e.'");</script>';
-    }
+   
