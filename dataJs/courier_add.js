@@ -1527,7 +1527,6 @@ var iti = window.intlTelInput(input, {
     utilsScript: "assets/js/input-js/utils.js",
 });
 
-console.log(iti)
 var reset = function () {
     input.classList.remove("error");
     errorMsg.innerHTML = "";

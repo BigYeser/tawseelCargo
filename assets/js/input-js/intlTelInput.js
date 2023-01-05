@@ -149,7 +149,6 @@
                 value: function _init() {
                     var _this2 = this;
                     // if in nationalMode, disable options relating to dial codes
-                    console.log(this.options)
                     if (this.options.nationalMode) this.options.autoHideDialCode = false;
                     // if separateDialCode then doesn't make sense to A) insert dial code into input
                     // (autoHideDialCode), and B) display national numbers (because we're displaying the country
