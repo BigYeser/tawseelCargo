@@ -17,8 +17,9 @@ use Twilio\Rest\Client;
             );
         // echo '<script>console.log("message");</script>';
         // echo '<script>console.log("'.$message.'");</script>';
-    } catch (Exception $e) {
+    } catch (\Throwable $e) {
         echo json_encode($e);
+        echo "abd";
         // echo '<script>console.log("whatsapp");</script>';
         // echo '<script>console.log("'.$e.'");</script>';
     }
