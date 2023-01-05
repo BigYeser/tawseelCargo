@@ -1522,12 +1522,12 @@ var iti = window.intlTelInput(input, {
         });
     },
     initialCountry: "auto",
-    nationalMode: true,
-    separateDialCode: true,
+    nationalMode: false,
+    separateDialCode: false,
     utilsScript: "assets/js/input-js/utils.js",
 });
 
-
+console.log(iti)
 var reset = function () {
     input.classList.remove("error");
     errorMsg.innerHTML = "";
