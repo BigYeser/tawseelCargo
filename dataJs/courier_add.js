@@ -1522,8 +1522,9 @@ var iti = window.intlTelInput(input, {
         });
     },
     initialCountry: "auto",
-    nationalMode: false,
-    separateDialCode: false,
+    nationalMode: true,
+
+    separateDialCode: true,
     utilsScript: "assets/js/input-js/utils.js",
 });
 
@@ -1537,18 +1538,6 @@ var reset = function () {
 // on blur: validate
 input.addEventListener('blur', function () {
     reset();
-    var iti = window.intlTelInput(input, {
-        geoIpLookup: function (callback) {
-            $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
-                var countryCode = (resp && resp.country) ? resp.country : "";
-                callback(countryCode);
-            });
-        },
-        initialCountry: "auto",
-        nationalMode: true,
-        separateDialCode: true,
-        utilsScript: "assets/js/input-js/utils.js",
-    });
     if (input.value.trim()) {
 
         if (iti.isValidNumber()) {
