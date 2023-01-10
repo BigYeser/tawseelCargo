@@ -1539,7 +1539,7 @@ var reset = function () {
 input.addEventListener('blur', function () {
     reset();
     if (input.value.trim()) {
-
+        console.log(iti.getNumber())
         if (iti.isValidNumber()) {
             $('#phone').val(iti.getNumber());
             validMsg.classList.remove("hide");
