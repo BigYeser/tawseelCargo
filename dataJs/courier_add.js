@@ -1584,7 +1584,7 @@ function cdp_convertStrPad(value, dbDigits) {
 
 
 var input_recipient = document.querySelector("#phone_custom_recipient");
-var iti = window.intlTelInput(input_recipient, {
+var itir = window.intlTelInput(input_recipient, {
     geoIpLookup: function (callback) {
         $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
             var countryCode = (resp && resp.country) ? resp.country : "";
@@ -1603,9 +1603,9 @@ input_recipient.addEventListener('blur', function () {
     reset();
     if (input_recipient.value.trim()) {
 
-        if (iti.isValidNumber()) {
+        if (itir.isValidNumber()) {
 
-            $('#phone_recipient').val(iti.getNumber());
+            $('#phone_recipient').val(itir.getNumber());
 
             validMsg.classList.remove("hide");
 
